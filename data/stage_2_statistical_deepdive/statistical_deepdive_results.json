@@ -1,0 +1,2747 @@
+{
+  "confidence_vs_bottleneck_position": {
+    "gemma-2-2b": {
+      "avg_bottleneck_layer": {
+        "spearman_r": 0.294804763199253,
+        "spearman_p": 0.11376859484830243,
+        "pearson_r": 0.32244399833505016,
+        "pearson_p": 0.08224384795056888,
+        "n": 30
+      },
+      "median_bottleneck_layer": {
+        "spearman_r": 0.48116874954348265,
+        "spearman_p": 0.0071056294493956704,
+        "pearson_r": 0.4641731992450411,
+        "pearson_p": 0.00976908741387579,
+        "n": 30
+      },
+      "bottleneck_layer_std": {
+        "spearman_r": -0.05761957730812013,
+        "spearman_p": 0.7623192630766409,
+        "pearson_r": 0.028589953239986275,
+        "pearson_p": 0.880788199998941,
+        "n": 30
+      },
+      "min_bottleneck_layer": {
+        "spearman_r": 0.03218125949163388,
+        "spearman_p": 0.865940005197866,
+        "pearson_r": 0.05150467129581605,
+        "pearson_p": 0.7869332992378655,
+        "n": 30
+      },
+      "max_bottleneck_layer": {
+        "spearman_r": 0.09862214761173001,
+        "spearman_p": 0.6041165843972105,
+        "pearson_r": 0.1669898512103587,
+        "pearson_p": 0.3777807395509596,
+        "n": 30
+      }
+    },
+    "qwen3-4b": {
+      "avg_bottleneck_layer": {
+        "spearman_r": -0.1720262697382395,
+        "spearman_p": 0.36335417728364894,
+        "pearson_r": -0.030902541228072483,
+        "pearson_p": 0.871221983404177,
+        "n": 30
+      },
+      "median_bottleneck_layer": {
+        "spearman_r": -0.0023596556628024323,
+        "spearman_p": 0.9901262886970654,
+        "pearson_r": 0.05693017561733925,
+        "pearson_p": 0.7650834240083366,
+        "n": 30
+      },
+      "bottleneck_layer_std": {
+        "spearman_r": 0.17758986190312434,
+        "spearman_p": 0.3478024539884558,
+        "pearson_r": 0.09560413967808264,
+        "pearson_p": 0.6152816440128833,
+        "n": 30
+      },
+      "min_bottleneck_layer": {
+        "spearman_r": -0.24209170655310655,
+        "spearman_p": 0.1974254585777374,
+        "pearson_r": -0.020606923322809577,
+        "pearson_p": 0.9139290187190601,
+        "n": 30
+      },
+      "max_bottleneck_layer": {
+        "spearman_r": -0.1609600194442386,
+        "spearman_p": 0.3954842580810062,
+        "pearson_r": -0.15102297761033448,
+        "pearson_p": 0.4256698204471797,
+        "n": 30
+      }
+    },
+    "combined": {
+      "avg_bottleneck_layer": {
+        "spearman_r": 0.6331554965209724,
+        "spearman_p": 5.68050442927899e-08,
+        "pearson_r": 0.6807323655102572,
+        "pearson_p": 2.174224416185658e-09,
+        "n": 60
+      },
+      "median_bottleneck_layer": {
+        "spearman_r": 0.6977393111075595,
+        "spearman_p": 5.816445587708704e-10,
+        "pearson_r": 0.6933095916043034,
+        "pearson_p": 8.271426474760595e-10,
+        "n": 60
+      },
+      "bottleneck_layer_std": {
+        "spearman_r": 0.08038679029447991,
+        "spearman_p": 0.5414881238729994,
+        "pearson_r": 0.14152082574891778,
+        "pearson_p": 0.2807681335386239,
+        "n": 60
+      },
+      "min_bottleneck_layer": {
+        "spearman_r": 0.6080980072096135,
+        "spearman_p": 2.5586029158473137e-07,
+        "pearson_r": 0.5970791184718215,
+        "pearson_p": 4.763561142516682e-07,
+        "n": 60
+      },
+      "max_bottleneck_layer": {
+        "spearman_r": 0.6562900365634486,
+        "spearman_p": 1.2493374930455073e-08,
+        "pearson_r": 0.6365436981336302,
+        "pearson_p": 4.586471028536191e-08,
+        "n": 60
+      }
+    },
+    "scatter_data": [
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-gold-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.6682623624801636,
+        "avg_bottleneck_layer": 6.68
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-iron-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.41219642758369446,
+        "avg_bottleneck_layer": 3.56
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-lead-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.7881047129631042,
+        "avg_bottleneck_layer": 5.846153846153846
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-mercury-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.8353232145309448,
+        "avg_bottleneck_layer": 5.827586206896552
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-argon-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.5368743538856506,
+        "avg_bottleneck_layer": 3.36
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-sodium-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.4955626428127289,
+        "avg_bottleneck_layer": 5.222222222222222
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-silver-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.581764817237854,
+        "avg_bottleneck_layer": 5.892857142857143
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-potassium-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.4528234004974365,
+        "avg_bottleneck_layer": 1.7692307692307692
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-copper-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.566001296043396,
+        "avg_bottleneck_layer": 6.0
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-chemical-symbol-for-tungsten-is",
+        "model": "gemma-2-2b",
+        "category": "chemistry",
+        "output_probability": 0.6795600056648254,
+        "avg_bottleneck_layer": 9.0
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-france-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.20725467801094055,
+        "avg_bottleneck_layer": 3.888888888888889
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-japan-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.18401940166950226,
+        "avg_bottleneck_layer": 6.0
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-germany-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.1889750361442566,
+        "avg_bottleneck_layer": 4.76
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-egypt-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.1946999728679657,
+        "avg_bottleneck_layer": 4.5
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-italy-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.17350280284881592,
+        "avg_bottleneck_layer": 1.3333333333333333
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-spain-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.21536748111248016,
+        "avg_bottleneck_layer": 2.0
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-canada-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.2943759858608246,
+        "avg_bottleneck_layer": 7.62962962962963
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-thailand-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.19702307879924774,
+        "avg_bottleneck_layer": 5.333333333333333
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-turkey-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.19208593666553497,
+        "avg_bottleneck_layer": 7.384615384615385
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-capital-of-south-korea-is",
+        "model": "gemma-2-2b",
+        "category": "geography",
+        "output_probability": 0.21340960264205933,
+        "avg_bottleneck_layer": 8.318181818181818
+      },
+      {
+        "circuit_id": "gemma-2-2b_world-war-ii-ended-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.5501033067703247,
+        "avg_bottleneck_layer": 9.724137931034482
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-first-moon-landing-was-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.7373630404472351,
+        "avg_bottleneck_layer": 7.615384615384615
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-berlin-wall-fell-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.7547805905342102,
+        "avg_bottleneck_layer": 5.923076923076923
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-titanic-sank-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.43833041191101074,
+        "avg_bottleneck_layer": 6.724137931034483
+      },
+      {
+        "circuit_id": "gemma-2-2b_america-declared-independence-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.7674791812896729,
+        "avg_bottleneck_layer": 4.111111111111111
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-french-revolution-began-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.6779904961585999,
+        "avg_bottleneck_layer": 7.464285714285714
+      },
+      {
+        "circuit_id": "gemma-2-2b_world-war-i-started-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.61528480052948,
+        "avg_bottleneck_layer": 4.724137931034483
+      },
+      {
+        "circuit_id": "gemma-2-2b_columbus-reached-the-americas-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.8622098565101624,
+        "avg_bottleneck_layer": 7.884615384615385
+      },
+      {
+        "circuit_id": "gemma-2-2b_the-great-fire-of-london-occurred-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.440295934677124,
+        "avg_bottleneck_layer": 3.25
+      },
+      {
+        "circuit_id": "gemma-2-2b_nelson-mandela-was-released-from-prison-in",
+        "model": "gemma-2-2b",
+        "category": "history",
+        "output_probability": 0.6845184564590454,
+        "avg_bottleneck_layer": 5.954545454545454
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-gold-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.984375,
+        "avg_bottleneck_layer": 24.535714285714285
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-iron-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.9296875,
+        "avg_bottleneck_layer": 25.76
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-lead-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.9296875,
+        "avg_bottleneck_layer": 23.25925925925926
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-mercury-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.97265625,
+        "avg_bottleneck_layer": 20.413793103448278
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-argon-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.94921875,
+        "avg_bottleneck_layer": 21.79310344827586
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-sodium-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.9140625,
+        "avg_bottleneck_layer": 28.40740740740741
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-silver-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.93359375,
+        "avg_bottleneck_layer": 24.85185185185185
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-potassium-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.9609375,
+        "avg_bottleneck_layer": 24.448275862068964
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-copper-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.953125,
+        "avg_bottleneck_layer": 25.233333333333334
+      },
+      {
+        "circuit_id": "qwen3-4b_the-chemical-symbol-for-tungsten-is",
+        "model": "qwen3-4b",
+        "category": "chemistry",
+        "output_probability": 0.96875,
+        "avg_bottleneck_layer": 22.62962962962963
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-france-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.80078125,
+        "avg_bottleneck_layer": 26.925925925925927
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-japan-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.8125,
+        "avg_bottleneck_layer": 25.517241379310345
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-germany-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.76171875,
+        "avg_bottleneck_layer": 26.310344827586206
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-egypt-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.65234375,
+        "avg_bottleneck_layer": 23.48148148148148
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-italy-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.80078125,
+        "avg_bottleneck_layer": 25.25925925925926
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-spain-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.796875,
+        "avg_bottleneck_layer": 26.448275862068964
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-canada-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.37109375,
+        "avg_bottleneck_layer": 25.357142857142858
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-thailand-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.875,
+        "avg_bottleneck_layer": 23.72
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-turkey-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.71875,
+        "avg_bottleneck_layer": 22.071428571428573
+      },
+      {
+        "circuit_id": "qwen3-4b_the-capital-of-south-korea-is",
+        "model": "qwen3-4b",
+        "category": "geography",
+        "output_probability": 0.73828125,
+        "avg_bottleneck_layer": 21.24137931034483
+      },
+      {
+        "circuit_id": "qwen3-4b_world-war-ii-ended-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.984375,
+        "avg_bottleneck_layer": 22.137931034482758
+      },
+      {
+        "circuit_id": "qwen3-4b_the-first-moon-landing-was-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.828125,
+        "avg_bottleneck_layer": 15.0
+      },
+      {
+        "circuit_id": "qwen3-4b_the-berlin-wall-fell-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.84765625,
+        "avg_bottleneck_layer": 22.620689655172413
+      },
+      {
+        "circuit_id": "qwen3-4b_the-titanic-sank-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.7265625,
+        "avg_bottleneck_layer": 22.857142857142858
+      },
+      {
+        "circuit_id": "qwen3-4b_america-declared-independence-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.79296875,
+        "avg_bottleneck_layer": 26.4
+      },
+      {
+        "circuit_id": "qwen3-4b_the-french-revolution-began-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.92578125,
+        "avg_bottleneck_layer": 25.11111111111111
+      },
+      {
+        "circuit_id": "qwen3-4b_world-war-i-started-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.55078125,
+        "avg_bottleneck_layer": 25.214285714285715
+      },
+      {
+        "circuit_id": "qwen3-4b_columbus-reached-the-americas-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.9921875,
+        "avg_bottleneck_layer": 24.96551724137931
+      },
+      {
+        "circuit_id": "qwen3-4b_the-great-fire-of-london-occurred-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.67578125,
+        "avg_bottleneck_layer": 16.571428571428573
+      },
+      {
+        "circuit_id": "qwen3-4b_nelson-mandela-was-released-from-prison-in",
+        "model": "qwen3-4b",
+        "category": "history",
+        "output_probability": 0.96484375,
+        "avg_bottleneck_layer": 18.75862068965517
+      }
+    ]
+  },
+  "expanded_correlation_matrix": {
+    "gemma-2-2b": {
+      "n_tests": 16,
+      "bonferroni_alpha": 0.003125,
+      "correlations": {
+        "avg_compression_ratio": {
+          "spearman_r": 0.33140235423860814,
+          "spearman_p": 0.0736183312125497,
+          "pearson_r": 0.31352802995664575,
+          "pearson_p": 0.0915771339277954,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_score_decay_rate": {
+          "spearman_r": 0.3027808676307008,
+          "spearman_p": 0.1038717079837925,
+          "pearson_r": 0.2924742627284381,
+          "pearson_p": 0.11678862101856316,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_branching_factor": {
+          "spearman_r": -0.21114695869893665,
+          "spearman_p": 0.2626951315449387,
+          "pearson_r": -0.2858848542401271,
+          "pearson_p": 0.12564932812544707,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_layers_visited": {
+          "spearman_r": 0.3423811745528347,
+          "spearman_p": 0.06402036530015408,
+          "pearson_r": 0.31352802995664564,
+          "pearson_p": 0.09157713392779562,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "total_nodes": {
+          "spearman_r": 0.47769496346324225,
+          "spearman_p": 0.007593083822362591,
+          "pearson_r": 0.6644304149460847,
+          "pearson_p": 6.221852261486667e-05,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "total_edges": {
+          "spearman_r": 0.43448275862068964,
+          "spearman_p": 0.016431965011658046,
+          "pearson_r": 0.4496316608752089,
+          "pearson_p": 0.012672647309852677,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "num_bottlenecks": {
+          "spearman_r": 0.3857431058137143,
+          "spearman_p": 0.03526674314864602,
+          "pearson_r": 0.4046205391833019,
+          "pearson_p": 0.02656529111043193,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "weight_skewness": {
+          "spearman_r": 0.22981090100111232,
+          "spearman_p": 0.22183117032217686,
+          "pearson_r": 0.21423002120600748,
+          "pearson_p": 0.2556275411268094,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "weight_kurtosis": {
+          "spearman_r": 0.5181312569521691,
+          "spearman_p": 0.003357800077645299,
+          "pearson_r": 0.41937671555814515,
+          "pearson_p": 0.021058966319643102,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "top_10pct_weight_share": {
+          "spearman_r": 0.3299221357063403,
+          "spearman_p": 0.07499313717954018,
+          "pearson_r": 0.3262856153062719,
+          "pearson_p": 0.07845480869892882,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "num_supernodes": {
+          "spearman_r": -0.05218502588521098,
+          "spearman_p": 0.784184255826359,
+          "pearson_r": -0.15911007014481915,
+          "pearson_p": 0.40100911557640195,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "size_entropy": {
+          "spearman_r": -0.2208838758204524,
+          "spearman_p": 0.24080351862784433,
+          "pearson_r": -0.2065171576057772,
+          "pearson_p": 0.2735457889801744,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "peak_layer": {
+          "spearman_r": -0.31517779293097564,
+          "spearman_p": 0.0897921664727218,
+          "pearson_r": -0.3166623760756369,
+          "pearson_p": 0.0882086545852444,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "total_energy": {
+          "spearman_r": 0.5270300333704115,
+          "spearman_p": 0.00276810498074456,
+          "pearson_r": 0.618121842543831,
+          "pearson_p": 0.0002725847930238488,
+          "n": 30,
+          "survives_bonferroni": "True"
+        },
+        "avg_bottleneck_layer": {
+          "spearman_r": 0.294804763199253,
+          "spearman_p": 0.11376859484830243,
+          "pearson_r": 0.32244399833505016,
+          "pearson_p": 0.08224384795056888,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "bottleneck_layer_std": {
+          "spearman_r": -0.05761957730812013,
+          "spearman_p": 0.7623192630766409,
+          "pearson_r": 0.028589953239986275,
+          "pearson_p": 0.880788199998941,
+          "n": 30,
+          "survives_bonferroni": "False"
+        }
+      },
+      "significant_uncorrected": 5,
+      "significant_bonferroni": 1
+    },
+    "qwen3-4b": {
+      "n_tests": 16,
+      "bonferroni_alpha": 0.003125,
+      "correlations": {
+        "avg_compression_ratio": {
+          "spearman_r": 0.20135875713543158,
+          "spearman_p": 0.2859714978755605,
+          "pearson_r": 0.15995098251820922,
+          "pearson_p": 0.3984923278537438,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_score_decay_rate": {
+          "spearman_r": -0.33047737459415993,
+          "spearman_p": 0.07447513616105117,
+          "pearson_r": -0.3522158576188553,
+          "pearson_p": 0.056278585430394976,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_branching_factor": {
+          "spearman_r": 0.08850050149460081,
+          "spearman_p": 0.6418925443431592,
+          "pearson_r": 0.15753885906242526,
+          "pearson_p": 0.40573573327492074,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_layers_visited": {
+          "spearman_r": 0.19360249149066158,
+          "spearman_p": 0.3053226336425959,
+          "pearson_r": 0.15995098251820908,
+          "pearson_p": 0.3984923278537452,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "total_nodes": {
+          "spearman_r": 0.09349955476402494,
+          "spearman_p": 0.6231178547232825,
+          "pearson_r": 0.07456009863034674,
+          "pearson_p": 0.6953718992909278,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "total_edges": {
+          "spearman_r": 0.06231223224671029,
+          "spearman_p": 0.7435817082795774,
+          "pearson_r": 0.0990474866121804,
+          "pearson_p": 0.6025499919860969,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "num_bottlenecks": {
+          "spearman_r": 0.13182438663311144,
+          "spearman_p": 0.4874368252257193,
+          "pearson_r": 0.018415204953843724,
+          "pearson_p": 0.9230549061192737,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "weight_skewness": {
+          "spearman_r": -0.1203961344481081,
+          "spearman_p": 0.5262583053674961,
+          "pearson_r": -0.12571930458049901,
+          "pearson_p": 0.5079918531442847,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "weight_kurtosis": {
+          "spearman_r": 0.0060086795380756355,
+          "spearman_p": 0.9748606890006005,
+          "pearson_r": -0.031046946441012684,
+          "pearson_p": 0.8706252151275988,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "top_10pct_weight_share": {
+          "spearman_r": -0.43440527623420894,
+          "spearman_p": 0.016453340445205994,
+          "pearson_r": -0.44361852758715575,
+          "pearson_p": 0.01406814731752836,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "num_supernodes": {
+          "spearman_r": -0.14014619889539792,
+          "spearman_p": 0.46011800319412133,
+          "pearson_r": -0.28507173933770213,
+          "pearson_p": 0.12677610215679508,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "size_entropy": {
+          "spearman_r": -0.10527508603456097,
+          "spearman_p": 0.579813973773659,
+          "pearson_r": -0.35272719526107893,
+          "pearson_p": 0.055897184818422686,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "peak_layer": {
+          "error": "No variance"
+        },
+        "total_energy": {
+          "spearman_r": 0.01424279594210521,
+          "spearman_p": 0.9404535509245693,
+          "pearson_r": 0.11043461784663637,
+          "pearson_p": 0.5612708695815726,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "avg_bottleneck_layer": {
+          "spearman_r": -0.1720262697382395,
+          "spearman_p": 0.36335417728364894,
+          "pearson_r": -0.030902541228072483,
+          "pearson_p": 0.871221983404177,
+          "n": 30,
+          "survives_bonferroni": "False"
+        },
+        "bottleneck_layer_std": {
+          "spearman_r": 0.17758986190312434,
+          "spearman_p": 0.3478024539884558,
+          "pearson_r": 0.09560413967808264,
+          "pearson_p": 0.6152816440128833,
+          "n": 30,
+          "survives_bonferroni": "False"
+        }
+      },
+      "significant_uncorrected": 1,
+      "significant_bonferroni": 0
+    },
+    "combined": {
+      "n_tests": 16,
+      "bonferroni_alpha": 0.003125,
+      "correlations": {
+        "avg_compression_ratio": {
+          "spearman_r": -0.2094377819738683,
+          "spearman_p": 0.10826531758603909,
+          "pearson_r": -0.16293074397356633,
+          "pearson_p": 0.21355895678470982,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "avg_score_decay_rate": {
+          "spearman_r": -0.3546688528581893,
+          "spearman_p": 0.005427955367764998,
+          "pearson_r": -0.3086711599388663,
+          "pearson_p": 0.01641409156659528,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "avg_branching_factor": {
+          "spearman_r": 0.08006892524373262,
+          "spearman_p": 0.5430932249862387,
+          "pearson_r": 0.09376539729016076,
+          "pearson_p": 0.4760949477539801,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "avg_layers_visited": {
+          "spearman_r": 0.5900420371237919,
+          "spearman_p": 7.000083542696691e-07,
+          "pearson_r": 0.5671587112244153,
+          "pearson_p": 2.3030966734407122e-06,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "total_nodes": {
+          "spearman_r": -0.30825876741741337,
+          "spearman_p": 0.016565876927138352,
+          "pearson_r": -0.17935598169510092,
+          "pearson_p": 0.17030993047966148,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "total_edges": {
+          "spearman_r": 0.08133153653368223,
+          "spearman_p": 0.5367311632641607,
+          "pearson_r": 0.1932938892693078,
+          "pearson_p": 0.13894080701578096,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "num_bottlenecks": {
+          "spearman_r": 0.5205056368937921,
+          "spearman_p": 2.0164392729086694e-05,
+          "pearson_r": 0.5213054876570349,
+          "pearson_p": 1.9479752031858967e-05,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "weight_skewness": {
+          "spearman_r": 0.331911583155051,
+          "spearman_p": 0.00957557341390041,
+          "pearson_r": 0.2531515554160408,
+          "pearson_p": 0.050989113083562354,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "weight_kurtosis": {
+          "spearman_r": 0.6895813946554123,
+          "spearman_p": 1.1071086315803761e-09,
+          "pearson_r": 0.631159839361565,
+          "pearson_p": 6.435544260862737e-08,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "top_10pct_weight_share": {
+          "spearman_r": 0.5574002811293699,
+          "spearman_p": 3.7263880288737816e-06,
+          "pearson_r": 0.4924272928047586,
+          "pearson_p": 6.427873110693939e-05,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "num_supernodes": {
+          "spearman_r": 0.1766765932013261,
+          "spearman_p": 0.17688999039616846,
+          "pearson_r": -0.006304837392136237,
+          "pearson_p": 0.9618675265134008,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "size_entropy": {
+          "spearman_r": 0.0034561246151122013,
+          "spearman_p": 0.9790914859050874,
+          "pearson_r": -0.13734032511036523,
+          "pearson_p": 0.295365604767686,
+          "n": 60,
+          "survives_bonferroni": "False"
+        },
+        "peak_layer": {
+          "spearman_r": 0.6382723416546776,
+          "spearman_p": 4.1080899545580446e-08,
+          "pearson_r": 0.653811849906442,
+          "pearson_p": 1.4785323111571369e-08,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "total_energy": {
+          "spearman_r": -0.5325312257150734,
+          "spearman_p": 1.18846327976733e-05,
+          "pearson_r": -0.5144158720029541,
+          "pearson_p": 2.6156054080450674e-05,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "avg_bottleneck_layer": {
+          "spearman_r": 0.6331554965209724,
+          "spearman_p": 5.68050442927899e-08,
+          "pearson_r": 0.6807323655102572,
+          "pearson_p": 2.174224416185658e-09,
+          "n": 60,
+          "survives_bonferroni": "True"
+        },
+        "bottleneck_layer_std": {
+          "spearman_r": 0.08038679029447991,
+          "spearman_p": 0.5414881238729994,
+          "pearson_r": 0.14152082574891778,
+          "pearson_p": 0.2807681335386239,
+          "n": 60,
+          "survives_bonferroni": "False"
+        }
+      },
+      "significant_uncorrected": 10,
+      "significant_bonferroni": 7
+    }
+  },
+  "multiple_regression": {
+    "gemma-2-2b": {
+      "full_model": {
+        "r_squared": 0.5577196701204353,
+        "adj_r_squared": 0.3586935216746312,
+        "f_statistic": 2.8022431950558766,
+        "f_p_value": 0.026347747028077517,
+        "n_observations": 30,
+        "n_predictors": 9,
+        "residual_std_error": 0.18574714664273861,
+        "coefficients": {
+          "intercept": {
+            "beta": 0.4868514428536096,
+            "std_error": 0.03391263406948237,
+            "t_statistic": 14.35604918969483,
+            "p_value": 5.38991073995021e-12,
+            "significant_at_05": true
+          },
+          "total_nodes": {
+            "beta": 0.06608703715642986,
+            "std_error": 0.11807842818743389,
+            "t_statistic": 0.5596876429581653,
+            "p_value": 0.5819072618437264,
+            "significant_at_05": false
+          },
+          "num_bottlenecks": {
+            "beta": 0.059838149263464264,
+            "std_error": 0.05453013220938478,
+            "t_statistic": 1.097340989999763,
+            "p_value": 0.285529028192274,
+            "significant_at_05": false
+          },
+          "avg_layers_visited": {
+            "beta": 0.021817373323153467,
+            "std_error": 0.0,
+            "t_statistic": 0.0,
+            "p_value": 1.0,
+            "significant_at_05": false
+          },
+          "avg_compression_ratio": {
+            "beta": 0.021817373323153436,
+            "std_error": 0.0,
+            "t_statistic": 0.0,
+            "p_value": 1.0,
+            "significant_at_05": false
+          },
+          "avg_score_decay_rate": {
+            "beta": 0.0189929229941496,
+            "std_error": 0.0418372851575669,
+            "t_statistic": 0.45397121067054813,
+            "p_value": 0.6547374865831839,
+            "significant_at_05": false
+          },
+          "weight_kurtosis": {
+            "beta": 0.026661087275304828,
+            "std_error": 0.04166343623645715,
+            "t_statistic": 0.6399157074801075,
+            "p_value": 0.5294904905669195,
+            "significant_at_05": false
+          },
+          "size_entropy": {
+            "beta": -0.026535071978825195,
+            "std_error": 0.039795638536636244,
+            "t_statistic": -0.6667834203589108,
+            "p_value": 0.5125301674383973,
+            "significant_at_05": false
+          },
+          "total_energy": {
+            "beta": 0.04339664564070561,
+            "std_error": 0.10674219795241566,
+            "t_statistic": 0.40655566845317626,
+            "p_value": 0.6886519846492383,
+            "significant_at_05": false
+          },
+          "avg_bottleneck_layer": {
+            "beta": -0.011337668081518017,
+            "std_error": 0.06356842974446435,
+            "t_statistic": -0.17835375401113035,
+            "p_value": 0.8602393859734159,
+            "significant_at_05": false
+          }
+        },
+        "warning": null
+      },
+      "reduced_model": {
+        "r_squared": 0.4891406523222187,
+        "adj_r_squared": 0.43019534297478235,
+        "f_statistic": 8.298211642916634,
+        "f_p_value": 0.000489421983293381,
+        "n_observations": 30,
+        "n_predictors": 3,
+        "residual_std_error": 0.17508636838030428,
+        "coefficients": {
+          "intercept": {
+            "beta": 0.48685144285360965,
+            "std_error": 0.031966251157850636,
+            "t_statistic": 15.23017010814054,
+            "p_value": 1.7985612998927536e-14,
+            "significant_at_05": true
+          },
+          "total_energy": {
+            "beta": -0.014814731794578623,
+            "std_error": 0.08983485467031807,
+            "t_statistic": -0.1649107336895764,
+            "p_value": 0.8702897198618937,
+            "significant_at_05": false
+          },
+          "weight_kurtosis": {
+            "beta": 0.05270097344488861,
+            "std_error": 0.033852085950815416,
+            "t_statistic": 1.5568013599356694,
+            "p_value": 0.131607718609134,
+            "significant_at_05": false
+          },
+          "total_nodes": {
+            "beta": 0.14840329946736308,
+            "std_error": 0.08972334963116187,
+            "t_statistic": 1.6540097987583495,
+            "p_value": 0.1101502505633114,
+            "significant_at_05": false
+          }
+        },
+        "warning": null,
+        "features_used": [
+          "total_energy",
+          "weight_kurtosis",
+          "total_nodes"
+        ]
+      }
+    },
+    "qwen3-4b": {
+      "full_model": {
+        "r_squared": 0.33684821288280176,
+        "adj_r_squared": 0.038429908680062574,
+        "f_statistic": 1.1287786578063053,
+        "f_p_value": 0.38837623457455894,
+        "n_observations": 30,
+        "n_predictors": 9,
+        "residual_std_error": 0.1422743329373764,
+        "coefficients": {
+          "intercept": {
+            "beta": 0.837109375,
+            "std_error": 0.0259756205012671,
+            "t_statistic": 32.22673256098601,
+            "p_value": 0.0,
+            "significant_at_05": true
+          },
+          "total_nodes": {
+            "beta": -0.09985351276282182,
+            "std_error": 0.08993140004545247,
+            "t_statistic": -1.1103297926236508,
+            "p_value": 0.28002849563558385,
+            "significant_at_05": false
+          },
+          "num_bottlenecks": {
+            "beta": -0.00020658012734532126,
+            "std_error": 0.02707728456043591,
+            "t_statistic": -0.007629277850378199,
+            "p_value": 0.9939883644541632,
+            "significant_at_05": false
+          },
+          "avg_layers_visited": {
+            "beta": -0.004004252311725285,
+            "std_error": 0.0,
+            "t_statistic": 0.0,
+            "p_value": 1.0,
+            "significant_at_05": false
+          },
+          "avg_compression_ratio": {
+            "beta": -0.004004252311725155,
+            "std_error": 0.0,
+            "t_statistic": 0.0,
+            "p_value": 1.0,
+            "significant_at_05": false
+          },
+          "avg_score_decay_rate": {
+            "beta": -0.06837200101816154,
+            "std_error": 0.036880771130757085,
+            "t_statistic": -1.853865820097835,
+            "p_value": 0.07856732560683155,
+            "significant_at_05": false
+          },
+          "weight_kurtosis": {
+            "beta": -0.023248004556554555,
+            "std_error": 0.029841326981281883,
+            "t_statistic": -0.7790539801107698,
+            "p_value": 0.4450687880943933,
+            "significant_at_05": false
+          },
+          "size_entropy": {
+            "beta": -0.04110431279775167,
+            "std_error": 0.031633719080843684,
+            "t_statistic": -1.2993828734681738,
+            "p_value": 0.20859205671115277,
+            "significant_at_05": false
+          },
+          "total_energy": {
+            "beta": 0.16321441477840723,
+            "std_error": 0.08976288407881992,
+            "t_statistic": 1.8182839873448164,
+            "p_value": 0.08403068327744379,
+            "significant_at_05": false
+          },
+          "avg_bottleneck_layer": {
+            "beta": 0.017637990439215677,
+            "std_error": 0.039618326357641155,
+            "t_statistic": 0.4451977673159293,
+            "p_value": 0.6609580283655168,
+            "significant_at_05": false
+          }
+        },
+        "warning": null
+      },
+      "reduced_model": {
+        "r_squared": 0.12432008055488508,
+        "adj_r_squared": 0.023280089849679553,
+        "f_statistic": 1.230404710918883,
+        "f_p_value": 0.3186643989335659,
+        "n_observations": 30,
+        "n_predictors": 3,
+        "residual_std_error": 0.14339073971671437,
+        "coefficients": {
+          "intercept": {
+            "beta": 0.8371093749999999,
+            "std_error": 0.026179447560065468,
+            "t_statistic": 31.97582275482923,
+            "p_value": 0.0,
+            "significant_at_05": true
+          },
+          "avg_score_decay_rate": {
+            "beta": -0.04919547124742236,
+            "std_error": 0.028732532165430587,
+            "t_statistic": -1.7121871112568234,
+            "p_value": 0.09876640869646036,
+            "significant_at_05": false
+          },
+          "avg_compression_ratio": {
+            "beta": 0.0012720892393664595,
+            "std_error": 0.0,
+            "t_statistic": 0.0,
+            "p_value": 1.0,
+            "significant_at_05": false
+          },
+          "avg_layers_visited": {
+            "beta": 0.0012720892393664571,
+            "std_error": 0.0,
+            "t_statistic": 0.0,
+            "p_value": 1.0,
+            "significant_at_05": false
+          }
+        },
+        "warning": null,
+        "features_used": [
+          "avg_score_decay_rate",
+          "avg_compression_ratio",
+          "avg_layers_visited"
+        ]
+      }
+    },
+    "combined": {
+      "full_model": {
+        "r_squared": 0.677399151724118,
+        "adj_r_squared": 0.6193309990344593,
+        "f_statistic": 11.665588112376009,
+        "f_p_value": 1.28807053911828e-09,
+        "n_observations": 60,
+        "n_predictors": 9,
+        "residual_std_error": 0.1608671212917611,
+        "coefficients": {
+          "intercept": {
+            "beta": 0.661980408926805,
+            "std_error": 0.02076785605717731,
+            "t_statistic": 31.875240617243517,
+            "p_value": 0.0,
+            "significant_at_05": true
+          },
+          "total_nodes": {
+            "beta": 0.06261323711367535,
+            "std_error": 0.07239786666382567,
+            "t_statistic": 0.8648492006596749,
+            "p_value": 0.3912520592087403,
+            "significant_at_05": false
+          },
+          "num_bottlenecks": {
+            "beta": 0.027872072949793967,
+            "std_error": 0.02594537334230853,
+            "t_statistic": 1.074259852886511,
+            "p_value": 0.2878632692928056,
+            "significant_at_05": false
+          },
+          "avg_layers_visited": {
+            "beta": 0.1585750169944756,
+            "std_error": 0.0952053543819075,
+            "t_statistic": 1.665610280261828,
+            "p_value": 0.10204529128085116,
+            "significant_at_05": false
+          },
+          "avg_compression_ratio": {
+            "beta": -0.10590401144951826,
+            "std_error": 0.08317145047241499,
+            "t_statistic": -1.2733216848808337,
+            "p_value": 0.20879208725451348,
+            "significant_at_05": false
+          },
+          "avg_score_decay_rate": {
+            "beta": 0.002087903940197838,
+            "std_error": 0.02697590552933619,
+            "t_statistic": 0.07739884534838878,
+            "p_value": 0.9386151602195143,
+            "significant_at_05": false
+          },
+          "weight_kurtosis": {
+            "beta": -0.010893234638715447,
+            "std_error": 0.045605337794213524,
+            "t_statistic": -0.23885876446896084,
+            "p_value": 0.8121914376610417,
+            "significant_at_05": false
+          },
+          "size_entropy": {
+            "beta": -0.04718243722524298,
+            "std_error": 0.022153978027994466,
+            "t_statistic": -2.1297501137548194,
+            "p_value": 0.03813778477406049,
+            "significant_at_05": true
+          },
+          "total_energy": {
+            "beta": 0.1407193294182722,
+            "std_error": 0.15314481679390296,
+            "t_statistic": 0.9188644602164201,
+            "p_value": 0.36257810355394104,
+            "significant_at_05": false
+          },
+          "avg_bottleneck_layer": {
+            "beta": 0.20283643067908258,
+            "std_error": 0.07664298241791352,
+            "t_statistic": 2.6465101471791663,
+            "p_value": 0.010845654684986439,
+            "significant_at_05": true
+          }
+        },
+        "warning": null
+      },
+      "reduced_model": {
+        "r_squared": 0.5122796470180201,
+        "adj_r_squared": 0.48615177096541407,
+        "f_statistic": 19.606631858884832,
+        "f_p_value": 8.17118095408631e-09,
+        "n_observations": 60,
+        "n_predictors": 3,
+        "residual_std_error": 0.1869007164125201,
+        "coefficients": {
+          "intercept": {
+            "beta": 0.661980408926805,
+            "std_error": 0.024128778735330852,
+            "t_statistic": 27.43530520910668,
+            "p_value": 0.0,
+            "significant_at_05": true
+          },
+          "weight_kurtosis": {
+            "beta": 0.051710736674920904,
+            "std_error": 0.0426986036550012,
+            "t_statistic": 1.2110638814499999,
+            "p_value": 0.23095709930599218,
+            "significant_at_05": false
+          },
+          "avg_bottleneck_layer": {
+            "beta": 0.09658843929292349,
+            "std_error": 0.04579588494857475,
+            "t_statistic": 2.1091073881722093,
+            "p_value": 0.039419730083073645,
+            "significant_at_05": true
+          },
+          "avg_layers_visited": {
+            "beta": 0.06005566642158759,
+            "std_error": 0.030573777574326572,
+            "t_statistic": 1.9642867576827525,
+            "p_value": 0.054467108201245784,
+            "significant_at_05": false
+          }
+        },
+        "warning": null,
+        "features_used": [
+          "weight_kurtosis",
+          "avg_bottleneck_layer",
+          "avg_layers_visited"
+        ]
+      }
+    }
+  },
+  "anova_kruskal": {
+    "gemma-2-2b": {
+      "avg_compression_ratio": {
+        "test_used": "one_way_anova",
+        "statistic": 1.0926006399873573,
+        "p_value": 0.3497151630021398,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "eta_squared": 0.07487360662727648,
+        "group_means": {
+          "chemistry": 0.5930769230769232,
+          "geography": 0.5692307692307692,
+          "history": 0.6184615384615384
+        },
+        "group_stds": {
+          "chemistry": 0.07178617163402588,
+          "geography": 0.0421325044234743,
+          "history": 0.08972014345737435
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.3407892094242637,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.1873479769813502,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.3072593279337328,
+            "is_normal": "True"
+          }
+        }
+      },
+      "avg_score_decay_rate": {
+        "test_used": "one_way_anova",
+        "statistic": 7.403623879377653,
+        "p_value": 0.002732212733412304,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": true,
+        "eta_squared": 0.35417896543200145,
+        "group_means": {
+          "chemistry": 0.9090026867431119,
+          "geography": 0.9016739337593807,
+          "history": 1.1489498312301825
+        },
+        "group_stds": {
+          "chemistry": 0.19434169529899878,
+          "geography": 0.11772361182165206,
+          "history": 0.143402792109993
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.7656782689117319,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.6216795889799017,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.12169428600486687,
+            "is_normal": "True"
+          }
+        }
+      },
+      "avg_branching_factor": {
+        "test_used": "one_way_anova",
+        "statistic": 0.8370870342849351,
+        "p_value": 0.44389824932266353,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "eta_squared": 0.05838613047986481,
+        "group_means": {
+          "chemistry": 2.9307125097125097,
+          "geography": 3.09899555999556,
+          "history": 2.950264735264735
+        },
+        "group_stds": {
+          "chemistry": 0.41640201272169963,
+          "geography": 0.18138220711344089,
+          "history": 0.2586886112074913
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.2447415971908693,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.05810818219401489,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.9977106529588055,
+            "is_normal": "True"
+          }
+        }
+      },
+      "num_bottlenecks": {
+        "test_used": "kruskal_wallis",
+        "statistic": 4.193119058397453,
+        "p_value": 0.12287846159922199,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.08122663179249827,
+        "group_means": {
+          "chemistry": 24.8,
+          "geography": 20.6,
+          "history": 24.6
+        },
+        "group_stds": {
+          "chemistry": 4.261455150532504,
+          "geography": 7.351190379795643,
+          "history": 7.158212067269312
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.0022256440456899004,
+            "is_normal": "False"
+          },
+          "geography": {
+            "shapiro_p": 0.013164695092728268,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 5.967230866297231e-05,
+            "is_normal": "False"
+          }
+        }
+      },
+      "total_energy": {
+        "test_used": "kruskal_wallis",
+        "statistic": 18.611612903225804,
+        "p_value": 9.089491930175935e-05,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": true,
+        "epsilon_squared": 0.6152449223416965,
+        "group_means": {
+          "chemistry": 11653.662035381794,
+          "geography": 9422.021720468998,
+          "history": 11381.618852347136
+        },
+        "group_stds": {
+          "chemistry": 482.13811645954695,
+          "geography": 379.1413186449544,
+          "history": 865.0495238111308
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.5561477302030391,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.005432719440692312,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 0.033119721074774726,
+            "is_normal": "False"
+          }
+        }
+      },
+      "avg_bottleneck_layer": {
+        "test_used": "one_way_anova",
+        "statistic": 0.9739766317240167,
+        "p_value": 0.3904538132118388,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "eta_squared": 0.06729157138400094,
+        "group_means": {
+          "chemistry": 5.315805018736053,
+          "geography": 5.1147982387982385,
+          "history": 6.337543299612266
+        },
+        "group_stds": {
+          "chemistry": 1.9045627734129214,
+          "geography": 2.204032899041237,
+          "history": 1.8527225390508837
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.5798474826968409,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.7429756381739091,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.9566642461271899,
+            "is_normal": "True"
+          }
+        }
+      },
+      "output_probability": {
+        "test_used": "kruskal_wallis",
+        "statistic": 19.667096774193553,
+        "p_value": 5.362214688373853e-05,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": true,
+        "epsilon_squared": 0.6543369175627242,
+        "group_means": {
+          "chemistry": 0.6016473233699798,
+          "geography": 0.2060713976621628,
+          "history": 0.6528356075286865
+        },
+        "group_stds": {
+          "chemistry": 0.1323005600948818,
+          "geography": 0.0319146217854321,
+          "history": 0.13390464635836802
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.750055928879606,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.0027422514467323306,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 0.5228679945126735,
+            "is_normal": "True"
+          }
+        }
+      },
+      "weight_kurtosis": {
+        "test_used": "kruskal_wallis",
+        "statistic": 7.0606451612903385,
+        "p_value": 0.029295464192919257,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.18743130227001253,
+        "group_means": {
+          "chemistry": 136.6478632574322,
+          "geography": 90.55719441447147,
+          "history": 117.75247446854567
+        },
+        "group_stds": {
+          "chemistry": 92.72674929199242,
+          "geography": 22.83599768271099,
+          "history": 32.203725904091804
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 2.1101865156868743e-06,
+            "is_normal": "False"
+          },
+          "geography": {
+            "shapiro_p": 0.00023829659401125748,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 0.6061667958881073,
+            "is_normal": "True"
+          }
+        }
+      },
+      "size_entropy": {
+        "test_used": "kruskal_wallis",
+        "statistic": 1.1138340807174782,
+        "p_value": 0.5729727956994706,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.0,
+        "group_means": {
+          "chemistry": 1.6548042806837024,
+          "geography": 2.903047628024102,
+          "history": 3.183714175860526
+        },
+        "group_stds": {
+          "chemistry": 1.6574372814978975,
+          "geography": 0.9698785031567999,
+          "history": 0.16224562002477014
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.000648084463085777,
+            "is_normal": "False"
+          },
+          "geography": {
+            "shapiro_p": 5.474920274045189e-07,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 0.8989560802878842,
+            "is_normal": "True"
+          }
+        }
+      }
+    },
+    "qwen3-4b": {
+      "avg_compression_ratio": {
+        "test_used": "kruskal_wallis",
+        "statistic": 3.1585246266993567,
+        "p_value": 0.20612709934283993,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.04290831950738358,
+        "group_means": {
+          "chemistry": 0.5372222222222222,
+          "geography": 0.5249999999999999,
+          "history": 0.4966666666666667
+        },
+        "group_stds": {
+          "chemistry": 0.06564259758178338,
+          "geography": 0.05260204662027871,
+          "history": 0.04562325592810627
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.436808357108877,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.489591116038002,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.042516578275949755,
+            "is_normal": "False"
+          }
+        }
+      },
+      "avg_score_decay_rate": {
+        "test_used": "kruskal_wallis",
+        "statistic": 11.491612903225814,
+        "p_value": 0.0031961559668963043,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.3515412186379931,
+        "group_means": {
+          "chemistry": 0.5946108263748545,
+          "geography": 0.8740445664424652,
+          "history": 0.825609919727609
+        },
+        "group_stds": {
+          "chemistry": 0.10707852251634652,
+          "geography": 0.11870271641969443,
+          "history": 0.222594906649464
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.6475052555861076,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.7887278992127118,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.049241675297736265,
+            "is_normal": "False"
+          }
+        }
+      },
+      "avg_branching_factor": {
+        "test_used": "one_way_anova",
+        "statistic": 1.7264662637811747,
+        "p_value": 0.19697798597320362,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "eta_squared": 0.1133858791575215,
+        "group_means": {
+          "chemistry": 3.034230824730825,
+          "geography": 3.1011860916860914,
+          "history": 3.3429509379509375
+        },
+        "group_stds": {
+          "chemistry": 0.43878528933253436,
+          "geography": 0.2098630509465467,
+          "history": 0.4193780172211115
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.14866796058708126,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.2329243114764446,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.3762385380243007,
+            "is_normal": "True"
+          }
+        }
+      },
+      "num_bottlenecks": {
+        "test_used": "kruskal_wallis",
+        "statistic": 1.7710137914347897,
+        "p_value": 0.41250502324521277,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.0,
+        "group_means": {
+          "chemistry": 27.8,
+          "geography": 27.8,
+          "history": 28.5
+        },
+        "group_stds": {
+          "chemistry": 1.4000000000000001,
+          "geography": 1.2489995996796797,
+          "history": 0.806225774829855
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.33741972535695053,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.048343812820886053,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 0.25755075097086744,
+            "is_normal": "True"
+          }
+        }
+      },
+      "total_energy": {
+        "test_used": "kruskal_wallis",
+        "statistic": 19.021935483870976,
+        "p_value": 7.403535993447294e-05,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": true,
+        "epsilon_squared": 0.6304420549581843,
+        "group_means": {
+          "chemistry": 4900.18125,
+          "geography": 4827.430029296875,
+          "history": 6455.164111328125
+        },
+        "group_stds": {
+          "chemistry": 181.70224166142359,
+          "geography": 227.4904981207189,
+          "history": 705.1285761803688
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.0385632697959892,
+            "is_normal": "False"
+          },
+          "geography": {
+            "shapiro_p": 0.836494677007023,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.8809707039453027,
+            "is_normal": "True"
+          }
+        }
+      },
+      "avg_bottleneck_layer": {
+        "test_used": "one_way_anova",
+        "statistic": 2.508212773325163,
+        "p_value": 0.10020223888875301,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "eta_squared": 0.15668287327518848,
+        "group_means": {
+          "chemistry": 24.133236818098887,
+          "geography": 24.633247947454844,
+          "history": 21.96367268746579
+        },
+        "group_stds": {
+          "chemistry": 2.12692048235975,
+          "geography": 1.8245270661722037,
+          "history": 3.7184222844614445
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.9472948749563195,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.3516281932531271,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.17589285481898376,
+            "is_normal": "True"
+          }
+        }
+      },
+      "output_probability": {
+        "test_used": "kruskal_wallis",
+        "statistic": 12.949933214603751,
+        "p_value": 0.0015415504130170741,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": true,
+        "epsilon_squared": 0.4055530820223612,
+        "group_means": {
+          "chemistry": 0.949609375,
+          "geography": 0.7328125,
+          "history": 0.82890625
+        },
+        "group_stds": {
+          "chemistry": 0.02135615145755726,
+          "geography": 0.1335252017118398,
+          "history": 0.13842462553001544
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.8471972852785761,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.004918762184412562,
+            "is_normal": "False"
+          },
+          "history": {
+            "shapiro_p": 0.4829066607211039,
+            "is_normal": "True"
+          }
+        }
+      },
+      "weight_kurtosis": {
+        "test_used": "one_way_anova",
+        "statistic": 7.432239543034152,
+        "p_value": 0.0026822174155143714,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": true,
+        "eta_squared": 0.35506184265445506,
+        "group_means": {
+          "chemistry": 508.3325690337286,
+          "geography": 434.67173778668956,
+          "history": 657.7616780805262
+        },
+        "group_stds": {
+          "chemistry": 112.09746079729632,
+          "geography": 75.59157950994931,
+          "history": 169.28853524366227
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.6907582716109523,
+            "is_normal": "True"
+          },
+          "geography": {
+            "shapiro_p": 0.8494025753281982,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.6659943508436919,
+            "is_normal": "True"
+          }
+        }
+      },
+      "size_entropy": {
+        "test_used": "kruskal_wallis",
+        "statistic": 11.278569832402226,
+        "p_value": 0.0035554099134452485,
+        "bonferroni_alpha": 0.002777777777777778,
+        "survives_bonferroni": false,
+        "epsilon_squared": 0.34365073453341577,
+        "group_means": {
+          "chemistry": 1.6363040353377023,
+          "geography": 3.246012324877261,
+          "history": 3.428017543583119
+        },
+        "group_stds": {
+          "chemistry": 1.6388430291190732,
+          "geography": 0.0963111758794635,
+          "history": 0.13986459489156278
+        },
+        "group_ns": {
+          "chemistry": 10,
+          "geography": 10,
+          "history": 10
+        },
+        "normality": {
+          "chemistry": {
+            "shapiro_p": 0.0006769672602283767,
+            "is_normal": "False"
+          },
+          "geography": {
+            "shapiro_p": 0.9026791383566459,
+            "is_normal": "True"
+          },
+          "history": {
+            "shapiro_p": 0.2133793823496526,
+            "is_normal": "True"
+          }
+        }
+      }
+    },
+    "summary": {
+      "total_tests": 18,
+      "significant_uncorrected": 9,
+      "significant_bonferroni": 6
+    }
+  },
+  "cross_model_comparison": {
+    "metrics": {
+      "output_probability": {
+        "gemma_mean": 0.4868514428536097,
+        "gemma_std": 0.22804875683766174,
+        "gemma_median": 0.5162184983491898,
+        "qwen_mean": 0.837109375,
+        "qwen_std": 0.14265088040962323,
+        "qwen_median": 0.861328125,
+        "u_statistic": 86.0,
+        "p_value": 7.685404501893616e-08,
+        "rank_biserial_r": 0.8088888888888889,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "avg_compression_ratio": {
+        "gemma_mean": 0.5935897435897437,
+        "gemma_std": 0.07346276904146734,
+        "gemma_median": 0.5923076923076923,
+        "qwen_mean": 0.5196296296296296,
+        "qwen_std": 0.057801514592294545,
+        "qwen_median": 0.5055555555555555,
+        "u_statistic": 700.0,
+        "p_value": 0.00022394120446511884,
+        "rank_biserial_r": -0.5555555555555556,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "avg_score_decay_rate": {
+        "gemma_mean": 0.9865421505775583,
+        "gemma_std": 0.19303120776147498,
+        "gemma_median": 0.9971110069904352,
+        "qwen_mean": 0.7647551041816428,
+        "qwen_std": 0.1997508512645762,
+        "qwen_median": 0.7298081548462108,
+        "u_statistic": 695.0,
+        "p_value": 0.00030058883784483086,
+        "rank_biserial_r": -0.5444444444444445,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "avg_branching_factor": {
+        "gemma_mean": 2.9933242683242685,
+        "gemma_std": 0.31099341708559664,
+        "gemma_median": 2.992272727272727,
+        "qwen_mean": 3.1594559514559517,
+        "qwen_std": 0.3937850812330918,
+        "qwen_median": 3.131414141414141,
+        "u_statistic": 369.5,
+        "p_value": 0.2368154313039994,
+        "rank_biserial_r": 0.17888888888888888,
+        "effect_size_interpretation": "small",
+        "survives_bonferroni": "False",
+        "bonferroni_alpha": 0.003125
+      },
+      "avg_layers_visited": {
+        "gemma_mean": 15.433333333333334,
+        "gemma_std": 1.910031995078151,
+        "gemma_median": 15.4,
+        "qwen_mean": 18.706666666666663,
+        "qwen_std": 2.080854525322603,
+        "qwen_median": 18.2,
+        "u_statistic": 116.5,
+        "p_value": 8.286812779990656e-07,
+        "rank_biserial_r": 0.741111111111111,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "total_nodes": {
+        "gemma_mean": 1130.8333333333333,
+        "gemma_std": 134.37635787427624,
+        "gemma_median": 1179.5,
+        "qwen_mean": 920.7666666666667,
+        "qwen_std": 116.32617456483682,
+        "qwen_median": 863.5,
+        "u_statistic": 783.5,
+        "p_value": 8.498567855306545e-07,
+        "rank_biserial_r": -0.741111111111111,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "total_edges": {
+        "gemma_mean": 39722.433333333334,
+        "gemma_std": 9546.552936997146,
+        "gemma_median": 38213.0,
+        "qwen_mean": 39317.9,
+        "qwen_std": 11844.75313194271,
+        "qwen_median": 33293.5,
+        "u_statistic": 500.0,
+        "p_value": 0.46427291062161524,
+        "rank_biserial_r": -0.11111111111111116,
+        "effect_size_interpretation": "small",
+        "survives_bonferroni": "False",
+        "bonferroni_alpha": 0.003125
+      },
+      "num_bottlenecks": {
+        "gemma_mean": 23.333333333333332,
+        "gemma_std": 6.69991708074726,
+        "gemma_median": 26.0,
+        "qwen_mean": 28.033333333333335,
+        "qwen_std": 1.2242911781471304,
+        "qwen_median": 28.0,
+        "u_statistic": 163.0,
+        "p_value": 1.6851764064691106e-05,
+        "rank_biserial_r": 0.6377777777777778,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "weight_skewness": {
+        "gemma_mean": 4.615683235195543,
+        "gemma_std": 1.3821929674932865,
+        "gemma_median": 4.279442075196596,
+        "qwen_mean": 7.462633375182412,
+        "qwen_std": 4.615501164951056,
+        "qwen_median": 8.3139057325787,
+        "u_statistic": 212.0,
+        "p_value": 0.0004459191206574567,
+        "rank_biserial_r": 0.528888888888889,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "weight_kurtosis": {
+        "gemma_mean": 114.98584404681645,
+        "gemma_std": 61.18406390981795,
+        "gemma_median": 104.26507734384154,
+        "qwen_mean": 533.588661633648,
+        "qwen_std": 155.75611472772897,
+        "qwen_median": 525.5991035247673,
+        "u_statistic": 8.0,
+        "p_value": 6.69551896550012e-11,
+        "rank_biserial_r": 0.9822222222222222,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "top_10pct_weight_share": {
+        "gemma_mean": 0.46042903671103136,
+        "gemma_std": 0.016237041006146834,
+        "gemma_median": 0.4569177744302849,
+        "qwen_mean": 0.5189256182835232,
+        "qwen_std": 0.029391378860132048,
+        "qwen_median": 0.518758035199484,
+        "u_statistic": 35.0,
+        "p_value": 8.890991323298936e-10,
+        "rank_biserial_r": 0.9222222222222223,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "num_supernodes": {
+        "gemma_mean": 9.433333333333334,
+        "gemma_std": 4.83517206404166,
+        "gemma_median": 11.0,
+        "qwen_mean": 11.6,
+        "qwen_std": 5.438136935875496,
+        "qwen_median": 13.0,
+        "u_statistic": 232.0,
+        "p_value": 0.001127964422798449,
+        "rank_biserial_r": 0.48444444444444446,
+        "effect_size_interpretation": "medium",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "size_entropy": {
+        "gemma_mean": 2.580522028189444,
+        "gemma_std": 1.2960070951207405,
+        "gemma_median": 3.1773753532351305,
+        "qwen_mean": 2.7701113012660277,
+        "qwen_std": 1.2462591685816564,
+        "qwen_median": 3.2610752585817013,
+        "u_statistic": 335.0,
+        "p_value": 0.08950502796898761,
+        "rank_biserial_r": 0.25555555555555554,
+        "effect_size_interpretation": "small",
+        "survives_bonferroni": "False",
+        "bonferroni_alpha": 0.003125
+      },
+      "peak_layer": {
+        "gemma_mean": 14.333333333333334,
+        "gemma_std": 1.4907119849998596,
+        "gemma_median": 15.0,
+        "qwen_mean": 35.0,
+        "qwen_std": 0.0,
+        "qwen_median": 35.0,
+        "u_statistic": 0.0,
+        "p_value": 1.17723613245892e-13,
+        "rank_biserial_r": 1.0,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "total_energy": {
+        "gemma_mean": 10819.10086939931,
+        "gemma_std": 1167.5137330776083,
+        "gemma_median": 11172.569040715694,
+        "qwen_mean": 5394.258463541667,
+        "qwen_std": 870.4216412407758,
+        "qwen_median": 5011.359375,
+        "u_statistic": 900.0,
+        "p_value": 3.019859359162157e-11,
+        "rank_biserial_r": -1.0,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      },
+      "avg_bottleneck_layer": {
+        "gemma_mean": 5.58938218571552,
+        "gemma_std": 2.0637765242345485,
+        "gemma_median": 5.8695054945054945,
+        "qwen_mean": 23.5767191510065,
+        "qwen_std": 2.927298979383986,
+        "qwen_median": 24.491995073891623,
+        "u_statistic": 0.0,
+        "p_value": 3.017966798490446e-11,
+        "rank_biserial_r": 1.0,
+        "effect_size_interpretation": "large",
+        "survives_bonferroni": "True",
+        "bonferroni_alpha": 0.003125
+      }
+    },
+    "summary": {
+      "total_tests": 16,
+      "significant_uncorrected": 13,
+      "significant_bonferroni": 13,
+      "largest_effect": {
+        "metric": "peak_layer",
+        "r_rb": 1.0
+      }
+    }
+  },
+  "effect_sizes": {
+    "pairwise_cohens_d": {
+      "gemma-2-2b": {
+        "avg_compression_ratio": {
+          "chemistry_vs_geography": {
+            "d": 0.3843598749234796,
+            "interpretation": "small"
+          },
+          "chemistry_vs_history": {
+            "d": -0.2963952297354352,
+            "interpretation": "small"
+          },
+          "geography_vs_history": {
+            "d": -0.6663614494444504,
+            "interpretation": "medium"
+          }
+        },
+        "avg_score_decay_rate": {
+          "chemistry_vs_geography": {
+            "d": 0.04327385710966808,
+            "interpretation": "negligible"
+          },
+          "chemistry_vs_history": {
+            "d": -1.3328905117772354,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": -1.7881022881525388,
+            "interpretation": "large"
+          }
+        },
+        "avg_branching_factor": {
+          "chemistry_vs_geography": {
+            "d": -0.4970927067817976,
+            "interpretation": "small"
+          },
+          "chemistry_vs_history": {
+            "d": -0.0535113783166762,
+            "interpretation": "negligible"
+          },
+          "geography_vs_history": {
+            "d": 0.6315823327872893,
+            "interpretation": "medium"
+          }
+        },
+        "num_bottlenecks": {
+          "chemistry_vs_geography": {
+            "d": 0.663157894736842,
+            "interpretation": "medium"
+          },
+          "chemistry_vs_history": {
+            "d": 0.03220968762570102,
+            "interpretation": "negligible"
+          },
+          "geography_vs_history": {
+            "d": -0.523026032815805,
+            "interpretation": "medium"
+          }
+        },
+        "total_energy": {
+          "chemistry_vs_geography": {
+            "d": 4.881440437598426,
+            "interpretation": "large"
+          },
+          "chemistry_vs_history": {
+            "d": 0.36854539706111916,
+            "interpretation": "small"
+          },
+          "geography_vs_history": {
+            "d": -2.7835966320985213,
+            "interpretation": "large"
+          }
+        },
+        "avg_bottleneck_layer": {
+          "chemistry_vs_geography": {
+            "d": 0.09258016595041832,
+            "interpretation": "negligible"
+          },
+          "chemistry_vs_history": {
+            "d": -0.5159117362507074,
+            "interpretation": "medium"
+          },
+          "geography_vs_history": {
+            "d": -0.5697521213922513,
+            "interpretation": "medium"
+          }
+        },
+        "output_probability": {
+          "chemistry_vs_geography": {
+            "d": 3.8996208620566253,
+            "interpretation": "large"
+          },
+          "chemistry_vs_history": {
+            "d": -0.36483575421120906,
+            "interpretation": "small"
+          },
+          "geography_vs_history": {
+            "d": -4.354331698790539,
+            "interpretation": "large"
+          }
+        },
+        "weight_kurtosis": {
+          "chemistry_vs_geography": {
+            "d": 0.6475274821813959,
+            "interpretation": "medium"
+          },
+          "chemistry_vs_history": {
+            "d": 0.25826097619396754,
+            "interpretation": "small"
+          },
+          "geography_vs_history": {
+            "d": -0.9242035695944668,
+            "interpretation": "large"
+          }
+        },
+        "size_entropy": {
+          "chemistry_vs_geography": {
+            "d": -0.8720753918365001,
+            "interpretation": "large"
+          },
+          "chemistry_vs_history": {
+            "d": -1.2317148208176003,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": -0.38292733907193444,
+            "interpretation": "small"
+          }
+        }
+      },
+      "qwen3-4b": {
+        "avg_compression_ratio": {
+          "chemistry_vs_geography": {
+            "d": 0.19493722944370526,
+            "interpretation": "negligible"
+          },
+          "chemistry_vs_history": {
+            "d": 0.6806463113180298,
+            "interpretation": "medium"
+          },
+          "geography_vs_history": {
+            "d": 0.545923964236651,
+            "interpretation": "medium"
+          }
+        },
+        "avg_score_decay_rate": {
+          "chemistry_vs_geography": {
+            "d": -2.345132716415158,
+            "interpretation": "large"
+          },
+          "chemistry_vs_history": {
+            "d": -1.2546734343477055,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": 0.2575913674656296,
+            "interpretation": "small"
+          }
+        },
+        "avg_branching_factor": {
+          "chemistry_vs_geography": {
+            "d": -0.18468709334758818,
+            "interpretation": "negligible"
+          },
+          "chemistry_vs_history": {
+            "d": -0.6823940104692279,
+            "interpretation": "medium"
+          },
+          "geography_vs_history": {
+            "d": -0.6916663151961103,
+            "interpretation": "medium"
+          }
+        },
+        "num_bottlenecks": {
+          "chemistry_vs_geography": {
+            "d": 0.0,
+            "interpretation": "negligible"
+          },
+          "chemistry_vs_history": {
+            "d": -0.5813183589761791,
+            "interpretation": "medium"
+          },
+          "geography_vs_history": {
+            "d": -0.6317396794759955,
+            "interpretation": "medium"
+          }
+        },
+        "total_energy": {
+          "chemistry_vs_geography": {
+            "d": 0.3352443856088614,
+            "interpretation": "small"
+          },
+          "chemistry_vs_history": {
+            "d": -2.86505512172504,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": -2.9474745039055468,
+            "interpretation": "large"
+          }
+        },
+        "avg_bottleneck_layer": {
+          "chemistry_vs_geography": {
+            "d": -0.23939038535842475,
+            "interpretation": "small"
+          },
+          "chemistry_vs_history": {
+            "d": 0.6794935299627457,
+            "interpretation": "medium"
+          },
+          "geography_vs_history": {
+            "d": 0.8647208487793788,
+            "interpretation": "large"
+          }
+        },
+        "output_probability": {
+          "chemistry_vs_geography": {
+            "d": 2.1510030178483523,
+            "interpretation": "large"
+          },
+          "chemistry_vs_history": {
+            "d": 1.1562010379004173,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": -0.6703276537898164,
+            "interpretation": "medium"
+          }
+        },
+        "weight_kurtosis": {
+          "chemistry_vs_geography": {
+            "d": 0.7309465695711982,
+            "interpretation": "medium"
+          },
+          "chemistry_vs_history": {
+            "d": -0.9874020632705265,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": -1.6143936744025957,
+            "interpretation": "large"
+          }
+        },
+        "size_entropy": {
+          "chemistry_vs_geography": {
+            "d": -1.3155198811055335,
+            "interpretation": "large"
+          },
+          "chemistry_vs_history": {
+            "d": -1.4614757032177907,
+            "interpretation": "large"
+          },
+          "geography_vs_history": {
+            "d": -1.4379305804866276,
+            "interpretation": "large"
+          }
+        }
+      }
+    },
+    "eta_squared_from_anova": {
+      "gemma-2-2b": {
+        "avg_compression_ratio": 0.07487360662727648,
+        "avg_score_decay_rate": 0.35417896543200145,
+        "avg_branching_factor": 0.05838613047986481,
+        "num_bottlenecks": 0.08122663179249827,
+        "total_energy": 0.6152449223416965,
+        "avg_bottleneck_layer": 0.06729157138400094,
+        "output_probability": 0.6543369175627242,
+        "weight_kurtosis": 0.18743130227001253,
+        "size_entropy": 0.0
+      },
+      "qwen3-4b": {
+        "avg_compression_ratio": 0.04290831950738358,
+        "avg_score_decay_rate": 0.3515412186379931,
+        "avg_branching_factor": 0.1133858791575215,
+        "num_bottlenecks": 0.0,
+        "total_energy": 0.6304420549581843,
+        "avg_bottleneck_layer": 0.15668287327518848,
+        "output_probability": 0.4055530820223612,
+        "weight_kurtosis": 0.35506184265445506,
+        "size_entropy": 0.34365073453341577
+      }
+    },
+    "rank_biserial_from_mannwhitney": {
+      "output_probability": 0.8088888888888889,
+      "avg_compression_ratio": -0.5555555555555556,
+      "avg_score_decay_rate": -0.5444444444444445,
+      "avg_branching_factor": 0.17888888888888888,
+      "avg_layers_visited": 0.741111111111111,
+      "total_nodes": -0.741111111111111,
+      "total_edges": -0.11111111111111116,
+      "num_bottlenecks": 0.6377777777777778,
+      "weight_skewness": 0.528888888888889,
+      "weight_kurtosis": 0.9822222222222222,
+      "top_10pct_weight_share": 0.9222222222222223,
+      "num_supernodes": 0.48444444444444446,
+      "size_entropy": 0.25555555555555554,
+      "peak_layer": 1.0,
+      "total_energy": -1.0,
+      "avg_bottleneck_layer": 1.0
+    }
+  },
+  "bottleneck_convergence": {
+    "gemma-2-2b": {
+      "convergence_vs_confidence": {
+        "spearman_r": 0.2703003337041157,
+        "spearman_p": 0.14855961563512166,
+        "pearson_r": 0.24904179810852017,
+        "pearson_p": 0.18446896143051317,
+        "n": 30
+      },
+      "convergence_by_category": {
+        "chemistry": {
+          "mean": 0.7723798947900898,
+          "std": 0.10780047035659442
+        },
+        "geography": {
+          "mean": 0.7358791726791727,
+          "std": 0.09788216190721383
+        },
+        "history": {
+          "mean": 0.80451646693026,
+          "std": 0.09233339985303025
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 2.3922580645161275,
+        "p_value": 0.30236238451109987
+      }
+    },
+    "qwen3-4b": {
+      "convergence_vs_confidence": {
+        "spearman_r": -0.17649677712915793,
+        "spearman_p": 0.350825873905274,
+        "pearson_r": -0.25433982665976396,
+        "pearson_p": 0.1750004611602907,
+        "n": 30
+      },
+      "convergence_by_category": {
+        "chemistry": {
+          "mean": 0.8612330231709542,
+          "std": 0.06797246286177024
+        },
+        "geography": {
+          "mean": 0.9051147235905856,
+          "std": 0.050359666022482694
+        },
+        "history": {
+          "mean": 0.8458704615945998,
+          "std": 0.06785831177768065
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 4.305473965287057,
+        "p_value": 0.11616577855337484
+      }
+    },
+    "combined": {
+      "convergence_vs_confidence": {
+        "spearman_r": 0.3368021785644816,
+        "spearman_p": 0.008504846832606518,
+        "pearson_r": 0.4020229391453816,
+        "pearson_p": 0.0014523069762170096,
+        "n": 60
+      },
+      "convergence_by_category": {
+        "chemistry": {
+          "mean": 0.8168064589805221,
+          "std": 0.10047048404414831
+        },
+        "geography": {
+          "mean": 0.8204969481348794,
+          "std": 0.11497249546667836
+        },
+        "history": {
+          "mean": 0.8251934642624299,
+          "std": 0.08362201756441179
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 0.04943034984854502,
+        "p_value": 0.9755877443128064
+      }
+    }
+  },
+  "concentration_index": {
+    "gemma-2-2b": {
+      "descriptive_stats": {
+        "mean": 0.0013647720949447458,
+        "std": 0.0006978560387134279,
+        "median": 0.0011540496218689464,
+        "min": 0.0006745213490036014,
+        "max": 0.0047086534262007216
+      },
+      "vs_output_probability": {
+        "spearman_r": 0.14482758620689654,
+        "spearman_p": 0.4451139889332254,
+        "pearson_r": 0.23427240091665524,
+        "pearson_p": 0.21273944068597211,
+        "n": 30
+      },
+      "by_category": {
+        "chemistry": {
+          "mean": 0.0015135324968536697,
+          "std": 0.001081425548011925
+        },
+        "geography": {
+          "mean": 0.0013754741315677372,
+          "std": 0.0003737099955036828
+        },
+        "history": {
+          "mean": 0.0012053096564128298,
+          "std": 0.0003227945408578145
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 1.1561290322580646,
+        "p_value": 0.5609830902172135
+      }
+    },
+    "qwen3-4b": {
+      "descriptive_stats": {
+        "mean": 0.007298289077788253,
+        "std": 0.0019417520328497315,
+        "median": 0.007227917392443672,
+        "min": 0.0034984130220620134,
+        "max": 0.012088070731898262
+      },
+      "vs_output_probability": {
+        "spearman_r": -0.23189052143240044,
+        "spearman_p": 0.21756109624367714,
+        "pearson_r": -0.20515849595840072,
+        "pearson_p": 0.2767841775130001,
+        "n": 30
+      },
+      "by_category": {
+        "chemistry": {
+          "mean": 0.007479685708688215,
+          "std": 0.0019036837719132822
+        },
+        "geography": {
+          "mean": 0.007941446848177542,
+          "std": 0.0011716057328880548
+        },
+        "history": {
+          "mean": 0.006473734676499003,
+          "std": 0.0022777366745185016
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 5.390967741935469,
+        "p_value": 0.06750970788220369
+      }
+    },
+    "combined": {
+      "descriptive_stats": {
+        "mean": 0.0043315305863665,
+        "std": 0.0033061091860895203,
+        "median": 0.0039467461240289894,
+        "min": 0.0006745213490036014,
+        "max": 0.012088070731898262
+      },
+      "vs_output_probability": {
+        "spearman_r": 0.6053322594418405,
+        "spearman_p": 2.997193838783496e-07,
+        "pearson_r": 0.5963936755136428,
+        "pearson_p": 4.947552693952592e-07,
+        "n": 60
+      },
+      "by_category": {
+        "chemistry": {
+          "mean": 0.004496609102770941,
+          "std": 0.003360876760079184
+        },
+        "geography": {
+          "mean": 0.0046584604898726395,
+          "std": 0.0033961977277322717
+        },
+        "history": {
+          "mean": 0.0038395221664559174,
+          "std": 0.0030959999814429264
+        }
+      },
+      "kruskal_wallis": {
+        "statistic": 1.4291803278688633,
+        "p_value": 0.489392641456074
+      }
+    }
+  },
+  "metadata": {
+    "timestamp": "2026-02-25 00:15:37.564603",
+    "n_circuits": 60,
+    "models": [
+      "gemma-2-2b",
+      "qwen3-4b"
+    ],
+    "categories": [
+      "chemistry",
+      "geography",
+      "history"
+    ]
+  }
+}

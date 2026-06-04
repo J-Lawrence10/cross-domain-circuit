@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-Domain Circuit Analysis of Factual Knowledge Retrieval in LLMs</title>
+<meta name="description" content="Cross-domain circuit analysis of factual knowledge retrieval in Gemma-2-2B and Qwen3-4B using attribution graphs, traceback graphing, and causal steering.">
+<meta name="keywords" content="mechanistic interpretability, attribution graphs, sparse autoencoders, bottleneck features, factual recall, information bottleneck theory, activation steering, Gemma, Qwen">
+<meta property="og:title" content="Cross-Domain Circuit Analysis of Factual Knowledge Retrieval in LLMs">
+<meta property="og:description" content="Architecture explains ~14x more variance in circuit structure than knowledge domain. We introduce traceback graphing and report a 'bottleneck tax' linking bottleneck-layer activation to confidence.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── Theme variables ──────────────────────────────────────── */
+:root {
+  --bg:          #0d1117;
+  --bg2:         #161b22;
+  --bg3:         #21262d;
+  --border:      #30363d;
+  --text:        #c9d1d9;
+  --text-muted:  #8b949e;
+  --link:        #58a6ff;
+  --green:       #3fb950;
+  --orange:      #e67e22;
+  --purple:      #8854d0;
+  --red:         #f85149;
+  --hero-bg:     #0d1117;
+  --section-bg:  #0d1117;
+  --footer-bg:   #161b22;
+  --hr-color:    #30363d;
+  --code-bg:     #161b22;
+  --phase1-bg:   rgba(230,126,34,0.10);
+  --phase2-bg:   rgba(88,166,255,0.10);
+  --phase3-bg:   rgba(136,84,208,0.10);
+  --finding-bg:  rgba(63,185,80,0.10);
+  --finding-bdr: #3fb950;
+  --smoking-bg:  rgba(249,168,37,0.15);
+  --smoking-bdr: #d29922;
+  --table-head:  #161b22;
+  --table-even:  rgba(22,27,34,0.6);
+  /* SVG theme tokens */
+  --svg-box-blue-fill:   rgba(88,166,255,0.12);
+  --svg-box-blue-stroke: #58a6ff;
+  --svg-box-orange-fill: rgba(230,126,34,0.12);
+  --svg-box-orange-stroke: #e67e22;
+  --svg-text:            #c9d1d9;
+  --svg-text-muted:      #8b949e;
+  --svg-text-blue:       #58a6ff;
+  --svg-text-orange:     #e67e22;
+  --svg-divider:         #30363d;
+  --svg-bar-blue:        #3273dc;
+  --svg-bar-orange:      #e67e22;
+  --svg-bar-purple:      #8854d0;
+  --svg-bar-label:       #8b949e;
+}
+[data-theme="light"] {
+  --bg:          #ffffff;
+  --bg2:         #f6f8fa;
+  --bg3:         #eaeef2;
+  --border:      #d0d7de;
+  --text:        #1f2328;
+  --text-muted:  #57606a;
+  --link:        #0969da;
+  --green:       #1a7f37;
+  --orange:      #bc4c00;
+  --purple:      #6639ba;
+  --red:         #cf222e;
+  --hero-bg:     #ffffff;
+  --section-bg:  #ffffff;
+  --footer-bg:   #f6f8fa;
+  --hr-color:    #ededed;
+  --code-bg:     #eaeef2;
+  --phase1-bg:   #fff9f5;
+  --phase2-bg:   #f5f9ff;
+  --phase3-bg:   #f9f5ff;
+  --finding-bg:  #f6fff8;
+  --finding-bdr: #1a7f37;
+  --smoking-bg:  #fffde7;
+  --smoking-bdr: #f9a825;
+  --table-head:  #f6f8fa;
+  --table-even:  #f6f8fa;
+  --svg-box-blue-fill:   #f0f4ff;
+  --svg-box-blue-stroke: #3273dc;
+  --svg-box-orange-fill: #fff9e6;
+  --svg-box-orange-stroke: #e67e22;
+  --svg-text:            #1a1a1a;
+  --svg-text-muted:      #555555;
+  --svg-text-blue:       #3273dc;
+  --svg-text-orange:     #bc4c00;
+  --svg-divider:         #dddddd;
+  --svg-bar-blue:        #3273dc;
+  --svg-bar-orange:      #e67e22;
+  --svg-bar-purple:      #8854d0;
+  --svg-bar-label:       #555555;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+html { font-size: 12pt; }
+body {
+  font-family: 'DM Sans', sans-serif !important;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+code, pre { font-family: 'DM Mono', monospace !important; background: var(--code-bg) !important; color: var(--link) !important; }
+a { color: var(--link); }
+a:hover { color: var(--link); opacity: 0.8; }
+
+/* ── Bulma overrides ──────────────────────────────────────── */
+.hero { background: var(--hero-bg) !important; }
+.section { background: var(--section-bg) !important; }
+.footer { background: var(--footer-bg) !important; color: var(--text-muted); }
+.footer a { color: var(--link); }
+.title { color: var(--text) !important; }
+.content { color: var(--text); }
+.content h2, .content h3, .content h4, .content h5 { color: var(--text) !important; }
+.content p, .content li, .content ol, .content ul { color: var(--text); }
+.content strong { color: var(--text); }
+.content em { color: var(--text-muted); }
+.table { background: var(--bg2) !important; color: var(--text) !important; border-color: var(--border) !important; }
+.table thead th { background: var(--table-head) !important; color: var(--text-muted) !important; border-color: var(--border) !important; }
+.table td, .table th { border-color: var(--border) !important; color: var(--text) !important; }
+.table.is-hoverable tbody tr:hover { background: var(--bg3) !important; }
+.table tbody tr:nth-child(even) td { background: var(--table-even) !important; }
+.is-size-5 { color: var(--text-muted); }
+
+/* ── Layout helpers ───────────────────────────────────────── */
+.max-width-content { max-width: 70vw; margin: 0 auto; }
+hr.section-divider { background-color: var(--hr-color); height: 1px; border: none; width: 90vw; margin: 0 auto; }
+.publication-links .link-block { margin: 5px; display: inline-block; }
+.figure-caption { color: var(--text-muted); font-size: 0.9em; margin-top: 10px; line-height: 1.5; }
+.figure-number { font-weight: 700; color: var(--text); }
+.paper-figure { width: 100%; max-width: 760px; display: block; margin: 0 auto; border: 1px solid var(--border); border-radius: 6px; background: var(--bg2); }
+.paper-figure-hero {
+  /* hero figures get slightly more emphasis than standard figures */
+  max-width: 95%;
+  margin: 0.5em auto;
+  display: block;
+}
+hr.results-subsection-divider {
+  border: 0;
+  border-top: 1px dashed var(--border);
+  width: 60%;
+  margin: 2em auto;
+  opacity: 0.6;
+}
+.results-subsection {
+  margin-bottom: 1.5em;
+}
+
+/* ── Theme toggle button ──────────────────────────────────── */
+#theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 9999;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, border-color 0.2s;
+}
+#theme-toggle:hover { border-color: var(--link); color: var(--link); }
+
+/* ── Circuit phase boxes ──────────────────────────────────── */
+.phase-box { border-radius: 6px; padding: 14px 18px; margin: 8px 0; }
+.phase-input  { background: var(--bg3); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 12px 18px; font-family: 'DM Mono', monospace; font-size: 0.9em; text-align: center; }
+.phase-output { background: var(--bg3); color: var(--green); border: 1px solid var(--border); border-radius: 6px; padding: 12px 18px; font-family: 'DM Mono', monospace; font-size: 0.9em; text-align: center; }
+.phase-1 { border-left: 4px solid var(--orange); background: var(--phase1-bg); }
+.phase-2 { border-left: 4px solid var(--link);   background: var(--phase2-bg); }
+.phase-3 { border-left: 4px solid var(--purple);  background: var(--phase3-bg); }
+.phase-label   { font-size: 0.75em; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+.phase-label-1 { color: var(--orange); }
+.phase-label-2 { color: var(--link); }
+.phase-label-3 { color: var(--purple); }
+.phase-feature { font-family: 'DM Mono', monospace; font-size: 0.8em; color: var(--text); margin: 2px 0; }
+.phase-feature strong { color: var(--text); }
+.phase-arrow   { text-align: center; font-size: 1.8em; color: var(--text-muted); line-height: 1.2; margin: 2px 0; }
+.smoking-gun   { background: var(--smoking-bg); border: 2px solid var(--smoking-bdr); border-radius: 4px; padding: 2px 6px; font-weight: 700; color: var(--text); }
+.finding-box   { border-left: 4px solid var(--finding-bdr); background: var(--finding-bg); padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+.finding-box p { margin: 0; color: var(--text); }
+
+/* ── SVG theming via CSS vars ─────────────────────────────── */
+.svg-box-blue   { fill: var(--svg-box-blue-fill);   stroke: var(--svg-box-blue-stroke);   stroke-width: 1.5; }
+.svg-box-orange { fill: var(--svg-box-orange-fill); stroke: var(--svg-box-orange-stroke); stroke-width: 1.5; }
+.svg-box-bg     { fill: var(--bg2); stroke: var(--border); stroke-width: 1; }
+.svg-text-main  { fill: var(--svg-text); }
+.svg-text-muted { fill: var(--svg-text-muted); }
+.svg-text-blue  { fill: var(--svg-text-blue);   font-weight: 600; }
+.svg-text-orange{ fill: var(--svg-text-orange); font-weight: 600; }
+.svg-text-green { fill: var(--green); font-weight: 700; }
+.svg-divider    { stroke: var(--svg-divider); }
+.svg-arrow      { fill: var(--text-muted); }
+.svg-bar-blue   { fill: var(--svg-bar-blue); }
+.svg-bar-orange { fill: var(--svg-bar-orange); }
+.svg-bar-purple { fill: var(--svg-bar-purple); }
+.svg-bar-label  { fill: var(--svg-bar-label); }
+.svg-circle-blue   { fill: rgba(88,166,255,0.12); stroke: #58a6ff; stroke-width: 2; }
+.svg-circle-purple { fill: rgba(136,84,208,0.12); stroke: #8854d0; stroke-width: 2; }
+[data-theme="light"] .svg-circle-blue   { fill: rgba(50,115,220,0.12); stroke: #3273dc; }
+[data-theme="light"] .svg-circle-purple { fill: rgba(136,84,208,0.12); stroke: #8854d0; }
+
+/* ── Bar chart ────────────────────────────────────────────── */
+.bar-chart { margin: 16px 0; }
+.bar-row { display: flex; align-items: center; margin: 6px 0; gap: 10px; }
+.bar-row-label { width: 100px; font-size: 0.8em; color: var(--text-muted); font-family: 'DM Mono', monospace; text-align: right; }
+.bar-fill { height: 24px; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; color: white; font-size: 0.75em; font-weight: 600; }
+.bar-value { font-size: 0.75em; color: var(--text-muted); margin-left: 6px; font-family: 'DM Mono', monospace; }
+
+/* ── Supplementary cards ──────────────────────────────────── */
+.supp-card { border: 1px solid var(--border); border-radius: 8px; padding: 20px; background: var(--bg2); }
+.supp-card p { color: var(--text-muted); }
+.supp-card a.button.is-dark { background: #363636; color: #fff; }
+[data-theme="light"] .supp-card { background: #f6f8fa; border-color: #d0d7de; }
+
+/* ── TLDR finding cards (key findings grid) ───────────────── */
+.findings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 18px 0; }
+.finding-card { border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; background: var(--bg2); }
+.finding-card .finding-icon { font-size: 1.4em; margin-bottom: 6px; color: var(--link); }
+.finding-card .finding-title { font-weight: 700; color: var(--text); margin-bottom: 4px; font-size: 0.95em; }
+.finding-card .finding-body { color: var(--text-muted); font-size: 0.85em; line-height: 1.45; }
+.finding-card.green { border-left: 4px solid var(--green); }
+.finding-card.blue  { border-left: 4px solid var(--link); }
+.finding-card.orange{ border-left: 4px solid var(--orange); }
+.finding-card.purple{ border-left: 4px solid var(--purple); }
+.key-findings-list { list-style: none; padding-left: 0; margin: 1em 0; }
+.key-findings-list li {
+  padding: 0.75em 1em;
+  margin-bottom: 0.5em;
+  background: var(--finding-bg);
+  border-left: 3px solid var(--finding-bdr);
+  border-radius: 4px;
+}
+.key-findings-list a { color: var(--link); font-weight: 500; text-decoration: none; }
+.key-findings-list a:hover { text-decoration: underline; }
+
+/* Glossary deep-link icons */
+.gloss-link {
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 2px;
+}
+.gloss-link:hover { color: var(--link); }
+</style>
+</head>
+<body>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+  <span id="theme-icon">☀️</span>
+  <span id="theme-label">Light mode</span>
+</button>
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('theme-icon').textContent  = isDark ? '🌙' : '☀️';
+  document.getElementById('theme-label').textContent = isDark ? 'Dark mode' : 'Light mode';
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
+// Restore saved preference
+(function() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.addEventListener('DOMContentLoaded', function() {
+    const isDark = saved === 'dark';
+    document.getElementById('theme-icon').textContent  = isDark ? '☀️' : '🌙';
+    document.getElementById('theme-label').textContent = isDark ? 'Light mode' : 'Dark mode';
+  });
+})();
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-body" style="padding: 3rem 1.5rem 0.5rem 1.5rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+            Cross-Domain Circuit Analysis of<br>
+            Factual Knowledge Retrieval in LLMs
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="margin: 0 8px;">
+              <a href="https://www.linkedin.com/in/joseph-lawrence-0a68512a2/" target="_blank" style="color:var(--link);">Joseph Lawrence</a>
+            </span>
+            <span style="color:var(--text-muted);">·</span>
+            <span class="author-block" style="margin: 0 8px;">
+              <a href="https://www.linkedin.com/in/kkrampis/" target="_blank" style="color:var(--link);">Konstantinos Krampis</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors" style="margin-top:4px;">
+            <span style="color:var(--text-muted);">Mechanistic Interpretability &nbsp;·&nbsp; April 2026</span>
+          </div>
+          <div class="column has-text-centered" style="margin-top:16px;">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="papers/pdf/CROSS_DOMAIN_CIRCUIT_PAPER.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon"><i class="fa-solid fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/KKrampis/autocircuit" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="glossary.html" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon"><i class="fa-solid fa-book"></i></span>
+                  <span>Glossary</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#supplementary" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="index.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fa-solid fa-diagram-project"></i></span>
+                  <span>Companion Paper</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ABSTRACT -->
+<section class="section" style="padding-top:1.5rem;" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <p><b>TLDR:</b> Across 60 attribution graphs spanning chemistry, geography, and history on <span style="font-variant:small-caps;">Gemma-2-2B</span> and <span style="font-variant:small-caps;">Qwen3-4B</span>, model architecture explains roughly <strong>14× more variance in circuit structure than knowledge domain</strong>. We introduce <strong>traceback graphing</strong>, identify a <strong>"bottleneck tax"</strong> linking bottleneck-layer activation to lower confidence, and show via 80 steering experiments that pathway topology, cross-circuit frequency, and text-level steerability decouple into a three-tier dissociation.</p>
+        <br>
+        <h2 class="title is-4">Abstract</h2>
+        <div class="content has-text-left">
+          <p>We characterize the cross-domain organization of factual knowledge circuits in two large language models by analyzing attribution graphs for 60 prompts spanning three knowledge domains: chemical symbol lookup (10 prompts), world capital retrieval (10 prompts), and historical date recall (10 prompts), generated for both <span style="font-variant:small-caps;">Gemma-2-2B</span> and <span style="font-variant:small-caps;">Qwen3-4B</span> via the Neuronpedia API. We introduce <strong>traceback graphing</strong>, a backward breadth-first search with geometric score decay (factor 0.8) that traces critical paths from output predictions back to input features and identifies bottleneck features where 60% or more of paths converge.</p>
+          <p>Per-layer activation energy profiling reveals that within-model profile similarity is <strong>0.978</strong> across knowledge domains while between-model similarity is only <strong>0.696</strong>. We term this pattern <strong>"architecture dominance,"</strong> the observation that within-model energy profile similarity clusters roughly 14× more tightly than between-model similarity, with knowledge domain modulating the profile by less than 2%. The two architectures use complementary energy accumulation strategies, <span style="font-variant:small-caps;">Gemma</span> front-loading 54% of activation energy into layers 0–12 while <span style="font-variant:small-caps;">Qwen</span> back-loads with only 31% in the corresponding first half, yet both achieve comparable factual recall accuracy. Within each architecture we identify <strong>universal bottleneck features</strong> (features serving as bottlenecks across all three knowledge domains): six in <span style="font-variant:small-caps;">Gemma</span> and 15 in <span style="font-variant:small-caps;">Qwen</span>, with zero overlap between architectures. Their dominant categories (code, language) suggest a routing-infrastructure function rather than a knowledge-storage one.</p>
+          <p>In <span style="font-variant:small-caps;">Gemma</span>, activation energy at the bottleneck layer L6 negatively correlates with output confidence (Spearman r = −0.684, Bonferroni-significant), while energy at post-bottleneck layers L13 and L16 positively predicts confidence (r ≈ +0.60). We term this pattern the <strong>"bottleneck tax,"</strong> heavier activation concentration at the bottleneck layer predicting lower downstream confidence, and interpret it through information bottleneck theory (Tishby &amp; Zaslavsky, 2015) as evidence consistent with over-compression at intermediate layers reducing the information available for downstream evidence accumulation. Causal validation via 80 steering experiments reveals a <strong>three-tier dissociation</strong>: essential-pathway topology predicts distributional perturbation strength (mean KL = 1.448), cross-circuit frequency does not predict causal influence, and text-level output changes are governed by output entropy rather than feature-selection criteria. Circuit redundancy (94.1% of nodes are non-essential) absorbs even strong tier-1 perturbations before they reach the output layer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- KEY FINDINGS / TLDR GRID -->
+<section class="section" style="padding-top:1rem;" id="key-findings">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Key Findings</h2>
+    <div class="content">
+      <ul class="key-findings-list">
+        <li><strong>Architecture dominance.</strong> Across 60 circuits, model architecture explains ~14× more variance in layer-energy profiles than knowledge domain. <span style="font-variant:small-caps;">Gemma</span> front-loads 54% of energy into early layers; <span style="font-variant:small-caps;">Qwen</span> back-loads with 31%. Both produce comparable factual recall. <a href="#results-architecture">[Jump to §3.2 →]</a></li>
+        <li><strong>Universal bottleneck features.</strong> Six <span style="font-variant:small-caps;">Gemma</span> and 15 <span style="font-variant:small-caps;">Qwen</span> features participate in circuits across chemistry, geography, AND history. Zero cross-architecture overlap. Function: routing infrastructure, not knowledge stores. <a href="#results-universal">[Jump to §3.3 →]</a></li>
+        <li><strong>The bottleneck tax.</strong> More activation at <span style="font-variant:small-caps;">Gemma</span>'s bottleneck layer L6 predicts <em>worse</em> output confidence (r = −0.684, Bonferroni-significant). Counter-intuitive correlation consistent with information bottleneck theory. <a href="#results-bottleneck-tax">[Jump to §3.5 →]</a></li>
+        <li><strong>The three-tier dissociation.</strong> 80 steering experiments reveal that pathway topology, cross-circuit frequency, and text-level behavior each measure different things. Essential-pathway features perturb distributions strongest (KL = 1.448) but 94% circuit redundancy absorbs them. <a href="#results-steering">[Jump to §3.7 →]</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 1. INTRODUCTION -->
+<section class="section" style="padding-top:1rem;" id="introduction">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-4">1. Introduction</h2>
+
+      <h3 class="title is-5">1.1 Motivation</h3>
+      <p>Large language models encode vast factual knowledge, yet how this knowledge is organized at the circuit level remains poorly understood. When a model predicts that the chemical symbol for gold is "Au" or that the capital of Japan is "Tokyo," which internal features are responsible?</p>
+      <p>A central question is whether different knowledge types (symbolic mappings, geographic relations, temporal facts) use separate specialised circuits or share common computational infrastructure. Both possibilities are consistent with the existing mechanistic-interpretability literature, and the question has been studied only piecemeal.</p>
+      <p>The answer matters for model editing and targeted intervention. If factual knowledge is organized by domain, interventions must be domain-specific. If circuits share universal bottleneck features<a href="glossary.html#universal-bottleneck-features" class="gloss-link" title="See glossary">ⓘ</a>, a small number of features could provide efficient intervention points across multiple knowledge types.</p>
+
+      <h3 class="title is-5" style="margin-top:1.4rem;">1.2 Research Questions</h3>
+      <ol>
+        <li><strong>Within-domain convergence.</strong> Do prompts querying the same type of knowledge (e.g., chemical symbols) share circuit architecture?</li>
+        <li><strong>Cross-domain divergence.</strong> Do different knowledge types use different circuit features or layer depths?</li>
+        <li><strong>Universal bottlenecks.</strong> Are there features that participate in circuits across all knowledge domains?</li>
+        <li><strong>Architecture vs. domain.</strong> Is circuit structure more determined by model architecture or by the type of knowledge being retrieved?</li>
+      </ol>
+
+      <h3 class="title is-5" style="margin-top:1.4rem;">1.3 Contributions</h3>
+      <p>We present six contributions:</p>
+      <ol>
+        <li><strong>Systematic cross-domain circuit analysis.</strong> The first large-scale comparison of attribution circuits across three knowledge domains on two model architectures (60 circuits total), with statistical validation via permutation tests (p &lt; 0.0001).</li>
+        <li><strong>Architecture-dominance finding.</strong> Demonstration that bottleneck depth is determined by model architecture, not knowledge domain. <span style="font-variant:small-caps;">Gemma</span> consistently uses early bottlenecks (L5–7) and <span style="font-variant:small-caps;">Qwen</span> uses late bottlenecks (L22–25) regardless of whether the task involves chemistry, geography, or history. Cross-model Mann–Whitney tests confirm 13/16 structural metrics differ significantly (Bonferroni-corrected).</li>
+        <li><strong>Universal bottleneck identification.</strong> Discovery of 6 universal bottleneck features in <span style="font-variant:small-caps;">Gemma</span> and 15 in <span style="font-variant:small-caps;">Qwen</span> that participate in circuits across all three knowledge domains, with zero overlap between architectures.</li>
+        <li><strong>Output–path convergence dissociation.</strong> Finding that same-domain circuits share output features far more than intermediate features (up to 4.4× ratio), revealing convergent predictions from divergent internal processing.</li>
+        <li><strong>Confidence–energetics model.</strong> A three-predictor regression model explains 49% of <span style="font-variant:small-caps;">Gemma</span> prediction-confidence variance using total activation energy<a href="glossary.html#activation-energy" class="gloss-link" title="See glossary">ⓘ</a>, edge weight kurtosis, and circuit size (F(3,26) = 8.30, p &lt; 0.001). Bottleneck position and convergence do not significantly predict confidence, constraining "bottleneck quality" explanations.</li>
+        <li><strong>Three-tier causal dissociation.</strong> 80 steering experiments reveal that essential-pathway features produce strong distributional perturbations (mean KL = 1.448) but neither pathway topology nor cross-circuit frequency predicts text-level output changes: circuit redundancy absorbs perturbations, and output determinism governs steering susceptibility.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 2. METHODOLOGY -->
+<section class="section" style="padding-top:1rem;" id="methods">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">2. Methodology</h2>
+    <div class="content">
+      <p>Attribution graphs were generated via the Neuronpedia <code>/api/graph/generate</code> endpoint with <code>maxFeatureNodes=3000</code>, <code>desiredLogitProb=0.95</code>, <code>nodeThreshold=0.8</code>, <code>edgeThreshold=0.85</code>. Graphs typically contain 1,000–1,500 nodes and 40,000–80,000 edges. Our core analytical method is a backward breadth-first search from the top-K output nodes that traces critical paths through intermediate layers and identifies bottleneck features where 60%+ of paths converge.</p>
+
+      <div class="max-width-content" style="margin: 24px auto;">
+        <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;display:block;margin:0 auto;">
+          <defs>
+            <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L6,3 z" class="svg-arrow"/>
+            </marker>
+          </defs>
+          <!-- Input box -->
+          <rect x="10" y="90" width="120" height="40" rx="6" class="svg-box-blue"/>
+          <text x="70" y="115" text-anchor="middle" font-family="DM Mono,monospace" font-size="12" class="svg-text-main">"Capital of</text>
+          <text x="70" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-blue">PROMPT</text>
+          <text x="70" y="148" text-anchor="middle" font-family="DM Mono,monospace" font-size="12" class="svg-text-main">Japan is"</text>
+          <line x1="130" y1="110" x2="170" y2="110" stroke-width="1.5" class="svg-divider" marker-end="url(#arr2)"/>
+
+          <!-- Graph box -->
+          <rect x="170" y="60" width="200" height="100" rx="6" class="svg-box-bg"/>
+          <text x="270" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-muted">ATTRIBUTION GRAPH</text>
+          <text x="270" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" class="svg-text-main">~1,200 nodes</text>
+          <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" class="svg-text-main">~60K edges</text>
+          <text x="270" y="125" text-anchor="middle" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">SAE features × layers</text>
+          <text x="270" y="145" text-anchor="middle" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">Neuronpedia API</text>
+          <line x1="370" y1="110" x2="410" y2="110" stroke-width="1.5" class="svg-divider" marker-end="url(#arr2)"/>
+
+          <!-- Traceback box -->
+          <rect x="410" y="60" width="200" height="100" rx="6" class="svg-box-orange"/>
+          <text x="510" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-orange">TRACEBACK BFS</text>
+          <text x="510" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" class="svg-text-main">Backward search</text>
+          <text x="510" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" class="svg-text-main">decay = 0.8</text>
+          <text x="510" y="125" text-anchor="middle" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">Top-K paths</text>
+          <text x="510" y="145" text-anchor="middle" font-family="DM Mono,monospace" font-size="10" class="svg-text-muted">depth ≤ 20</text>
+          <line x1="610" y1="110" x2="650" y2="110" stroke-width="1.5" class="svg-divider" marker-end="url(#arr2)"/>
+
+          <!-- Bottleneck output -->
+          <rect x="650" y="90" width="60" height="40" rx="6" class="svg-box-orange"/>
+          <text x="680" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" class="svg-text-orange">B</text>
+          <text x="680" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" class="svg-text-orange">BOTTLENECKS</text>
+          <text x="680" y="148" text-anchor="middle" font-family="DM Mono,monospace" font-size="9" class="svg-text-muted">≥60%</text>
+
+          <!-- Equation -->
+          <text x="365" y="200" text-anchor="middle" font-family="DM Mono,monospace" font-size="11" class="svg-text-muted">score(n_p) = activation(n_p) × weight(n_p → n) × score(n)^0.8</text>
+        </svg>
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 1.</span> <strong>Traceback graphing pipeline.</strong><a href="glossary.html#traceback-graphing" class="gloss-link" title="See glossary">ⓘ</a> Starting from the highest-contributing output nodes, the algorithm walks backward through the attribution graph, scoring predecessors by activation × edge weight × decayed downstream score. Geometric decay (factor 0.8) prevents score overflow across 20+ layers while preserving relative path ranking.</p>
+      </div>
+
+      <h3 class="title is-5" style="margin-top:1.4rem;">Models &amp; SAEs</h3>
+      <ul>
+        <li><strong><span style="font-variant:small-caps;">Gemma-2-2B</span></strong> (Google): 26 layers, ~2B parameters, <code>gemmascope-transcoder-16k</code> SAE (16,384 features per layer)</li>
+        <li><strong><span style="font-variant:small-caps;">Qwen3-4B</span></strong> (Alibaba): 36 layers, ~4B parameters, <code>transcoder-hp</code> SAE</li>
+      </ul>
+
+      <h3 class="title is-5" style="margin-top:1.2rem;">Prompt Design</h3>
+      <p>Three knowledge domains × 10 prompts each, with template-controlled phrasing:</p>
+      <div class="max-width-content">
+        <table class="table is-bordered is-hoverable has-text-left" style="min-width:540px;">
+          <thead><tr><th style="width:18%;">Domain</th><th>Template</th><th style="width:30%;">Examples</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Chemistry</strong></td><td><em>"The chemical symbol for [element] is"</em></td><td>gold→Au, iron→Fe, mercury→Hg</td></tr>
+            <tr><td><strong>Geography</strong></td><td><em>"The capital of [country] is"</em></td><td>France→Paris, Japan→Tokyo</td></tr>
+            <tr><td><strong>History</strong></td><td>Various event-date formats</td><td>WWII ended→1945, Titanic sank→1912</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- RESULTS WRAPPER -->
+<section class="section" style="padding-top:1rem;" id="results">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-4">3. Results</h2>
+      <p class="subtitle is-6" style="color:var(--text-muted);">Seven findings, in narrative order: from architecture-level structure (§3.1–§3.2) to specific feature behavior (§3.3–§3.4) to mechanistic interpretation (§3.5–§3.6) to causal validation (§3.7–§3.8).</p>
+    </div>
+
+    <!-- 3.1 WITHIN-DOMAIN CONVERGENCE -->
+    <div class="results-subsection" id="results-within-domain">
+      <div class="content">
+        <h3 class="title is-5">3.1 Within-domain convergence</h3>
+        <p>Within-category circuit similarity, measured as average pairwise Jaccard similarity<a href="glossary.html#jaccard-similarity" class="gloss-link" title="See glossary">ⓘ</a> of traceback path features, varies systematically by domain:</p>
+        <div class="max-width-content">
+          <table class="table is-bordered is-hoverable has-text-left" style="min-width:420px;">
+            <thead><tr><th>Category</th><th><span style="font-variant:small-caps;">Gemma</span> Jaccard</th><th><span style="font-variant:small-caps;">Qwen</span> Jaccard</th></tr></thead>
+            <tbody>
+              <tr><td>Chemistry</td><td>0.289</td><td>0.353</td></tr>
+              <tr><td>Geography</td><td><strong>0.395</strong></td><td>0.335</td></tr>
+              <tr><td>History</td><td>0.108</td><td>0.153</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Geography is most conserved; history is most diverse. This is expected, since "WWII ended" and "Columbus reached the Americas" involve fundamentally different subject matter, while capital queries are structurally identical.</p>
+
+        <div class="max-width-content" style="margin:20px auto;">
+          <img src="figures/fig2_jaccard_heatmaps.svg" alt="Jaccard similarity heatmaps" class="paper-figure">
+          <p class="figure-caption has-text-centered"><span class="figure-number">Figure 2.</span> <strong>Within-domain circuits share more features than cross-domain.</strong> Pairwise Jaccard similarity between circuits within each knowledge domain, computed on bottleneck feature sets. Geography shows the strongest convergence (J = 0.40); history the weakest (0.11). Heatmaps for <span style="font-variant:small-caps;">Gemma</span> (top) and <span style="font-variant:small-caps;">Qwen</span> (bottom) across chemistry, geography, and history.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.2 ARCHITECTURE DOMINANCE -->
+    <div class="results-subsection" id="results-architecture">
+      <div class="content">
+        <h3 class="title is-5">3.2 Architecture dominance<a href="glossary.html#architecture-dominance" class="gloss-link" title="See glossary">ⓘ</a></h3>
+      <p>We computed cosine similarity between layer energy fraction profiles (energy at each layer as a proportion of total circuit energy) for all pairs of circuits. Within-model similarity averages <strong>0.978</strong> (std = 0.013) across all 30 circuits within each model, meaning 97.8% of the energy distribution shape is shared across all factual recall circuits within each architecture, regardless of knowledge domain. After normalizing both models to a common [0,1] depth scale, between-model similarity drops to <strong>0.696</strong> (std = 0.045; Mann–Whitney p &lt; 1e-6). The gap of 0.282 is an order of magnitude larger than the within-model domain effect (~0.02).</p>
+
+      <div class="finding-box">
+        <p><strong>Architecture explains ~14× more variance in energy profiles than knowledge domain.</strong> Within-category similarity is slightly higher than cross-category (<span style="font-variant:small-caps;">Gemma</span>: 0.984 vs 0.966; <span style="font-variant:small-caps;">Qwen</span>: 0.975 vs 0.956), confirming a small but statistically significant domain effect, but the architecture effect dwarfs it.</p>
+      </div>
+
+      <div class="max-width-content" style="margin:20px auto;">
+        <img src="figures/fig_architecture_dominance_hero.svg" alt="Architecture dominance: two-panel annotated hero figure" class="paper-figure paper-figure-hero" id="fig-architecture-dominance">
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 3.</span> <strong>Architecture dominance.</strong> <strong>Left:</strong> Cumulative energy profiles show <span style="font-variant:small-caps;">Gemma</span> front-loads 54% of activation into the first half of layers while <span style="font-variant:small-caps;">Qwen</span> back-loads with only 31%: fundamentally different computational strategies, comparable factual recall. <strong>Right:</strong> Energy profile cosine similarity matrix across all 60 circuits. Within-model pairs (<span style="font-variant:small-caps;">Gemma</span>×<span style="font-variant:small-caps;">Gemma</span> and <span style="font-variant:small-caps;">Qwen</span>×<span style="font-variant:small-caps;">Qwen</span>) cluster at 0.978; between-model pairs (<span style="font-variant:small-caps;">Gemma</span>×<span style="font-variant:small-caps;">Qwen</span> off-diagonal blocks) drop to 0.696. Architecture explains ~14× more variance than knowledge domain.</p>
+      </div>
+
+      <h4 class="title is-6" style="margin-top:1.4rem;">Front-loading vs back-loading</h4>
+      <p>The two models adopt fundamentally different energy accumulation strategies:</p>
+      <ul>
+        <li><strong><span style="font-variant:small-caps;">Gemma</span> front-loads</strong>: 54% of energy in the first half of layers (L0–L12). Cumulative energy reaches 50% by L11 and 90% by L24.</li>
+        <li><strong><span style="font-variant:small-caps;">Qwen</span> back-loads</strong>: only 31% of energy in the first half (L0–L17). Cumulative energy reaches 50% by L28 and 90% by L34.</li>
+      </ul>
+      <p>These accumulation profiles are consistent across all three knowledge domains: category differences in the 50% threshold layer are only 1–2 layers within each model. Both strategies produce comparable factual recall accuracy: distinct but equally viable solutions to the same retrieval problem.</p>
+
+      <div class="max-width-content" style="margin:24px auto;">
+        <figure>
+          <img src="figures/fig_bottleneck_density_hero.svg"
+               alt="Where the bottleneck lives: per-layer bottleneck feature density by model"
+               class="paper-figure paper-figure-hero"
+               id="fig-bottleneck-density">
+          <figcaption class="figure-caption has-text-centered">
+            <span class="figure-number">Figure 4.</span>
+            <strong>Where the bottleneck lives.</strong> Per-circuit mean bottleneck layer (path convergence ≥ 60%) across 30 <span style="font-variant:small-caps;">Gemma</span> circuits (left) and 30 <span style="font-variant:small-caps;">Qwen</span> circuits (right). <span style="font-variant:small-caps;">Gemma</span> circuits cluster at L5–7 (53% of circuits, mean L5.6); <span style="font-variant:small-caps;">Qwen</span> circuits cluster at L22–25 (60% of circuits, mean L23.6). The modal band in each histogram defines that model's primary bottleneck layer.
+          </figcaption>
+        </figure>
+      </div>
+
+      <h4 class="title is-6" style="margin-top:1.4rem;">Bottleneck depth is architecture-dependent</h4>
+      <p>Bottleneck layer position is determined by model architecture, not knowledge domain:</p>
+      <div class="max-width-content">
+        <table class="table is-bordered is-hoverable has-text-left" style="min-width:520px;">
+          <thead>
+            <tr><th>Category</th><th><span style="font-variant:small-caps;">Gemma</span> Avg Layer</th><th>% Depth</th><th><span style="font-variant:small-caps;">Qwen</span> Avg Layer</th><th>% Depth</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chemistry</td><td>L5.5</td><td>21%</td><td>L24.1</td><td>67%</td></tr>
+            <tr><td>Geography</td><td>L5.8</td><td>22%</td><td>L24.6</td><td>68%</td></tr>
+            <tr><td>History</td><td>L6.6</td><td>25%</td><td>L22.0</td><td>61%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><span style="font-variant:small-caps;">Gemma</span> bottlenecks consistently cluster in layers 5–7 (~22% depth) across all three domains; <span style="font-variant:small-caps;">Qwen</span> bottlenecks cluster in layers 22–25 (~65% depth). Within-model variation across domains is much smaller than between-model variation.</p>
+
+      <div class="max-width-content" style="margin:20px auto;">
+        <img src="figures/fig3_bottleneck_depth.svg" alt="Bottleneck depth distribution" class="paper-figure">
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 5.</span> <strong>Bottleneck depth is architecturally determined.</strong> Across all three knowledge domains, <span style="font-variant:small-caps;">Gemma</span> bottlenecks sit at L5–7 (about 22% depth); <span style="font-variant:small-caps;">Qwen</span> bottlenecks at L22–25 (about 65%). Domain modulates the depth by less than 2 layers.</p>
+      </div>
+
+      </div>
+    </div>
+
+    <hr class="results-subsection-divider">
+
+    <!-- 3.3 UNIVERSAL BOTTLENECKS -->
+    <div class="results-subsection" id="results-universal">
+      <div class="content">
+        <h3 class="title is-5">3.3 Universal bottlenecks</h3>
+      <p>We identified features that serve as bottlenecks across <em>all three</em> knowledge domains. <strong>Zero features are shared between <span style="font-variant:small-caps;">Gemma</span> and <span style="font-variant:small-caps;">Qwen</span></strong>, further supporting the architecture-dominance hypothesis.</p>
+
+      <div class="columns">
+        <div class="column">
+          <p style="font-weight:700;margin-bottom:8px;"><span style="font-variant:small-caps;">Gemma</span> Universal Bottlenecks (6)</p>
+          <table class="table is-bordered is-hoverable has-text-left" style="font-size:0.85em;">
+            <thead><tr><th>Feature</th><th>Layer</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/11319" target="_blank" rel="noopener"><code>L0_F1813559</code></a></td><td>L0</td><td>Code/file keywords</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/5788" target="_blank" rel="noopener"><code>L0_F74438300</code></a></td><td>L0</td><td>—</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/5865" target="_blank" rel="noopener"><code>L3_F5150441</code></a></td><td>L3</td><td>HTML formatting tags</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2404" target="_blank" rel="noopener"><code>L4_F110446948</code></a></td><td>L4</td><td>Place names</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/14380" target="_blank" rel="noopener"><code>L6_F2586668</code></a></td><td>L6</td><td>Code snippets</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/24-gemmascope-transcoder-16k/4628" target="_blank" rel="noopener"><code>L24_F88478228</code></a></td><td>L24</td><td>Lithuanian place names</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column">
+          <p style="font-weight:700;margin-bottom:8px;"><span style="font-variant:small-caps;">Qwen</span> Universal Bottlenecks (15)</p>
+          <table class="table is-bordered is-hoverable has-text-left" style="font-size:0.82em;">
+            <thead><tr><th>Feature</th><th>Layer</th></tr></thead>
+            <tbody>
+              <tr><td><code>L15_F8173514424</code></td><td>L15</td></tr>
+              <tr><td><code>L16_F1043399704</code></td><td>L16</td></tr>
+              <tr><td><code>L17_F6197796762</code></td><td>L17</td></tr>
+              <tr><td><code>L18_F11703352509</code></td><td>L18</td></tr>
+              <tr><td><code>L19_F6611637508</code></td><td>L19</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/24-gemmascope-transcoder-16k/3042" target="_blank" rel="noopener"><code>L24_F457788386</code></a></td><td>L24</td></tr>
+              <tr><td><a href="https://neuronpedia.org/gemma-2-2b/25-gemmascope-transcoder-16k/8273" target="_blank" rel="noopener"><code>L25_F942235729</code></a></td><td>L25</td></tr>
+              <tr><td><code>L26_F10368215974</code></td><td>L26</td></tr>
+              <tr><td><code>L27_F12610705050</code></td><td>L27</td></tr>
+              <tr><td><code>L28_F393078712</code></td><td>L28</td></tr>
+              <tr><td><code>L29_F89625936</code></td><td>L29</td></tr>
+              <tr><td><code>L32_F3158177517</code></td><td>L32</td></tr>
+              <tr><td><code>L33_F10240593794</code></td><td>L33</td></tr>
+              <tr><td><code>L34_F415944868</code></td><td>L34</td></tr>
+              <tr><td>… (15 total)</td><td>L15–L34</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p><span style="font-variant:small-caps;">Qwen</span> has 2.5× more universal bottlenecks than <span style="font-variant:small-caps;">Gemma</span> (15 vs 6), and they span a wider layer range (L15–L34 vs L0–L24). This is consistent with <span style="font-variant:small-caps;">Qwen</span>'s later, more distributed bottleneck architecture providing more opportunities for cross-domain feature sharing. The notable descriptions of <span style="font-variant:small-caps;">Gemma</span>'s universal features ("HTML formatting tags," "code/file keywords," "place names") are <strong>structural/format features, not factual knowledge stores</strong>. They function as architecture-specific routing infrastructure.</p>
+
+      <div class="finding-box">
+        <p><strong>Top bottleneck consistency.</strong> <code>L34_F415944868</code> appears as a bottleneck in 100% of <span style="font-variant:small-caps;">Qwen</span> geography, 100% of <span style="font-variant:small-caps;">Qwen</span> history, and 90% of <span style="font-variant:small-caps;">Qwen</span> chemistry circuits, a domain-agnostic late-layer hub.</p>
+      </div>
+      </div>
+    </div>
+
+    <hr class="results-subsection-divider">
+
+    <!-- 3.4 OUTPUT CONVERGENCE -->
+    <div class="results-subsection" id="results-output-convergence">
+      <div class="content">
+        <h3 class="title is-5">3.4 Output convergence vs path divergence</h3>
+      <p>We separately analyzed whether same-domain circuits converge at the output layer (final-layer features) versus along full traceback paths.</p>
+
+      <div class="max-width-content">
+        <table class="table is-bordered is-hoverable has-text-left" style="min-width:520px;">
+          <thead><tr><th>Model</th><th>Category</th><th>Output Jaccard</th><th>Path Jaccard</th><th>Ratio</th></tr></thead>
+          <tbody>
+            <tr><td><span style="font-variant:small-caps;">Gemma</span></td><td>Chemistry</td><td>0.293</td><td>0.289</td><td>1.02</td></tr>
+            <tr><td><span style="font-variant:small-caps;">Gemma</span></td><td>Geography</td><td>0.436</td><td>0.395</td><td>1.10</td></tr>
+            <tr><td><span style="font-variant:small-caps;">Gemma</span></td><td>History</td><td>0.283</td><td>0.108</td><td><strong>2.63</strong></td></tr>
+            <tr><td><span style="font-variant:small-caps;">Qwen</span></td><td>Chemistry</td><td>0.559</td><td>0.353</td><td>1.58</td></tr>
+            <tr><td><span style="font-variant:small-caps;">Qwen</span></td><td>Geography</td><td>0.475</td><td>0.335</td><td>1.42</td></tr>
+            <tr style="font-weight:700;background:var(--finding-bg);"><td><span style="font-variant:small-caps;">Qwen</span></td><td>History</td><td>0.673</td><td>0.153</td><td><strong>4.41</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Output node convergence is consistently higher than path convergence</strong>, and the gap is largest for history (4.41× in <span style="font-variant:small-caps;">Qwen</span>). History circuits share the same output features (the model uses similar features to produce the final prediction) even though their intermediate processing paths diverge substantially. The model arrives at a similar "output vocabulary" through different internal routes.</p>
+
+      <div class="max-width-content" style="margin:20px auto;">
+        <img src="figures/fig10_output_path.svg" alt="Output vs path convergence" class="paper-figure">
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 6.</span> <strong>Convergent outputs from divergent paths.</strong> Same-domain circuits share output features at up to 4.4× the rate of path-feature overlap (history in <span style="font-variant:small-caps;">Qwen</span>), confirming that different internal routes produce shared output vocabulary. Bar pairs compare output Jaccard (left) and path Jaccard (right) by domain for each model.</p>
+      </div>
+
+      <p>This has implications for model editing: intervening at the output layer would affect most circuits within a domain, while intervening at intermediate layers requires more domain-specific targeting.</p>
+      </div>
+    </div>
+
+    <hr class="results-subsection-divider">
+
+    <!-- 3.5 BOTTLENECK TAX -->
+    <div class="results-subsection" id="results-bottleneck-tax">
+      <div class="content">
+        <h3 class="title is-5">3.5 The bottleneck tax</h3>
+
+        <p>We correlated each layer's energy fraction with output probability across all 30 circuits within each model, applying Bonferroni correction (<span style="font-variant:small-caps;">Gemma</span>: α = 0.0019 for 26 tests; <span style="font-variant:small-caps;">Qwen</span>: α = 0.0014 for 36 tests).</p>
+
+        <div class="max-width-content">
+          <table class="table is-bordered is-hoverable has-text-left" style="min-width:480px;">
+            <thead><tr><th>Layer</th><th>Spearman r</th><th>p-value</th><th>Direction</th></tr></thead>
+            <tbody>
+              <tr style="font-weight:700;background:var(--smoking-bg);"><td>L6 (bottleneck)</td><td>−0.684</td><td>&lt;0.0001</td><td>Negative (<em>bottleneck tax</em>)</td></tr>
+              <tr><td>L10</td><td>−0.601</td><td>0.0004</td><td>Negative</td></tr>
+              <tr><td>L1</td><td>+0.634</td><td>0.0002</td><td>Positive</td></tr>
+              <tr><td>L13</td><td>+0.601</td><td>0.0004</td><td>Positive</td></tr>
+              <tr><td>L16</td><td>+0.598</td><td>0.0005</td><td>Positive</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="finding-box">
+          <p><strong>L6, the primary bottleneck layer, shows the strongest negative correlation (r = −0.684).</strong> Circuits with a larger fraction of activation energy at the bottleneck layer exhibit lower output confidence. Energy at post-bottleneck layers (L13, L16) positively predicts confidence. We term this pattern the <strong>"bottleneck tax."</strong><a href="glossary.html#bottleneck-tax" class="gloss-link" title="See glossary">ⓘ</a></p>
+        </div>
+
+        <div class="max-width-content" style="margin:20px auto;">
+          <img src="figures/fig_bottleneck_tax_hero.svg" alt="Bottleneck tax: two-panel annotated hero figure" class="paper-figure paper-figure-hero" id="fig-bottleneck-tax">
+          <p class="figure-caption has-text-centered"><span class="figure-number">Figure 7.</span> <strong>The bottleneck tax.</strong> Per-layer Spearman correlation between activation energy fraction and output confidence across 30 <span style="font-variant:small-caps;">Gemma</span> circuits. <strong>Bottleneck layer L6 shows a strong negative correlation (r = −0.684, p &lt; 0.0001):</strong> circuits concentrating more activation at L6 produce <em>less</em> confident predictions. Post-bottleneck layers L13, L16 reverse the sign (r ≈ +0.60), consistent with information bottleneck framing: heavier compression at intermediate layers reduces information available for downstream evidence accumulation.</p>
+        </div>
+
+        <h4 class="title is-6" style="margin-top:1.4rem;">Theoretical framing: information bottleneck theory</h4>
+        <p>We interpret this pattern through information bottleneck theory (Tishby &amp; Zaslavsky, 2015; Shwartz-Ziv &amp; Tishby, 2017), which formalizes the tradeoff between representational compression and predictive accuracy. Each layer L computes a representation T<sub>L</sub> of the input X with mutual information I(X; T<sub>L</sub>); heavier compression at an intermediate layer reduces what downstream layers can recover. Our correlation is consistent with this prediction: circuits that concentrate more activation magnitude at L6 may be compressing input representations more aggressively, leaving less information for evidence accumulation at L13–L16. Energy at post-bottleneck layers positively predicts confidence, consistent with those layers aggregating information into the final decision.</p>
+
+        <h4 class="title is-6">Important caveat</h4>
+        <p>"Energy" here is shorthand for summed feature activation magnitudes, not a conserved physical quantity. Neural networks have no global energy budget; activations at different layers are computed independently. The bottleneck tax is a <strong>correlation, not a mechanistic causal claim</strong>. Alternative explanations include prompt-difficulty confounds, domain-specific accuracy differences, and feature-selection effects in the traceback algorithm. Direct interventional validation (clamping L6 activation and measuring confidence change) would require local model access not currently available through the Neuronpedia API.</p>
+
+        <p><span style="font-variant:small-caps;">Qwen</span> shows <strong>0 Bonferroni-significant layers</strong> (best: L29, r = 0.552, p = 0.0016), consistent with its late-layer architecture decoupling layer-level energy from confidence.</p>
+      </div>
+    </div>
+
+    <hr class="results-subsection-divider">
+
+    <!-- 3.6 CIRCUIT REDUNDANCY -->
+    <div class="results-subsection" id="results-redundancy">
+      <div class="content">
+        <h3 class="title is-5">3.6 Circuit redundancy</h3>
+      <p>We extracted the minimum viable circuit connecting input features (early layers, high fan-out) to output features (late layers, high fan-in) for all 60 circuits.</p>
+
+      <div class="findings-grid">
+        <div class="finding-card green">
+          <div class="finding-title">94.1% redundant</div>
+          <div class="finding-body">Mean reduction across 60 circuits is <strong>94.1%</strong> (±1.2%). Only ~6% of nodes participate in shortest input-to-output pathways. Consistent across models and categories.</div>
+        </div>
+        <div class="finding-card blue">
+          <div class="finding-title">Single-node bottlenecks</div>
+          <div class="finding-body">Mean minimal-pathway bottleneck width is <strong>1.1 features</strong>. Nearly every circuit funnels through a single critical node in its essential pathway.</div>
+        </div>
+        <div class="finding-card orange">
+          <div class="finding-title">0.3% essential weight</div>
+          <div class="finding-body">Minimal pathway retains just <strong>0.3%</strong> of total edge weight. Vast majority of energy flows through redundant, non-essential connections.</div>
+        </div>
+        <div class="finding-card purple">
+          <div class="finding-title">Redundancy → confidence</div>
+          <div class="finding-body"><span style="font-variant:small-caps;">Gemma</span>: r = <strong>0.642</strong> (p&lt;0.001). More redundant circuits → more confident outputs. <span style="font-variant:small-caps;">Qwen</span>: r = -0.051 (no relationship).</div>
+        </div>
+      </div>
+
+      <div class="max-width-content" style="margin:20px auto;">
+        <img src="figures/fig41_reduction_breakdown.svg" alt="Minimal pathway extraction" class="paper-figure">
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 8.</span> <strong>Circuits are 94% redundant.</strong> Minimal pathway extraction prunes circuits until only essential edges remain: essential edges carry just 0.3% of total weight, yet preserve output behavior. <span style="font-variant:small-caps;">Gemma</span> essential-pathway bottlenecks concentrate at L22 (median); <span style="font-variant:small-caps;">Qwen</span> at L30.</p>
+      </div>
+
+      <p>The <span style="font-variant:small-caps;">Gemma</span> redundancy–confidence correlation suggests a functional role: more redundant circuits may represent more robust, well-established factual memories where the model has encoded multiple parallel pathways to the same answer. This <em>"redundancy-as-robustness"</em> hypothesis aligns with the ensemble interpretation of neural network computation.</p>
+      </div>
+    </div>
+
+    <hr class="results-subsection-divider">
+
+    <!-- 3.7 CAUSAL STEERING -->
+    <div class="results-subsection" id="results-steering">
+      <div class="content">
+        <h3 class="title is-5">3.7 Causal steering: three-tier dissociation<a href="glossary.html#three-tier-dissociation" class="gloss-link" title="See glossary">ⓘ</a></h3>
+      <p>Across <strong>80 steering experiments</strong> on <span style="font-variant:small-caps;">Gemma</span>, we tested whether structural importance metrics on the attribution graph predict behavioral causal influence. Three categories of features were tested: original 5 bottleneck features (Section 6a), 5 cross-circuit-frequency-selected features (Section 6b), and 5 essential-pathway features (Section 6c).</p>
+
+      <h4 class="title is-6">3.7a Initial steering (20 experiments)</h4>
+      <p>Mean logprob shift = <strong>0.045</strong> across all experiments; <strong>50%</strong> produced visible text changes. Effects are probability-level perturbations rather than token-flipping interventions. Critical methodological finding: <strong>none of the 5 steered features appeared as nodes in their respective circuits' attribution graphs</strong>. The threshold-based circuit extraction filters out features that exert causal influence below the display threshold. This <em>visibility gap</em> means circuit-based analysis underestimates the set of causally relevant features.</p>
+
+      <h4 class="title is-6">3.7b Frequency vs causation (D5, 30 experiments)</h4>
+      <p>We expanded by testing 5 high-frequency cross-circuit features (each appearing in 9–11 of the 30 <span style="font-variant:small-caps;">Gemma</span> circuits) on 3 target circuits at strengths ±20.</p>
+      <ul>
+        <li><strong>23.3% text change rate</strong> for D5 features vs 50% for the original set. Cross-circuit frequency alone is insufficient for predicting causal effectiveness.</li>
+        <li><strong><a href="https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/11809" target="_blank" rel="noopener">L2_F25751073</a></strong>, the feature appearing in the most circuits (11), produced <strong>zero</strong> text changes when steered.</li>
+        <li><strong><a href="https://neuronpedia.org/gemma-2-2b/7-gemmascope-transcoder-16k/11374" target="_blank" rel="noopener">L7_F4828270</a></strong> (9 circuits) was the most effective new feature (3/6 changed). High frequency does not imply high causal influence.</li>
+      </ul>
+
+      <div class="max-width-content" style="margin:20px auto;">
+        <img src="figures/fig45_d5_steering_heatmap.png" alt="D5 steering heatmap" class="paper-figure">
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 9.</span> <strong>Frequency does not predict causal influence.</strong> Expanded D5 steering batch: high-frequency cross-circuit features are not preferentially steerable, and domain susceptibility runs history &gt; geography &gt; chemistry rather than tracking topological centrality. Each point is one of 60 steering trials, color-coded by knowledge domain.</p>
+      </div>
+
+      <h4 class="title is-6" style="margin-top:1.4rem;">3.7c Essential-pathway steering (30 experiments)</h4>
+      <p>From the 1,000 unique features identified on essential pathways across 30 <span style="font-variant:small-caps;">Gemma</span> circuits, we selected 5 high-frequency essential-pathway features not previously tested.</p>
+      <ul>
+        <li><strong>26.7% text change rate</strong>, comparable to D5 features off essential pathways (33.3%) and intermediate to D5 features on essential pathways (18.8%).</li>
+        <li><strong>Essential-pathway features produce substantially larger distributional perturbations</strong>: mean KL divergence = <strong>1.448</strong>, vs much lower for D5 features. The strongest single perturbation (<a href="https://neuronpedia.org/gemma-2-2b/25-gemmascope-transcoder-16k/11007" target="_blank" rel="noopener">L25_F50014975</a> amplification on geography, KL = 12.72) changed the output from a generic description to the factually correct "Tokyo," suggesting the feature gates factual recall at the output layer.</li>
+        <li><strong>Layer depth modulates direction</strong>: early pathway features (L0, L1) produced changes exclusively via suppression; late features (L21, L24, L25) responded to both directions.</li>
+      </ul>
+
+      <div class="max-width-content" style="margin:20px auto;">
+        <img src="figures/fig43_steering_effects.png" alt="Steering effects across experiments" class="paper-figure">
+        <p class="figure-caption has-text-centered"><span class="figure-number">Figure 10.</span> <strong>Half of steering interventions produce visible text changes.</strong> Initial 20 steering experiments: mean logprob shift = 0.045, and 50% of trials flip the argmax output token. Distributional perturbation strength does not cleanly predict which trials yield surface-level text changes.</p>
+      </div>
+
+      <h4 class="title is-6" style="margin-top:1.4rem;">Domain susceptibility</h4>
+      <p>Steering susceptibility is highly asymmetric across domains and replicates across all three experiment sets:</p>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-row-label">Chemistry</span>
+          <div class="bar-fill" style="width:5%;background:#3273dc;">0%</div>
+          <span class="bar-value">0/30</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-row-label">Geography</span>
+          <div class="bar-fill" style="width:25%;background:#e67e22;">20%</div>
+          <span class="bar-value">2/10</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-row-label">History</span>
+          <div class="bar-fill" style="width:65%;background:#8854d0;">60%</div>
+          <span class="bar-value">6/10</span>
+        </div>
+      </div>
+      <p>Chemistry circuits produce the most deterministic outputs (Na, Fe, Pb are near-certain completions), making them resistant to perturbation. History and geography outputs have more distributional uncertainty, creating room for steering to shift the argmax.</p>
+
+      <div class="finding-box">
+        <p><strong>The Three-Tier Dissociation.</strong> Combining all 80 experiments yields a three-tier model of feature importance: (1) features on essential pathways perturb probability distributions most strongly (highest KL); (2) features with high cross-circuit frequency are statistically common but not necessarily causal; (3) text-level output changes are governed primarily by output entropy and domain determinism rather than by any single feature-selection criterion. <strong>Topology, frequency, and text-level effects decouple.</strong></p>
+      </div>
+
+      <div class="max-width-content" style="margin:24px auto;">
+        <figure id="fig-three-tier" class="paper-figure-svg">
+          <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fig-three-tier-title fig-three-tier-desc" style="width:100%; height:auto; display:block;">
+            <title id="fig-three-tier-title">The three-tier dissociation schematic</title>
+            <desc id="fig-three-tier-desc">Three stacked tiers showing three independent dimensions of feature importance: essential-pathway topology (Tier 1), cross-circuit frequency (Tier 2), and output determinism by domain (Tier 3).</desc>
+
+            <!-- TIER 1 -->
+            <rect x="40" y="20" width="720" height="90" rx="8"
+                  fill="var(--phase1-bg)" stroke="var(--svg-box-orange-stroke)" stroke-width="1.5"/>
+            <text x="60" y="50" fill="var(--text)" font-size="16" font-weight="700">Tier 1 &#183; Essential-pathway topology</text>
+            <text x="60" y="75" fill="var(--text-muted)" font-size="12">Governs distributional perturbation strength &#183; mean KL = 1.448</text>
+            <text x="60" y="95" fill="var(--text-muted)" font-size="11" font-style="italic">Example: L25_F50014975 amplification &#8594; KL = 12.72 (&#8220;Tokyo&#8221;)</text>
+
+            <!-- Decoupling separator Tier 1 / Tier 2 (non-directional) -->
+            <line x1="200" y1="122" x2="370" y2="122" stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1"/>
+            <text x="400" y="126" text-anchor="middle" font-size="10" fill="var(--text-muted)" font-style="italic">decoupled</text>
+            <line x1="430" y1="122" x2="600" y2="122" stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1"/>
+
+            <!-- TIER 2 -->
+            <rect x="40" y="135" width="720" height="90" rx="8"
+                  fill="var(--phase2-bg)" stroke="var(--svg-box-blue-stroke)" stroke-width="1.5"/>
+            <text x="60" y="165" fill="var(--text)" font-size="16" font-weight="700">Tier 2 &#183; Cross-circuit frequency</text>
+            <text x="60" y="190" fill="var(--text-muted)" font-size="12">Statistically common &#183; causally weak &#183; does NOT predict steering effect</text>
+            <text x="60" y="210" fill="var(--text-muted)" font-size="11" font-style="italic">Example: L2_F25751073 (highest frequency, 11 circuits) &#8594; 0% text changes</text>
+
+            <!-- Decoupling separator Tier 2 / Tier 3 (non-directional) -->
+            <line x1="200" y1="237" x2="370" y2="237" stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1"/>
+            <text x="400" y="241" text-anchor="middle" font-size="10" fill="var(--text-muted)" font-style="italic">decoupled</text>
+            <line x1="430" y1="237" x2="600" y2="237" stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1"/>
+
+            <!-- TIER 3 -->
+            <rect x="40" y="250" width="720" height="90" rx="8"
+                  fill="var(--phase3-bg)" stroke="var(--svg-bar-purple)" stroke-width="1.5"/>
+            <text x="60" y="280" fill="var(--text)" font-size="16" font-weight="700">Tier 3 &#183; Output determinism by domain</text>
+            <text x="60" y="305" fill="var(--text-muted)" font-size="12">Governs text-level susceptibility &#183; chemistry 0% &#183; geography 20% &#183; history 60%</text>
+            <text x="60" y="325" fill="var(--text-muted)" font-size="11" font-style="italic">Attribution graphs do NOT capture this tier</text>
+          </svg>
+          <figcaption class="figure-caption has-text-centered">
+            <span class="figure-number">Figure 11.</span> <strong>Three independent tiers of feature importance, none predictive of behavior alone.</strong> <strong>Tier 1 (essential-pathway topology)</strong> governs distributional perturbation strength. <strong>Tier 2 (cross-circuit frequency)</strong> is statistically common but causally weak. <strong>Tier 3 (output determinism by domain)</strong> governs text-level susceptibility (chemistry 0%, geography 20%, history 60%). Attribution graphs capture Tier 1 but not Tier 3.
+          </figcaption>
+        </figure>
+      </div>
+      </div>
+    </div>
+
+    <hr class="results-subsection-divider">
+
+    <!-- 3.8 FORMAT VARIATION -->
+    <div class="results-subsection" id="results-format">
+      <div class="content">
+        <h3 class="title is-5">3.8 Format variation: template &gt; fact &gt; cross-domain</h3>
+      <p>A critical question is whether the within-domain circuit similarity reflects genuine knowledge-domain convergence or merely prompt-template similarity (all chemistry prompts share "The chemical symbol for X is"). To test this, we generated circuits for the same fact (gold) using three different prompt formats.</p>
+
+      <div class="max-width-content">
+        <table class="table is-bordered is-hoverable has-text-left" style="min-width:560px;">
+          <thead><tr><th>Comparison</th><th>Mean Jaccard</th><th>N pairs</th></tr></thead>
+          <tbody>
+            <tr><td>Same fact, different format (gold × 3)</td><td>0.306</td><td>3</td></tr>
+            <tr><td>Different fact, same format (chemistry)</td><td><strong>0.611</strong></td><td>3</td></tr>
+            <tr style="font-weight:700;background:var(--finding-bg);"><td>Different fact, same format (geography)</td><td><strong>0.713</strong></td><td>3</td></tr>
+            <tr><td>Different fact, same format (history)</td><td>0.156</td><td>3</td></tr>
+            <tr><td>Different fact, same format (all domains)</td><td>0.493</td><td>9</td></tr>
+            <tr><td>Cross-domain baseline</td><td>0.112</td><td>27</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="finding-box">
+        <p><strong>Prompt template drives 1.6× more circuit overlap than factual identity</strong>, but the effect is domain-dependent. Chemistry (0.611) and geography (0.713) show strong template-driven convergence, but history (0.156) does not. History circuits are so structurally diverse that the template provides little convergence beyond the cross-domain baseline (0.112). Hierarchy: <strong>template &gt; fact &gt; cross-domain</strong> for chemistry/geography, but <strong>fact &gt; template ≈ cross-domain</strong> for history.</p>
+      </div>
+
+      <p>Same-fact-different-format Jaccard (0.306) is still <strong>2.7× higher</strong> than the cross-domain baseline (0.112), confirming that knowledge domain contributes to circuit structure beyond template effects alone.</p>
+
+      <p><strong>This finding does not undermine the architecture-dominance result</strong>, which is based on per-layer energy profiles (cosine similarity 0.978 within-model), not feature-level Jaccard. Energy profiles are robust to prompt format because they capture the <em>distribution of computation across layers</em>, not the identity of individual features. The format effect operates at the feature-selection level (which specific features are activated) while the architecture effect operates at the computational-structure level (where energy is concentrated).</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 4. DISCUSSION -->
+<section class="section" style="padding-top:1rem;" id="discussion">
+  <div class="container is-max-desktop">
+    <div class="content">
+      <h2 class="title is-4">4. Discussion</h2>
+
+      <h3 class="title is-5">4.1 Architecture vs domain</h3>
+      <p>Our most striking finding is that not just bottleneck position, but the entire layer-by-layer energy distribution is an architectural constant. <span style="font-variant:small-caps;">Gemma</span> routes all factual knowledge through early-layer bottlenecks (L5–7); <span style="font-variant:small-caps;">Qwen</span> routes through late-layer bottlenecks (L22–25). Within-model cosine similarity is 0.978 (virtually identical profiles across domains) while between-model similarity drops to 0.696 even after depth normalization. Architecture explains ~14× more variance in energy profiles than knowledge domain.</p>
+      <p>Edge flow analysis extends this invariance from energy to wiring topology. Cross-category edge pattern similarity is 0.995 for both models, even higher than the 0.978 energy profile similarity. Domains share virtually identical wiring diagrams within each architecture. Skip connections dominate: 80–85% of edges bypass adjacent layers.</p>
+      <p>The complementary accumulation strategies, with <span style="font-variant:small-caps;">Gemma</span> front-loading 54% of energy into the first half of layers while <span style="font-variant:small-caps;">Qwen</span> back-loads with only 31%, suggest fundamentally different computational paradigms. <span style="font-variant:small-caps;">Gemma</span> processes factual associations early and refines through later layers; <span style="font-variant:small-caps;">Qwen</span> accumulates context broadly before concentrating processing in late layers. Both strategies produce comparable factual recall accuracy across all three domains, demonstrating that early-bottleneck and late-bottleneck architectures represent distinct but equally viable solutions to the same knowledge retrieval problem.</p>
+
+      <h3 class="title is-5" style="margin-top:1.4rem;">4.2 Universal features as routing infrastructure</h3>
+      <p>The existence of universal bottleneck features that participate in all three knowledge domains suggests these features serve as general-purpose routing or gating infrastructure rather than domain-specific knowledge stores. A feature that activates for chemistry, geography, AND history queries is unlikely to encode any specific factual content; instead, it may implement a more general function such as attention routing, information filtering, or output formatting.</p>
+      <p>The notable descriptions of <span style="font-variant:small-caps;">Gemma</span>'s universal features support this interpretation: "HTML formatting tags," "code/file keywords," and "place names" are structural/format-related features, not factual knowledge features. Co-activation analysis further reveals that these universal features organize into within-layer functional modules: same-layer co-activation is 1.9× stronger than cross-layer, and hierarchical clustering identifies 5 distinct feature groups. This modular organization suggests a structured routing infrastructure rather than a random collection of individually useful features.</p>
+      <p>Polysemanticity analysis provides additional converging evidence. CODE (20%) and LANGUAGE (20%) features, encoding formatting, syntax, and linguistic patterns, outnumber domain-specific features (13%). 54% of features appear in ≥2 domains and 18% in all 3. The low overall polysemanticity rate (12.3%) suggests bottleneck features are more specialized than the average SAE feature: they are selected by the circuit architecture for specific routing functions, even when those functions span multiple knowledge domains.</p>
+
+      <h3 class="title is-5" style="margin-top:1.4rem;">4.3 Bottleneck tax interpretation</h3>
+      <p>Per-layer analysis reveals that <span style="font-variant:small-caps;">Gemma</span> L6 (the primary bottleneck layer) shows a strong negative correlation with confidence (r = −0.684, p &lt; 0.0001), while energy at post-bottleneck layers (L13: r = +0.601; L16: r = +0.598) positively predicts confidence. We term this pattern the <strong>"bottleneck tax,"</strong> a memorable label for the observation that heavier bottleneck-layer activation is associated with lower downstream confidence.</p>
+      <p>We interpret this pattern through information bottleneck theory (Tishby &amp; Zaslavsky, 2015; Shwartz-Ziv &amp; Tishby, 2017). The theory formalizes the tradeoff between compression and prediction in deep networks: each layer L computes a representation T<sub>L</sub> of the input X with mutual information I(X; T<sub>L</sub>), and heavier compression at an intermediate layer reduces the information available to downstream layers for reconstruction and prediction. Our observation (more bottleneck-layer activation predicts worse confidence) is consistent with the prediction that over-compression at L6 limits the information downstream layers (L13, L16) can use for evidence accumulation. We emphasize "consistent with" rather than "proof of": our measurements are of activation magnitude, not mutual information, and our analysis is correlational, not interventional.</p>
+      <p><strong>A nuance from output decomposition.</strong> While the bottleneck tax operates at the circuit level (more overall bottleneck weight = lower confidence), the critical paths show the opposite pattern: paths that route <em>more</em> through bottleneck layers yield <em>higher</em> confidence (r = 0.415, p = 0.016). Bottleneck layers are simultaneously the most important processing hubs and the most costly when over-used. This dual role, essential routing infrastructure that imposes compression costs when overloaded, is consistent with the information bottleneck framework.</p>
+      <p><span style="font-variant:small-caps;">Qwen</span> shows no per-layer confidence relationships (0 Bonferroni-significant layers), consistent with its late-layer architecture diffusing confidence signals across many layers. The information bottleneck framework predicts that architectures with diffuse compression should exhibit weaker per-layer correlations with output quality, which is what we observe.</p>
+
+      <h3 class="title is-5" style="margin-top:1.4rem;">4.4 Three-tier dissociation</h3>
+      <p>Minimal pathway analysis reveals that circuits are 94.1% redundant: only ~6% of nodes participate in the essential input-to-output pathways, and these pathways carry just 0.3% of total edge weight. <span style="font-variant:small-caps;">Gemma</span>'s redundancy positively correlates with confidence (r = 0.642), suggesting a functional role for this redundancy. More redundant circuits may represent more robust, well-established factual memories where the model has encoded multiple parallel pathways to the same answer.</p>
+      <p>Our steering analysis reveals a critical methodological gap: features that exert causal influence through steering are invisible in the attribution graph. None of the 5 initially steered features appeared as nodes in their circuits' graphs. This "visibility gap" means that circuit-based analysis underestimates the causally relevant feature set: the attribution graph captures only above-threshold activations, while causal influence extends to sub-threshold features.</p>
+      <p>The essential-pathway steering validation reveals a <strong>three-tier dissociation</strong> between structural importance metrics and causal influence. Features on the minimal viable pathway produce the strongest distributional perturbations (mean KL = 1.448), but neither pathway position (26.7% text change rate) nor cross-circuit frequency (23.3% for frequency-selected features) reliably predicts text-level output changes. This dissociation suggests that the attribution graph captures two distinct types of information: (1) the essential routing topology, which determines how strongly a feature can perturb probability distributions, and (2) the redundancy structure, which determines whether that perturbation survives to change the argmax output token.</p>
+      <p>Features on essential pathways are genuinely important for information flow (their perturbations propagate strongly through the circuit), but the model's 94.1% circuit redundancy provides compensatory pathways that absorb these perturbations before the output layer. The domain asymmetry in steering susceptibility (history &gt; geography &gt; chemistry = 0) has a natural interpretation: chemistry circuits produce the most deterministic outputs (Na, Fe, Pb are near-certain completions), making them resistant to perturbation; history and geography outputs have more distributional uncertainty, creating more room for steering to shift the argmax.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- 5. LIMITATIONS -->
+<section class="section" style="padding-top:1rem;" id="limitations">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">5. Limitations</h2>
+    <div class="content">
+      <ol>
+        <li><strong>Two models only.</strong> Findings based on <span style="font-variant:small-caps;">Gemma-2-2B</span> and <span style="font-variant:small-caps;">Qwen3-4B</span>. Larger models or instruction-tuned variants may exhibit different patterns.</li>
+        <li><strong>Sample size.</strong> n = 30 per model; correlations below |r| = 0.45 are unreliable at α = 0.05; only |r| ≥ 0.60 survives Bonferroni correction.</li>
+        <li><strong>SAE quality &amp; <span style="font-variant:small-caps;">Qwen</span> annotation gap.</strong> 114 of 244 cross-circuit features (all <span style="font-variant:small-caps;">Qwen</span>) lack Neuronpedia explanations, limiting polysemanticity analysis to <span style="font-variant:small-caps;">Gemma</span>.</li>
+        <li><strong>Prompt format effects.</strong> Within-domain Jaccard is partially inflated by template similarity for chemistry/geography (Section 7). Architecture-dominance result is robust to this confound.</li>
+        <li><strong>Correlational, not interventional.</strong> The bottleneck tax is correlational; direct clamping of L6 activation requires local model access not available via Neuronpedia API.</li>
+        <li><strong>Limited steering coverage.</strong> 80 experiments on <span style="font-variant:small-caps;">Gemma</span> only (<span style="font-variant:small-caps;">Qwen</span> SAE steering not yet supported); ±20 strength only; 15 features total.</li>
+        <li><strong>Community degeneracy.</strong> 4-method validation shows high modularity but low cross-algorithm agreement (mean Jaccard = 0.363). Community boundaries are algorithm-dependent.</li>
+        <li><strong>Visibility gap.</strong> Steered features are causally relevant but invisible in the circuit representation, suggesting threshold-based extraction systematically underestimates the causally relevant feature set.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CONCLUSIONS -->
+<section class="section" style="padding-top:1rem;" id="conclusions">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">6. Conclusions</h2>
+    <div class="content">
+      <p>Factual knowledge retrieval in large language models is constrained by architectural processing strategy across the full layer-by-layer activation profile. The bottleneck tax provides a mechanistic link between structure and behavior: confident predictions arise from evidence accumulation beyond the bottleneck, not from compression quality. The three-tier causal dissociation, where topology, frequency, and text-level effects decouple, reveals that attribution graphs capture only a fraction of causally relevant computation, mediated by layers of circuit redundancy.</p>
+
+      <h3 class="title is-5" style="margin-top:1rem;">Future Work</h3>
+      <ul>
+        <li>Extend to more models and domains</li>
+        <li>Expand steering with dose-response curves and more circuits</li>
+        <li>Develop sub-threshold circuit extraction to address the visibility gap</li>
+        <li>Test varied prompt formats to disentangle format from domain effects</li>
+        <li>Annotate remaining <span style="font-variant:small-caps;">Qwen</span> features when API support becomes available</li>
+        <li>Build predictive models combining structural and causal metrics</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- SUPPLEMENTARY MATERIALS -->
+<section class="section" style="padding-top:1rem;" id="supplementary">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Supplementary Materials</h2>
+    <div class="content">
+      <div class="columns">
+        <div class="column">
+          <div class="supp-card">
+            <p style="font-size:1em;font-weight:700;margin-bottom:8px;color:var(--text);"><i class="fa-solid fa-file-pdf" style="margin-right:8px;"></i>Full Paper PDF</p>
+            <p style="font-size:0.9em;">Complete paper with all 21 supplementary sections, statistical appendices, and figure pack.</p>
+            <a href="papers/pdf/CROSS_DOMAIN_CIRCUIT_PAPER.pdf" target="_blank" class="button is-normal is-rounded is-dark" style="margin-top:12px;">
+              <span class="icon"><i class="fa-solid fa-file-pdf"></i></span>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="supp-card">
+            <p style="font-size:1em;font-weight:700;margin-bottom:8px;color:var(--text);"><i class="fab fa-github" style="margin-right:8px;"></i>Code &amp; Data</p>
+            <p style="font-size:0.9em;margin-bottom:10px;">Full pipeline source code, attribution graph data, traceback algorithm, and analysis notebooks:</p>
+            <a href="https://github.com/J-Lawrence10/autocircuit" target="_blank" class="button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="supp-card">
+            <p style="font-size:1em;font-weight:700;margin-bottom:8px;color:var(--text);"><i class="fa-solid fa-brain" style="margin-right:8px;"></i>Live Attribution Graphs</p>
+            <p style="font-size:0.9em;margin-bottom:10px;">Interactive Neuronpedia attribution graph viewer:</p>
+            <ul style="font-size:0.85em;list-style:none;padding:0;margin:0;">
+              <li style="margin:4px 0;"><a href="https://www.neuronpedia.org/gemma-2-2b" target="_blank">Gemma-2-2B graphs</a></li>
+              <li style="margin:4px 0;"><a href="https://www.neuronpedia.org/qwen3-4b" target="_blank">Qwen3-4B graphs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- REFERENCES -->
+<section class="section" style="padding-top:1rem;" id="references">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">References</h2>
+    <div class="content">
+      <ol style="font-size:0.92em;line-height:1.7;">
+        <li>Bricken, T., et al. (2023). <em>Towards Monosemanticity: Decomposing Language Models With Dictionary Learning.</em> Anthropic.</li>
+        <li>Cunningham, H., et al. (2024). <em>Sparse Autoencoders Find Highly Interpretable Features in Language Models.</em> ICLR 2024.</li>
+        <li>Elhage, N., et al. (2021). <em>A Mathematical Framework for Transformer Circuits.</em> Anthropic.</li>
+        <li>Meng, K., et al. (2022). <em>Locating and Editing Factual Associations in GPT.</em> NeurIPS 2022.</li>
+        <li>Neuronpedia. Decode Research. <a href="https://neuronpedia.org" target="_blank">https://neuronpedia.org</a></li>
+        <li>Olah, C., et al. (2020). <em>Zoom In: An Introduction to Circuits.</em> Distill.</li>
+        <li>Templeton, A., et al. (2024). <em>Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet.</em> Anthropic.</li>
+        <li>Shwartz-Ziv, R., &amp; Tishby, N. (2017). <em>Opening the Black Box of Deep Neural Networks via Information.</em> arXiv:1703.00810.</li>
+        <li>Tishby, N., &amp; Zaslavsky, N. (2015). <em>Deep Learning and the Information Bottleneck Principle.</em> IEEE Information Theory Workshop (ITW).</li>
+        <li>Turner, A., et al. (2023). <em>Steering Language Models With Activation Engineering.</em> arXiv:2308.10248.</li>
+        <li>Wang, K., et al. (2023). <em>Interpretability in the Wild: A Circuit for Indirect Object Identification in GPT-2 Small.</em> ICLR 2023.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- BIBTEX -->
+<section class="section" style="padding-top:1rem;" id="bibtex">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-4">BibTeX</h2>
+    <pre><code>@article{lawrence2026crossdomain,
+  title   = {Cross-Domain Circuit Analysis of Factual Knowledge Retrieval
+             in Large Language Models},
+  author  = {Lawrence, Joseph and Krampis, Konstantinos},
+  year    = {2026},
+  month   = {April},
+  note    = {60 attribution graphs across {Gemma-2-2B} and {Qwen3-4B};
+             traceback graphing, bottleneck tax, three-tier causal dissociation},
+  url     = {https://github.com/J-Lawrence10/autocircuit}
+}</code></pre>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>Website template based on the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> and <a href="https://latentqa.github.io" target="_blank">LatentQA</a> project pages. Analysis performed using Neuronpedia API, NetworkX, and custom Python tooling. Models: <span style="font-variant:small-caps;">Gemma-2-2B</span> (Google DeepMind) and <span style="font-variant:small-caps;">Qwen3-4B</span> (Alibaba). SAEs: <code>gemmascope-transcoder-16k</code> and <code>transcoder-hp</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

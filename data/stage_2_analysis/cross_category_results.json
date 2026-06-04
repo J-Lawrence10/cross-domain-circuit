@@ -1,0 +1,5249 @@
+{
+  "within_category": [
+    {
+      "category": "chemistry",
+      "model": "gemma-2-2b",
+      "num_circuits": 10,
+      "shared_bottlenecks": [
+        {
+          "label": "L0_F124985954",
+          "layer": 0,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.8222222222222223,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L0_F120024270",
+          "layer": 0,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.825,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L6_F15806246",
+          "layer": 6,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L0_F12105659",
+          "layer": 0,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L3_F5150441",
+          "layer": 3,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L0_F64712375",
+          "layer": 0,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L4_F110446948",
+          "layer": 4,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8400000000000001,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L6_F2586668",
+          "layer": 6,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L0_F128440377",
+          "layer": 0,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.76,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L0_F100047584",
+          "layer": 0,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L1_F67750618",
+          "layer": 1,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.96,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L8_F87258646",
+          "layer": 8,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8800000000000001,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L0_F63918470",
+          "layer": 0,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.64,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L12_F56652677",
+          "layer": 12,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.64,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L7_F12688195",
+          "layer": 7,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.9199999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L2_F113048163",
+          "layer": 2,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L4_F8767573",
+          "layer": 4,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L4_F96778823",
+          "layer": 4,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L1_F48024898",
+          "layer": 1,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L7_F4828270",
+          "layer": 7,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is"
+          ]
+        },
+        {
+          "label": "L0_F1813559",
+          "layer": 0,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.6666666666666666,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is"
+          ]
+        },
+        {
+          "label": "L24_F92024936",
+          "layer": 24,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.6666666666666666,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L20_F4853149",
+          "layer": 20,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L12_F54637818",
+          "layer": 12,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L14_F6917325",
+          "layer": 14,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L13_F53742514",
+          "layer": 13,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L1_F38311879",
+          "layer": 1,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L0_F40747877",
+          "layer": 0,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L3_F13372202",
+          "layer": 3,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L6_F42342996",
+          "layer": 6,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L7_F107685142",
+          "layer": 7,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L2_F17656650",
+          "layer": 2,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L1_F4948",
+          "layer": 1,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L0_F41719544",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is"
+          ]
+        },
+        {
+          "label": "L20_F71957985",
+          "layer": 20,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is"
+          ]
+        },
+        {
+          "label": "L1_F38032279",
+          "layer": 1,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-sodium-is"
+          ]
+        },
+        {
+          "label": "L23_F40423512",
+          "layer": 23,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L2_F116502477",
+          "layer": 2,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L8_F4831377",
+          "layer": 8,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is"
+          ]
+        },
+        {
+          "label": "L10_F7405465",
+          "layer": 10,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is"
+          ]
+        },
+        {
+          "label": "L0_F70051365",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L0_F24587577",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L10_F3146275",
+          "layer": 10,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L9_F2910068",
+          "layer": 9,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L9_F53525021",
+          "layer": 9,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L13_F50526364",
+          "layer": 13,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L14_F42177505",
+          "layer": 14,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L13_F53614",
+          "layer": 13,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        }
+      ],
+      "avg_jaccard_similarity": 0.2885371241319611,
+      "jaccard_matrix": {
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-copper-is": 0.325,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-gold-is": 0.32954545454545453,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-iron-is": 0.28703703703703703,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-lead-is": 0.16666666666666666,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-mercury-is": 0.25287356321839083,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-potassium-is": 0.2545454545454545,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-silver-is": 0.25675675675675674,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-sodium-is": 0.29213483146067415,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-tungsten-is": 0.2375,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-gold-is": 0.36046511627906974,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-iron-is": 0.28703703703703703,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-lead-is": 0.26595744680851063,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-mercury-is": 0.26744186046511625,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-potassium-is": 0.24324324324324326,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-silver-is": 0.4090909090909091,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-sodium-is": 0.4024390243902439,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-tungsten-is": 0.4142857142857143,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-iron-is": 0.21951219512195122,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-lead-is": 0.2037037037037037,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-mercury-is": 0.2765957446808511,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-potassium-is": 0.2627118644067797,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-silver-is": 0.3,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-sodium-is": 0.3548387096774194,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-tungsten-is": 0.2222222222222222,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-lead-is": 0.16923076923076924,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-mercury-is": 0.22413793103448276,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-potassium-is": 0.4491525423728814,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-silver-is": 0.22330097087378642,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-sodium-is": 0.23333333333333334,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-tungsten-is": 0.168141592920354,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-mercury-is": 0.2978723404255319,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-potassium-is": 0.1984126984126984,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-silver-is": 0.30864197530864196,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-sodium-is": 0.3617021276595745,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-tungsten-is": 0.17894736842105263,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-potassium-is": 0.3557692307692308,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-silver-is": 0.391304347826087,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-sodium-is": 0.3409090909090909,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-tungsten-is": 0.3076923076923077,
+        "the-chemical-symbol-for-potassium-is vs the-chemical-symbol-for-silver-is": 0.26262626262626265,
+        "the-chemical-symbol-for-potassium-is vs the-chemical-symbol-for-sodium-is": 0.37383177570093457,
+        "the-chemical-symbol-for-potassium-is vs the-chemical-symbol-for-tungsten-is": 0.18018018018018017,
+        "the-chemical-symbol-for-silver-is vs the-chemical-symbol-for-sodium-is": 0.3972602739726027,
+        "the-chemical-symbol-for-silver-is vs the-chemical-symbol-for-tungsten-is": 0.30303030303030304,
+        "the-chemical-symbol-for-sodium-is vs the-chemical-symbol-for-tungsten-is": 0.3670886075949367
+      },
+      "layer_distribution": {
+        "0": 66,
+        "1": 26,
+        "2": 20,
+        "3": 13,
+        "4": 21,
+        "5": 2,
+        "6": 19,
+        "7": 15,
+        "8": 8,
+        "9": 5,
+        "10": 4,
+        "11": 1,
+        "12": 8,
+        "13": 9,
+        "14": 8,
+        "15": 2,
+        "16": 2,
+        "17": 1,
+        "18": 1,
+        "19": 1,
+        "20": 6,
+        "21": 1,
+        "22": 1,
+        "23": 3,
+        "24": 5
+      },
+      "consistency_score": 90.0,
+      "top_bottleneck": "L0_F124985954",
+      "bottlenecks_per_circuit": {
+        "the-chemical-symbol-for-gold-is": 25,
+        "the-chemical-symbol-for-iron-is": 25,
+        "the-chemical-symbol-for-lead-is": 26,
+        "the-chemical-symbol-for-mercury-is": 29,
+        "the-chemical-symbol-for-argon-is": 25,
+        "the-chemical-symbol-for-sodium-is": 27,
+        "the-chemical-symbol-for-silver-is": 28,
+        "the-chemical-symbol-for-potassium-is": 13,
+        "the-chemical-symbol-for-copper-is": 23,
+        "the-chemical-symbol-for-tungsten-is": 27
+      }
+    },
+    {
+      "category": "geography",
+      "model": "gemma-2-2b",
+      "num_circuits": 10,
+      "shared_bottlenecks": [
+        {
+          "label": "L0_F1813559",
+          "layer": 0,
+          "circuit_count": 10,
+          "total_circuits": 10,
+          "share_pct": 100.0,
+          "avg_convergence": 0.8400000000000001,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L2_F25751073",
+          "layer": 2,
+          "circuit_count": 10,
+          "total_circuits": 10,
+          "share_pct": 100.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L4_F110446948",
+          "layer": 4,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.911111111111111,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L3_F5150441",
+          "layer": 3,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.911111111111111,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L6_F10902108",
+          "layer": 6,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L4_F7332530",
+          "layer": 4,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L5_F5576124",
+          "layer": 5,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L1_F502501",
+          "layer": 1,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L2_F2110482",
+          "layer": 2,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L0_F25343639",
+          "layer": 0,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L0_F1925702",
+          "layer": 0,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L0_F11637899",
+          "layer": 0,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.6857142857142857,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L4_F29464321",
+          "layer": 4,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.7142857142857143,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L21_F17793573",
+          "layer": 21,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.7714285714285715,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L16_F12693224",
+          "layer": 16,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L17_F607735",
+          "layer": 17,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L15_F10172289",
+          "layer": 15,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L7_F244642",
+          "layer": 7,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.6666666666666666,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L2_F81977607",
+          "layer": 2,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L0_F74438300",
+          "layer": 0,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L3_F97839062",
+          "layer": 3,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.76,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L0_F80638649",
+          "layer": 0,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is"
+          ]
+        },
+        {
+          "label": "L8_F20940147",
+          "layer": 8,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.65,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L24_F88478228",
+          "layer": 24,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.65,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L23_F1206657",
+          "layer": 23,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.65,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L0_F9350649",
+          "layer": 0,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L0_F64712375",
+          "layer": 0,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-canada-is"
+          ]
+        },
+        {
+          "label": "L2_F38171950",
+          "layer": 2,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is"
+          ]
+        },
+        {
+          "label": "L16_F9311753",
+          "layer": 16,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-capital-of-egypt-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L9_F5335001",
+          "layer": 9,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.6666666666666666,
+          "circuits": [
+            "the-capital-of-egypt-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L15_F97238469",
+          "layer": 15,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-germany-is"
+          ]
+        },
+        {
+          "label": "L1_F127145429",
+          "layer": 1,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is"
+          ]
+        },
+        {
+          "label": "L0_F2239785",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is"
+          ]
+        },
+        {
+          "label": "L1_F58660694",
+          "layer": 1,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is"
+          ]
+        },
+        {
+          "label": "L6_F2586668",
+          "layer": 6,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L12_F78206258",
+          "layer": 12,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-capital-of-canada-is",
+            "the-capital-of-south-korea-is"
+          ]
+        }
+      ],
+      "avg_jaccard_similarity": 0.39489384067931554,
+      "jaccard_matrix": {
+        "the-capital-of-canada-is vs the-capital-of-egypt-is": 0.26548672566371684,
+        "the-capital-of-canada-is vs the-capital-of-france-is": 0.45901639344262296,
+        "the-capital-of-canada-is vs the-capital-of-germany-is": 0.2605042016806723,
+        "the-capital-of-canada-is vs the-capital-of-italy-is": 0.42857142857142855,
+        "the-capital-of-canada-is vs the-capital-of-japan-is": 0.4111111111111111,
+        "the-capital-of-canada-is vs the-capital-of-south-korea-is": 0.29411764705882354,
+        "the-capital-of-canada-is vs the-capital-of-spain-is": 0.4380165289256198,
+        "the-capital-of-canada-is vs the-capital-of-thailand-is": 0.3391304347826087,
+        "the-capital-of-canada-is vs the-capital-of-turkey-is": 0.3017241379310345,
+        "the-capital-of-egypt-is vs the-capital-of-france-is": 0.2905982905982906,
+        "the-capital-of-egypt-is vs the-capital-of-germany-is": 0.43023255813953487,
+        "the-capital-of-egypt-is vs the-capital-of-italy-is": 0.3076923076923077,
+        "the-capital-of-egypt-is vs the-capital-of-japan-is": 0.4084507042253521,
+        "the-capital-of-egypt-is vs the-capital-of-south-korea-is": 0.4431818181818182,
+        "the-capital-of-egypt-is vs the-capital-of-spain-is": 0.32432432432432434,
+        "the-capital-of-egypt-is vs the-capital-of-thailand-is": 0.5119047619047619,
+        "the-capital-of-egypt-is vs the-capital-of-turkey-is": 0.4418604651162791,
+        "the-capital-of-france-is vs the-capital-of-germany-is": 0.3504273504273504,
+        "the-capital-of-france-is vs the-capital-of-italy-is": 0.504,
+        "the-capital-of-france-is vs the-capital-of-japan-is": 0.35,
+        "the-capital-of-france-is vs the-capital-of-south-korea-is": 0.3064516129032258,
+        "the-capital-of-france-is vs the-capital-of-spain-is": 0.5689655172413793,
+        "the-capital-of-france-is vs the-capital-of-thailand-is": 0.36134453781512604,
+        "the-capital-of-france-is vs the-capital-of-turkey-is": 0.30327868852459017,
+        "the-capital-of-germany-is vs the-capital-of-italy-is": 0.3559322033898305,
+        "the-capital-of-germany-is vs the-capital-of-japan-is": 0.38961038961038963,
+        "the-capital-of-germany-is vs the-capital-of-south-korea-is": 0.38144329896907214,
+        "the-capital-of-germany-is vs the-capital-of-spain-is": 0.375,
+        "the-capital-of-germany-is vs the-capital-of-thailand-is": 0.4725274725274725,
+        "the-capital-of-germany-is vs the-capital-of-turkey-is": 0.42391304347826086,
+        "the-capital-of-italy-is vs the-capital-of-japan-is": 0.3431372549019608,
+        "the-capital-of-italy-is vs the-capital-of-south-korea-is": 0.312,
+        "the-capital-of-italy-is vs the-capital-of-spain-is": 0.6140350877192983,
+        "the-capital-of-italy-is vs the-capital-of-thailand-is": 0.37815126050420167,
+        "the-capital-of-italy-is vs the-capital-of-turkey-is": 0.35294117647058826,
+        "the-capital-of-japan-is vs the-capital-of-south-korea-is": 0.48,
+        "the-capital-of-japan-is vs the-capital-of-spain-is": 0.35051546391752575,
+        "the-capital-of-japan-is vs the-capital-of-thailand-is": 0.48,
+        "the-capital-of-japan-is vs the-capital-of-turkey-is": 0.4594594594594595,
+        "the-capital-of-south-korea-is vs the-capital-of-spain-is": 0.3277310924369748,
+        "the-capital-of-south-korea-is vs the-capital-of-thailand-is": 0.4838709677419355,
+        "the-capital-of-south-korea-is vs the-capital-of-turkey-is": 0.4673913043478261,
+        "the-capital-of-spain-is vs the-capital-of-thailand-is": 0.38596491228070173,
+        "the-capital-of-spain-is vs the-capital-of-turkey-is": 0.33620689655172414,
+        "the-capital-of-thailand-is vs the-capital-of-turkey-is": 0.5
+      },
+      "layer_distribution": {
+        "0": 52,
+        "1": 13,
+        "2": 26,
+        "3": 14,
+        "4": 24,
+        "5": 9,
+        "6": 11,
+        "7": 7,
+        "8": 4,
+        "9": 4,
+        "10": 1,
+        "12": 2,
+        "15": 8,
+        "16": 9,
+        "17": 6,
+        "19": 1,
+        "21": 7,
+        "23": 4,
+        "24": 4
+      },
+      "consistency_score": 100.0,
+      "top_bottleneck": "L0_F1813559",
+      "bottlenecks_per_circuit": {
+        "the-capital-of-france-is": 18,
+        "the-capital-of-japan-is": 27,
+        "the-capital-of-germany-is": 25,
+        "the-capital-of-egypt-is": 26,
+        "the-capital-of-italy-is": 6,
+        "the-capital-of-spain-is": 8,
+        "the-capital-of-canada-is": 27,
+        "the-capital-of-thailand-is": 21,
+        "the-capital-of-turkey-is": 26,
+        "the-capital-of-south-korea-is": 22
+      }
+    },
+    {
+      "category": "history",
+      "model": "gemma-2-2b",
+      "num_circuits": 10,
+      "shared_bottlenecks": [
+        {
+          "label": "L6_F2586668",
+          "layer": 6,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-titanic-sank-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L9_F125286525",
+          "layer": 9,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8400000000000001,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L5_F7993995",
+          "layer": 5,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8400000000000001,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L4_F110446948",
+          "layer": 4,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.72,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L3_F5150441",
+          "layer": 3,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.76,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L0_F32501952",
+          "layer": 0,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.72,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L24_F88478228",
+          "layer": 24,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.65,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-first-moon-landing-was-in",
+            "the-titanic-sank-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L7_F110677",
+          "layer": 7,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L7_F16528367",
+          "layer": 7,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L7_F4828270",
+          "layer": 7,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L4_F47653198",
+          "layer": 4,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L1_F99962728",
+          "layer": 1,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L10_F100614194",
+          "layer": 10,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.8000000000000002,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L8_F4831377",
+          "layer": 8,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L8_F19471911",
+          "layer": 8,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L14_F153720",
+          "layer": 14,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L4_F36564071",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L2_F37788468",
+          "layer": 2,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L3_F128264132",
+          "layer": 3,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L4_F48496471",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L12_F78206258",
+          "layer": 12,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L9_F4701701",
+          "layer": 9,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L11_F6324334",
+          "layer": 11,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L6_F48733121",
+          "layer": 6,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L17_F89625948",
+          "layer": 17,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L14_F45101238",
+          "layer": 14,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L13_F22068032",
+          "layer": 13,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L12_F47127473",
+          "layer": 12,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L10_F59891029",
+          "layer": 10,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L6_F106470521",
+          "layer": 6,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L6_F10231019",
+          "layer": 6,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L0_F1813559",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L0_F80638649",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L6_F105683984",
+          "layer": 6,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L0_F53235720",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L0_F11637899",
+          "layer": 0,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L4_F8443990",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L4_F106543498",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L4_F40118398",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L4_F45701575",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in"
+          ]
+        },
+        {
+          "label": "L11_F2069583",
+          "layer": 11,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L7_F1622693",
+          "layer": 7,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L6_F116044988",
+          "layer": 6,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L4_F112522496",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L5_F49496269",
+          "layer": 5,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L5_F74291949",
+          "layer": 5,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L4_F2823871",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L4_F36881161",
+          "layer": 4,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L7_F101438638",
+          "layer": 7,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L5_F6168822",
+          "layer": 5,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-french-revolution-began-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L7_F22879222",
+          "layer": 7,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "columbus-reached-the-americas-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        }
+      ],
+      "avg_jaccard_similarity": 0.10761067777617206,
+      "jaccard_matrix": {
+        "america-declared-independence-in vs columbus-reached-the-americas-in": 0.11578947368421053,
+        "america-declared-independence-in vs nelson-mandela-was-released-from-prison-in": 0.08928571428571429,
+        "america-declared-independence-in vs the-berlin-wall-fell-in": 0.06422018348623854,
+        "america-declared-independence-in vs the-first-moon-landing-was-in": 0.0707070707070707,
+        "america-declared-independence-in vs the-french-revolution-began-in": 0.11214953271028037,
+        "america-declared-independence-in vs the-great-fire-of-london-occurred-in": 0.07333333333333333,
+        "america-declared-independence-in vs the-titanic-sank-in": 0.09574468085106383,
+        "america-declared-independence-in vs world-war-i-started-in": 0.03296703296703297,
+        "america-declared-independence-in vs world-war-ii-ended-in": 0.10752688172043011,
+        "columbus-reached-the-americas-in vs nelson-mandela-was-released-from-prison-in": 0.25252525252525254,
+        "columbus-reached-the-americas-in vs the-berlin-wall-fell-in": 0.11320754716981132,
+        "columbus-reached-the-americas-in vs the-first-moon-landing-was-in": 0.17391304347826086,
+        "columbus-reached-the-americas-in vs the-french-revolution-began-in": 0.11009174311926606,
+        "columbus-reached-the-americas-in vs the-great-fire-of-london-occurred-in": 0.10884353741496598,
+        "columbus-reached-the-americas-in vs the-titanic-sank-in": 0.1797752808988764,
+        "columbus-reached-the-americas-in vs world-war-i-started-in": 0.03225806451612903,
+        "columbus-reached-the-americas-in vs world-war-ii-ended-in": 0.10526315789473684,
+        "nelson-mandela-was-released-from-prison-in vs the-berlin-wall-fell-in": 0.16521739130434782,
+        "nelson-mandela-was-released-from-prison-in vs the-first-moon-landing-was-in": 0.16981132075471697,
+        "nelson-mandela-was-released-from-prison-in vs the-french-revolution-began-in": 0.096,
+        "nelson-mandela-was-released-from-prison-in vs the-great-fire-of-london-occurred-in": 0.15483870967741936,
+        "nelson-mandela-was-released-from-prison-in vs the-titanic-sank-in": 0.16346153846153846,
+        "nelson-mandela-was-released-from-prison-in vs world-war-i-started-in": 0.037037037037037035,
+        "nelson-mandela-was-released-from-prison-in vs world-war-ii-ended-in": 0.1,
+        "the-berlin-wall-fell-in vs the-first-moon-landing-was-in": 0.14563106796116504,
+        "the-berlin-wall-fell-in vs the-french-revolution-began-in": 0.11016949152542373,
+        "the-berlin-wall-fell-in vs the-great-fire-of-london-occurred-in": 0.16891891891891891,
+        "the-berlin-wall-fell-in vs the-titanic-sank-in": 0.3068181818181818,
+        "the-berlin-wall-fell-in vs world-war-i-started-in": 0.02912621359223301,
+        "the-berlin-wall-fell-in vs world-war-ii-ended-in": 0.08490566037735849,
+        "the-first-moon-landing-was-in vs the-french-revolution-began-in": 0.11009174311926606,
+        "the-first-moon-landing-was-in vs the-great-fire-of-london-occurred-in": 0.10884353741496598,
+        "the-first-moon-landing-was-in vs the-titanic-sank-in": 0.12903225806451613,
+        "the-first-moon-landing-was-in vs world-war-i-started-in": 0.03225806451612903,
+        "the-first-moon-landing-was-in vs world-war-ii-ended-in": 0.039603960396039604,
+        "the-french-revolution-began-in vs the-great-fire-of-london-occurred-in": 0.1282051282051282,
+        "the-french-revolution-began-in vs the-titanic-sank-in": 0.09259259259259259,
+        "the-french-revolution-began-in vs world-war-i-started-in": 0.04807692307692308,
+        "the-french-revolution-began-in vs world-war-ii-ended-in": 0.02608695652173913,
+        "the-great-fire-of-london-occurred-in vs the-titanic-sank-in": 0.14285714285714285,
+        "the-great-fire-of-london-occurred-in vs world-war-i-started-in": 0.006666666666666667,
+        "the-great-fire-of-london-occurred-in vs world-war-ii-ended-in": 0.0457516339869281,
+        "the-titanic-sank-in vs world-war-i-started-in": 0.08139534883720931,
+        "the-titanic-sank-in vs world-war-ii-ended-in": 0.13333333333333333,
+        "world-war-i-started-in vs world-war-ii-ended-in": 0.14814814814814814
+      },
+      "layer_distribution": {
+        "0": 32,
+        "1": 17,
+        "2": 13,
+        "3": 11,
+        "4": 32,
+        "5": 18,
+        "6": 24,
+        "7": 27,
+        "8": 10,
+        "9": 8,
+        "10": 5,
+        "11": 5,
+        "12": 4,
+        "13": 3,
+        "14": 8,
+        "15": 2,
+        "16": 5,
+        "17": 7,
+        "18": 3,
+        "20": 2,
+        "21": 1,
+        "22": 3,
+        "23": 2,
+        "24": 4
+      },
+      "consistency_score": 60.0,
+      "top_bottleneck": "L6_F2586668",
+      "bottlenecks_per_circuit": {
+        "world-war-ii-ended-in": 29,
+        "the-first-moon-landing-was-in": 26,
+        "the-berlin-wall-fell-in": 26,
+        "the-titanic-sank-in": 29,
+        "america-declared-independence-in": 27,
+        "the-french-revolution-began-in": 28,
+        "world-war-i-started-in": 29,
+        "columbus-reached-the-americas-in": 26,
+        "the-great-fire-of-london-occurred-in": 4,
+        "nelson-mandela-was-released-from-prison-in": 22
+      }
+    },
+    {
+      "category": "chemistry",
+      "model": "qwen3-4b",
+      "num_circuits": 10,
+      "shared_bottlenecks": [
+        {
+          "label": "L27_F7867534052",
+          "layer": 27,
+          "circuit_count": 10,
+          "total_circuits": 10,
+          "share_pct": 100.0,
+          "avg_convergence": 0.96,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L19_F6611637508",
+          "layer": 19,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.911111111111111,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L15_F8173514424",
+          "layer": 15,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.9333333333333333,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L16_F1043399704",
+          "layer": 16,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.9333333333333333,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L18_F11703352509",
+          "layer": 18,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.9555555555555555,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L34_F415944868",
+          "layer": 34,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.7111111111111111,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L31_F2597510894",
+          "layer": 31,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.8250000000000001,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L30_F1922775047",
+          "layer": 30,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L24_F457788386",
+          "layer": 24,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.875,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L27_F12610705050",
+          "layer": 27,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.925,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L17_F6197796762",
+          "layer": 17,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.925,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L26_F1133238",
+          "layer": 26,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.8857142857142858,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L29_F89625936",
+          "layer": 29,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.8285714285714286,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L28_F2987219836",
+          "layer": 28,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.7714285714285715,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L24_F12464547080",
+          "layer": 24,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.9142857142857144,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L33_F10240593794",
+          "layer": 33,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.7666666666666666,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L28_F1199005936",
+          "layer": 28,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.8666666666666667,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L27_F1591692803",
+          "layer": 27,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L28_F169804777",
+          "layer": 28,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.8666666666666667,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L32_F7014668202",
+          "layer": 32,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L22_F4467724105",
+          "layer": 22,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8800000000000001,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L32_F3158177517",
+          "layer": 32,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.75,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-sodium-is"
+          ]
+        },
+        {
+          "label": "L13_F1279598152",
+          "layer": 13,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L29_F11043729241",
+          "layer": 29,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is"
+          ]
+        },
+        {
+          "label": "L28_F1888512124",
+          "layer": 28,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L27_F2886974063",
+          "layer": 27,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L9_F2699691930",
+          "layer": 9,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.8666666666666667,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L23_F4208618361",
+          "layer": 23,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L29_F6891203871",
+          "layer": 29,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.6666666666666666,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L28_F393078712",
+          "layer": 28,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.6666666666666666,
+          "circuits": [
+            "the-chemical-symbol-for-iron-is",
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L10_F5299402714",
+          "layer": 10,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L14_F1655454555",
+          "layer": 14,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-mercury-is",
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L25_F942235729",
+          "layer": 25,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L26_F10912888953",
+          "layer": 26,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L27_F2280859542",
+          "layer": 27,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L26_F10368215974",
+          "layer": 26,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L22_F2647554505",
+          "layer": 22,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-silver-is"
+          ]
+        },
+        {
+          "label": "L20_F1727632350",
+          "layer": 20,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-chemical-symbol-for-gold-is",
+            "the-chemical-symbol-for-mercury-is"
+          ]
+        },
+        {
+          "label": "L29_F9851377131",
+          "layer": 29,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-lead-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L29_F1822057131",
+          "layer": 29,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.6,
+          "circuits": [
+            "the-chemical-symbol-for-argon-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L25_F1732514654",
+          "layer": 25,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.7,
+          "circuits": [
+            "the-chemical-symbol-for-sodium-is",
+            "the-chemical-symbol-for-potassium-is"
+          ]
+        },
+        {
+          "label": "L25_F2544590765",
+          "layer": 25,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-copper-is"
+          ]
+        },
+        {
+          "label": "L26_F5142348964",
+          "layer": 26,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-chemical-symbol-for-silver-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        },
+        {
+          "label": "L26_F1958034304",
+          "layer": 26,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-chemical-symbol-for-potassium-is",
+            "the-chemical-symbol-for-tungsten-is"
+          ]
+        }
+      ],
+      "avg_jaccard_similarity": 0.3526867207171995,
+      "jaccard_matrix": {
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-copper-is": 0.3170731707317073,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-gold-is": 0.2916666666666667,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-iron-is": 0.3561643835616438,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-lead-is": 0.2714285714285714,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-mercury-is": 0.273972602739726,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-potassium-is": 0.4,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-silver-is": 0.25316455696202533,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-sodium-is": 0.4246575342465753,
+        "the-chemical-symbol-for-argon-is vs the-chemical-symbol-for-tungsten-is": 0.2898550724637681,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-gold-is": 0.33766233766233766,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-iron-is": 0.5138888888888888,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-lead-is": 0.3026315789473684,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-mercury-is": 0.33766233766233766,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-potassium-is": 0.42105263157894735,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-silver-is": 0.3625,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-sodium-is": 0.4805194805194805,
+        "the-chemical-symbol-for-copper-is vs the-chemical-symbol-for-tungsten-is": 0.3561643835616438,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-iron-is": 0.36231884057971014,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-lead-is": 0.3770491803278688,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-mercury-is": 0.3968253968253968,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-potassium-is": 0.273972602739726,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-silver-is": 0.38235294117647056,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-sodium-is": 0.2857142857142857,
+        "the-chemical-symbol-for-gold-is vs the-chemical-symbol-for-tungsten-is": 0.3333333333333333,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-lead-is": 0.34328358208955223,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-mercury-is": 0.36231884057971014,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-potassium-is": 0.5,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-silver-is": 0.35135135135135137,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-sodium-is": 0.5909090909090909,
+        "the-chemical-symbol-for-iron-is vs the-chemical-symbol-for-tungsten-is": 0.34328358208955223,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-mercury-is": 0.3333333333333333,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-potassium-is": 0.3088235294117647,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-silver-is": 0.2676056338028169,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-sodium-is": 0.26666666666666666,
+        "the-chemical-symbol-for-lead-is vs the-chemical-symbol-for-tungsten-is": 0.40350877192982454,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-potassium-is": 0.273972602739726,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-silver-is": 0.38235294117647056,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-sodium-is": 0.2857142857142857,
+        "the-chemical-symbol-for-mercury-is vs the-chemical-symbol-for-tungsten-is": 0.3125,
+        "the-chemical-symbol-for-potassium-is vs the-chemical-symbol-for-silver-is": 0.2692307692307692,
+        "the-chemical-symbol-for-potassium-is vs the-chemical-symbol-for-sodium-is": 0.5757575757575758,
+        "the-chemical-symbol-for-potassium-is vs the-chemical-symbol-for-tungsten-is": 0.390625,
+        "the-chemical-symbol-for-silver-is vs the-chemical-symbol-for-sodium-is": 0.26506024096385544,
+        "the-chemical-symbol-for-silver-is vs the-chemical-symbol-for-tungsten-is": 0.3235294117647059,
+        "the-chemical-symbol-for-sodium-is vs the-chemical-symbol-for-tungsten-is": 0.3194444444444444
+      },
+      "layer_distribution": {
+        "5": 1,
+        "7": 1,
+        "8": 4,
+        "9": 5,
+        "10": 5,
+        "12": 1,
+        "13": 6,
+        "14": 3,
+        "15": 9,
+        "16": 9,
+        "17": 8,
+        "18": 9,
+        "19": 10,
+        "20": 2,
+        "21": 1,
+        "22": 12,
+        "23": 11,
+        "24": 22,
+        "25": 13,
+        "26": 18,
+        "27": 32,
+        "28": 25,
+        "29": 23,
+        "30": 9,
+        "31": 12,
+        "32": 12,
+        "33": 6,
+        "34": 9
+      },
+      "consistency_score": 100.0,
+      "top_bottleneck": "L27_F7867534052",
+      "bottlenecks_per_circuit": {
+        "the-chemical-symbol-for-gold-is": 28,
+        "the-chemical-symbol-for-iron-is": 25,
+        "the-chemical-symbol-for-lead-is": 27,
+        "the-chemical-symbol-for-mercury-is": 29,
+        "the-chemical-symbol-for-argon-is": 29,
+        "the-chemical-symbol-for-sodium-is": 27,
+        "the-chemical-symbol-for-silver-is": 27,
+        "the-chemical-symbol-for-potassium-is": 29,
+        "the-chemical-symbol-for-copper-is": 30,
+        "the-chemical-symbol-for-tungsten-is": 27
+      }
+    },
+    {
+      "category": "geography",
+      "model": "qwen3-4b",
+      "num_circuits": 10,
+      "shared_bottlenecks": [
+        {
+          "label": "L34_F415944868",
+          "layer": 34,
+          "circuit_count": 10,
+          "total_circuits": 10,
+          "share_pct": 100.0,
+          "avg_convergence": 0.78,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L27_F12610705050",
+          "layer": 27,
+          "circuit_count": 10,
+          "total_circuits": 10,
+          "share_pct": 100.0,
+          "avg_convergence": 0.9199999999999999,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L33_F10240593794",
+          "layer": 33,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.9333333333333333,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L27_F904081475",
+          "layer": 27,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.9555555555555555,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L18_F11703352509",
+          "layer": 18,
+          "circuit_count": 9,
+          "total_circuits": 10,
+          "share_pct": 90.0,
+          "avg_convergence": 0.9555555555555555,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L25_F12748611655",
+          "layer": 25,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L22_F8843502505",
+          "layer": 22,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L22_F12138923368",
+          "layer": 22,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L32_F3158177517",
+          "layer": 32,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.9142857142857144,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L26_F10368215974",
+          "layer": 26,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.9428571428571428,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is"
+          ]
+        },
+        {
+          "label": "L28_F231608974",
+          "layer": 28,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.8285714285714285,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is"
+          ]
+        },
+        {
+          "label": "L17_F6197796762",
+          "layer": 17,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.8857142857142858,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L19_F6611637508",
+          "layer": 19,
+          "circuit_count": 7,
+          "total_circuits": 10,
+          "share_pct": 70.0,
+          "avg_convergence": 0.9428571428571428,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L28_F344964482",
+          "layer": 28,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.9666666666666667,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is"
+          ]
+        },
+        {
+          "label": "L16_F1043399704",
+          "layer": 16,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.9666666666666667,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L30_F7641879347",
+          "layer": 30,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.96,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L29_F12336827551",
+          "layer": 29,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.96,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L24_F457788386",
+          "layer": 24,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.96,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L28_F9078174856",
+          "layer": 28,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.9199999999999999,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is"
+          ]
+        },
+        {
+          "label": "L26_F2284643379",
+          "layer": 26,
+          "circuit_count": 5,
+          "total_circuits": 10,
+          "share_pct": 50.0,
+          "avg_convergence": 0.8800000000000001,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is",
+            "the-capital-of-canada-is"
+          ]
+        },
+        {
+          "label": "L29_F7810937548",
+          "layer": 29,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.85,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L25_F2636795864",
+          "layer": 25,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-germany-is",
+            "the-capital-of-italy-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L29_F89625936",
+          "layer": 29,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-capital-of-japan-is",
+            "the-capital-of-egypt-is",
+            "the-capital-of-south-korea-is"
+          ]
+        },
+        {
+          "label": "L24_F16898366",
+          "layer": 24,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-capital-of-egypt-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L15_F8173514424",
+          "layer": 15,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-capital-of-egypt-is",
+            "the-capital-of-thailand-is",
+            "the-capital-of-turkey-is"
+          ]
+        },
+        {
+          "label": "L23_F4208618361",
+          "layer": 23,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-capital-of-egypt-is",
+            "the-capital-of-canada-is",
+            "the-capital-of-thailand-is"
+          ]
+        },
+        {
+          "label": "L26_F10912888953",
+          "layer": 26,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-capital-of-france-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L25_F4264030352",
+          "layer": 25,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-capital-of-germany-is",
+            "the-capital-of-spain-is"
+          ]
+        },
+        {
+          "label": "L29_F1946224825",
+          "layer": 29,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-capital-of-germany-is",
+            "the-capital-of-spain-is"
+          ]
+        }
+      ],
+      "avg_jaccard_similarity": 0.3344799767214907,
+      "jaccard_matrix": {
+        "the-capital-of-canada-is vs the-capital-of-egypt-is": 0.37037037037037035,
+        "the-capital-of-canada-is vs the-capital-of-france-is": 0.36363636363636365,
+        "the-capital-of-canada-is vs the-capital-of-germany-is": 0.39285714285714285,
+        "the-capital-of-canada-is vs the-capital-of-italy-is": 0.4230769230769231,
+        "the-capital-of-canada-is vs the-capital-of-japan-is": 0.359375,
+        "the-capital-of-canada-is vs the-capital-of-south-korea-is": 0.2222222222222222,
+        "the-capital-of-canada-is vs the-capital-of-spain-is": 0.3384615384615385,
+        "the-capital-of-canada-is vs the-capital-of-thailand-is": 0.3333333333333333,
+        "the-capital-of-canada-is vs the-capital-of-turkey-is": 0.3157894736842105,
+        "the-capital-of-egypt-is vs the-capital-of-france-is": 0.3157894736842105,
+        "the-capital-of-egypt-is vs the-capital-of-germany-is": 0.3220338983050847,
+        "the-capital-of-egypt-is vs the-capital-of-italy-is": 0.32142857142857145,
+        "the-capital-of-egypt-is vs the-capital-of-japan-is": 0.3181818181818182,
+        "the-capital-of-egypt-is vs the-capital-of-south-korea-is": 0.2753623188405797,
+        "the-capital-of-egypt-is vs the-capital-of-spain-is": 0.3384615384615385,
+        "the-capital-of-egypt-is vs the-capital-of-thailand-is": 0.3968253968253968,
+        "the-capital-of-egypt-is vs the-capital-of-turkey-is": 0.36363636363636365,
+        "the-capital-of-france-is vs the-capital-of-germany-is": 0.3620689655172414,
+        "the-capital-of-france-is vs the-capital-of-italy-is": 0.4423076923076923,
+        "the-capital-of-france-is vs the-capital-of-japan-is": 0.3968253968253968,
+        "the-capital-of-france-is vs the-capital-of-south-korea-is": 0.2361111111111111,
+        "the-capital-of-france-is vs the-capital-of-spain-is": 0.35384615384615387,
+        "the-capital-of-france-is vs the-capital-of-thailand-is": 0.3283582089552239,
+        "the-capital-of-france-is vs the-capital-of-turkey-is": 0.3333333333333333,
+        "the-capital-of-germany-is vs the-capital-of-italy-is": 0.39285714285714285,
+        "the-capital-of-germany-is vs the-capital-of-japan-is": 0.421875,
+        "the-capital-of-germany-is vs the-capital-of-south-korea-is": 0.19480519480519481,
+        "the-capital-of-germany-is vs the-capital-of-spain-is": 0.4918032786885246,
+        "the-capital-of-germany-is vs the-capital-of-thailand-is": 0.3333333333333333,
+        "the-capital-of-germany-is vs the-capital-of-turkey-is": 0.27419354838709675,
+        "the-capital-of-italy-is vs the-capital-of-japan-is": 0.359375,
+        "the-capital-of-italy-is vs the-capital-of-south-korea-is": 0.23943661971830985,
+        "the-capital-of-italy-is vs the-capital-of-spain-is": 0.359375,
+        "the-capital-of-italy-is vs the-capital-of-thailand-is": 0.3333333333333333,
+        "the-capital-of-italy-is vs the-capital-of-turkey-is": 0.3392857142857143,
+        "the-capital-of-japan-is vs the-capital-of-south-korea-is": 0.21686746987951808,
+        "the-capital-of-japan-is vs the-capital-of-spain-is": 0.47058823529411764,
+        "the-capital-of-japan-is vs the-capital-of-thailand-is": 0.3116883116883117,
+        "the-capital-of-japan-is vs the-capital-of-turkey-is": 0.2753623188405797,
+        "the-capital-of-south-korea-is vs the-capital-of-spain-is": 0.23170731707317074,
+        "the-capital-of-south-korea-is vs the-capital-of-thailand-is": 0.24390243902439024,
+        "the-capital-of-south-korea-is vs the-capital-of-turkey-is": 0.2535211267605634,
+        "the-capital-of-spain-is vs the-capital-of-thailand-is": 0.4027777777777778,
+        "the-capital-of-spain-is vs the-capital-of-turkey-is": 0.3333333333333333,
+        "the-capital-of-thailand-is vs the-capital-of-turkey-is": 0.3484848484848485
+      },
+      "layer_distribution": {
+        "8": 3,
+        "9": 5,
+        "10": 5,
+        "11": 5,
+        "12": 2,
+        "13": 1,
+        "14": 1,
+        "15": 4,
+        "16": 6,
+        "17": 7,
+        "18": 9,
+        "19": 7,
+        "20": 2,
+        "21": 2,
+        "22": 24,
+        "23": 15,
+        "24": 10,
+        "25": 19,
+        "26": 21,
+        "27": 25,
+        "28": 30,
+        "29": 24,
+        "30": 12,
+        "31": 10,
+        "32": 9,
+        "33": 10,
+        "34": 10
+      },
+      "consistency_score": 100.0,
+      "top_bottleneck": "L34_F415944868",
+      "bottlenecks_per_circuit": {
+        "the-capital-of-france-is": 27,
+        "the-capital-of-japan-is": 29,
+        "the-capital-of-germany-is": 29,
+        "the-capital-of-egypt-is": 27,
+        "the-capital-of-italy-is": 27,
+        "the-capital-of-spain-is": 29,
+        "the-capital-of-canada-is": 28,
+        "the-capital-of-thailand-is": 25,
+        "the-capital-of-turkey-is": 28,
+        "the-capital-of-south-korea-is": 29
+      }
+    },
+    {
+      "category": "history",
+      "model": "qwen3-4b",
+      "num_circuits": 10,
+      "shared_bottlenecks": [
+        {
+          "label": "L34_F415944868",
+          "layer": 34,
+          "circuit_count": 10,
+          "total_circuits": 10,
+          "share_pct": 100.0,
+          "avg_convergence": 0.6799999999999999,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-first-moon-landing-was-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "america-declared-independence-in",
+            "the-french-revolution-began-in",
+            "world-war-i-started-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L16_F1043399704",
+          "layer": 16,
+          "circuit_count": 8,
+          "total_circuits": 10,
+          "share_pct": 80.0,
+          "avg_convergence": 0.95,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-first-moon-landing-was-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "america-declared-independence-in",
+            "world-war-i-started-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L19_F6611637508",
+          "layer": 19,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.8666666666666667,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "america-declared-independence-in",
+            "world-war-i-started-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L15_F8173514424",
+          "layer": 15,
+          "circuit_count": 6,
+          "total_circuits": 10,
+          "share_pct": 60.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-first-moon-landing-was-in",
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "the-great-fire-of-london-occurred-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L22_F10499091755",
+          "layer": 22,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "america-declared-independence-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L17_F6197796762",
+          "layer": 17,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-titanic-sank-in",
+            "america-declared-independence-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L28_F8530726861",
+          "layer": 28,
+          "circuit_count": 4,
+          "total_circuits": 10,
+          "share_pct": 40.0,
+          "avg_convergence": 0.95,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in",
+            "world-war-i-started-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L23_F2555803236",
+          "layer": 23,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.8666666666666667,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-french-revolution-began-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L15_F308649419",
+          "layer": 15,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L14_F4638048813",
+          "layer": 14,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L13_F1584085027",
+          "layer": 13,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L12_F2735743452",
+          "layer": 12,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L13_F2980576222",
+          "layer": 13,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L18_F11703352509",
+          "layer": 18,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L14_F1655454555",
+          "layer": 14,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.8000000000000002,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-titanic-sank-in",
+            "nelson-mandela-was-released-from-prison-in"
+          ]
+        },
+        {
+          "label": "L32_F7014668202",
+          "layer": 32,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7333333333333334,
+          "circuits": [
+            "the-titanic-sank-in",
+            "columbus-reached-the-americas-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L23_F4533757452",
+          "layer": 23,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.9333333333333332,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L27_F12610705050",
+          "layer": 27,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.8666666666666667,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L24_F1129146456",
+          "layer": 24,
+          "circuit_count": 3,
+          "total_circuits": 10,
+          "share_pct": 30.0,
+          "avg_convergence": 0.7999999999999999,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in",
+            "columbus-reached-the-americas-in"
+          ]
+        },
+        {
+          "label": "L25_F502175560",
+          "layer": 25,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in"
+          ]
+        },
+        {
+          "label": "L22_F5640228922",
+          "layer": 22,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L28_F37450156",
+          "layer": 28,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L27_F6675150168",
+          "layer": 27,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "world-war-ii-ended-in",
+            "the-berlin-wall-fell-in"
+          ]
+        },
+        {
+          "label": "L12_F3151902093",
+          "layer": 12,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L12_F800099990",
+          "layer": 12,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L11_F3608378664",
+          "layer": 11,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L13_F6061500446",
+          "layer": 13,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L11_F11058149958",
+          "layer": 11,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L9_F234805275",
+          "layer": 9,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L11_F5968272873",
+          "layer": 11,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L10_F2021812244",
+          "layer": 10,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L12_F2242323015",
+          "layer": 12,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-first-moon-landing-was-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L28_F2172690211",
+          "layer": 28,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L26_F13395653013",
+          "layer": 26,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-berlin-wall-fell-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L25_F942235729",
+          "layer": 25,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "the-titanic-sank-in",
+            "the-great-fire-of-london-occurred-in"
+          ]
+        },
+        {
+          "label": "L27_F12553280447",
+          "layer": 27,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L26_F9024491004",
+          "layer": 26,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L28_F393078712",
+          "layer": 28,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L24_F457788386",
+          "layer": 24,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L33_F10240593794",
+          "layer": 33,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L32_F3158177517",
+          "layer": 32,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L31_F2597510894",
+          "layer": 31,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L30_F1922775047",
+          "layer": 30,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L29_F89625936",
+          "layer": 29,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.9,
+          "circuits": [
+            "america-declared-independence-in",
+            "world-war-i-started-in"
+          ]
+        },
+        {
+          "label": "L31_F528206221",
+          "layer": 31,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L29_F1621793598",
+          "layer": 29,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L28_F8474132176",
+          "layer": 28,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 0.8,
+          "circuits": [
+            "america-declared-independence-in",
+            "the-french-revolution-began-in"
+          ]
+        },
+        {
+          "label": "L25_F488328100",
+          "layer": 25,
+          "circuit_count": 2,
+          "total_circuits": 10,
+          "share_pct": 20.0,
+          "avg_convergence": 1.0,
+          "circuits": [
+            "the-french-revolution-began-in",
+            "world-war-i-started-in"
+          ]
+        }
+      ],
+      "avg_jaccard_similarity": 0.1527135857246278,
+      "jaccard_matrix": {
+        "america-declared-independence-in vs columbus-reached-the-americas-in": 0.16483516483516483,
+        "america-declared-independence-in vs nelson-mandela-was-released-from-prison-in": 0.10465116279069768,
+        "america-declared-independence-in vs the-berlin-wall-fell-in": 0.2,
+        "america-declared-independence-in vs the-first-moon-landing-was-in": 0.14942528735632185,
+        "america-declared-independence-in vs the-french-revolution-began-in": 0.2631578947368421,
+        "america-declared-independence-in vs the-great-fire-of-london-occurred-in": 0.12745098039215685,
+        "america-declared-independence-in vs the-titanic-sank-in": 0.12941176470588237,
+        "america-declared-independence-in vs world-war-i-started-in": 0.3466666666666667,
+        "america-declared-independence-in vs world-war-ii-ended-in": 0.11764705882352941,
+        "columbus-reached-the-americas-in vs nelson-mandela-was-released-from-prison-in": 0.1744186046511628,
+        "columbus-reached-the-americas-in vs the-berlin-wall-fell-in": 0.2,
+        "columbus-reached-the-americas-in vs the-first-moon-landing-was-in": 0.23255813953488372,
+        "columbus-reached-the-americas-in vs the-french-revolution-began-in": 0.1590909090909091,
+        "columbus-reached-the-americas-in vs the-great-fire-of-london-occurred-in": 0.2222222222222222,
+        "columbus-reached-the-americas-in vs the-titanic-sank-in": 0.14606741573033707,
+        "columbus-reached-the-americas-in vs world-war-i-started-in": 0.12631578947368421,
+        "columbus-reached-the-americas-in vs world-war-ii-ended-in": 0.16091954022988506,
+        "nelson-mandela-was-released-from-prison-in vs the-berlin-wall-fell-in": 0.1686746987951807,
+        "nelson-mandela-was-released-from-prison-in vs the-first-moon-landing-was-in": 0.13095238095238096,
+        "nelson-mandela-was-released-from-prison-in vs the-french-revolution-began-in": 0.12345679012345678,
+        "nelson-mandela-was-released-from-prison-in vs the-great-fire-of-london-occurred-in": 0.1111111111111111,
+        "nelson-mandela-was-released-from-prison-in vs the-titanic-sank-in": 0.12345679012345678,
+        "nelson-mandela-was-released-from-prison-in vs world-war-i-started-in": 0.09090909090909091,
+        "nelson-mandela-was-released-from-prison-in vs world-war-ii-ended-in": 0.18421052631578946,
+        "the-berlin-wall-fell-in vs the-first-moon-landing-was-in": 0.18604651162790697,
+        "the-berlin-wall-fell-in vs the-french-revolution-began-in": 0.18072289156626506,
+        "the-berlin-wall-fell-in vs the-great-fire-of-london-occurred-in": 0.11428571428571428,
+        "the-berlin-wall-fell-in vs the-titanic-sank-in": 0.12643678160919541,
+        "the-berlin-wall-fell-in vs world-war-i-started-in": 0.11956521739130435,
+        "the-berlin-wall-fell-in vs world-war-ii-ended-in": 0.18292682926829268,
+        "the-first-moon-landing-was-in vs the-french-revolution-began-in": 0.12941176470588237,
+        "the-first-moon-landing-was-in vs the-great-fire-of-london-occurred-in": 0.25,
+        "the-first-moon-landing-was-in vs the-titanic-sank-in": 0.12941176470588237,
+        "the-first-moon-landing-was-in vs world-war-i-started-in": 0.10989010989010989,
+        "the-first-moon-landing-was-in vs world-war-ii-ended-in": 0.14457831325301204,
+        "the-french-revolution-began-in vs the-great-fire-of-london-occurred-in": 0.08823529411764706,
+        "the-french-revolution-began-in vs the-titanic-sank-in": 0.08235294117647059,
+        "the-french-revolution-began-in vs world-war-i-started-in": 0.22784810126582278,
+        "the-french-revolution-began-in vs world-war-ii-ended-in": 0.16666666666666666,
+        "the-great-fire-of-london-occurred-in vs the-titanic-sank-in": 0.1326530612244898,
+        "the-great-fire-of-london-occurred-in vs world-war-i-started-in": 0.1262135922330097,
+        "the-great-fire-of-london-occurred-in vs world-war-ii-ended-in": 0.0891089108910891,
+        "the-titanic-sank-in vs world-war-i-started-in": 0.11494252873563218,
+        "the-titanic-sank-in vs world-war-ii-ended-in": 0.10975609756097561,
+        "world-war-i-started-in vs world-war-ii-ended-in": 0.10344827586206896
+      },
+      "layer_distribution": {
+        "7": 1,
+        "8": 3,
+        "9": 6,
+        "10": 8,
+        "11": 16,
+        "12": 13,
+        "13": 12,
+        "14": 9,
+        "15": 9,
+        "16": 9,
+        "17": 4,
+        "18": 4,
+        "19": 6,
+        "20": 1,
+        "21": 6,
+        "22": 16,
+        "23": 13,
+        "24": 17,
+        "25": 14,
+        "26": 18,
+        "27": 22,
+        "28": 26,
+        "29": 18,
+        "30": 9,
+        "31": 6,
+        "32": 6,
+        "33": 3,
+        "34": 10
+      },
+      "consistency_score": 100.0,
+      "top_bottleneck": "L34_F415944868",
+      "bottlenecks_per_circuit": {
+        "world-war-ii-ended-in": 29,
+        "the-first-moon-landing-was-in": 28,
+        "the-berlin-wall-fell-in": 29,
+        "the-titanic-sank-in": 28,
+        "america-declared-independence-in": 30,
+        "the-french-revolution-began-in": 27,
+        "world-war-i-started-in": 28,
+        "columbus-reached-the-americas-in": 29,
+        "the-great-fire-of-london-occurred-in": 28,
+        "nelson-mandela-was-released-from-prison-in": 29
+      }
+    }
+  ],
+  "cross_category": [
+    {
+      "model": "gemma-2-2b",
+      "universal_bottlenecks": [
+        "L3_F5150441",
+        "L0_F1813559",
+        "L24_F88478228",
+        "L4_F110446948",
+        "L6_F2586668",
+        "L0_F74438300"
+      ],
+      "universal_count": 6,
+      "category_specific": {
+        "chemistry": [
+          "L0_F24587577",
+          "L1_F1490399",
+          "L2_F17656650",
+          "L24_F129261",
+          "L18_F38592486",
+          "L2_F5808933",
+          "L6_F42342996",
+          "L0_F2467530",
+          "L2_F113048163",
+          "L17_F78006277",
+          "L0_F1998999",
+          "L14_F94057455",
+          "L13_F53614",
+          "L3_F13372202",
+          "L20_F78971007",
+          "L4_F122062495",
+          "L6_F14191121",
+          "L1_F67750618",
+          "L9_F53525021",
+          "L0_F5",
+          "L7_F83896573",
+          "L0_F70051365",
+          "L1_F15326414",
+          "L0_F67390244",
+          "L6_F15806246",
+          "L7_F82773403",
+          "L20_F71957985",
+          "L2_F40684707",
+          "L2_F1007487",
+          "L4_F93099830",
+          "L10_F3146275",
+          "L2_F116502477",
+          "L1_F4948",
+          "L7_F9324713",
+          "L13_F53742514",
+          "L23_F45126",
+          "L1_F414503",
+          "L14_F6917325",
+          "L16_F91320838",
+          "L1_F126715238",
+          "L14_F75737263",
+          "L14_F26132820",
+          "L0_F124985954",
+          "L12_F54637818",
+          "L7_F107685142",
+          "L15_F77981300",
+          "L20_F4853149",
+          "L0_F3224529",
+          "L0_F12105659",
+          "L13_F50526364",
+          "L3_F128953766",
+          "L2_F2630068",
+          "L1_F392939",
+          "L1_F38311879",
+          "L13_F2534612",
+          "L4_F37493465",
+          "L22_F36095233",
+          "L0_F32397224",
+          "L7_F2706293",
+          "L2_F112102848",
+          "L6_F112642538",
+          "L8_F87258646",
+          "L13_F80829241",
+          "L0_F128440377",
+          "L9_F91537205",
+          "L2_F6063900",
+          "L0_F56727225",
+          "L14_F42177505",
+          "L16_F134160373",
+          "L12_F56652677",
+          "L19_F70918075",
+          "L9_F2910068",
+          "L0_F120024270",
+          "L7_F12688195",
+          "L5_F43361322",
+          "L1_F33003748",
+          "L2_F79121907",
+          "L21_F109749498",
+          "L1_F61532869",
+          "L4_F7451725",
+          "L3_F99666017",
+          "L1_F38032279",
+          "L2_F12982057",
+          "L4_F89625961",
+          "L10_F7405465",
+          "L23_F40423512",
+          "L3_F102738941",
+          "L2_F25493367",
+          "L1_F875824",
+          "L0_F63918470",
+          "L4_F96778823",
+          "L2_F57378825",
+          "L8_F13595496",
+          "L0_F100047584",
+          "L4_F74865961",
+          "L2_F7673400",
+          "L24_F92024936",
+          "L4_F8767573",
+          "L2_F37536777",
+          "L15_F17543910",
+          "L1_F13548613",
+          "L1_F48024898",
+          "L3_F17290136",
+          "L4_F94634398",
+          "L0_F108140570",
+          "L0_F41719544",
+          "L1_F6802514"
+        ],
+        "geography": [
+          "L4_F7332530",
+          "L3_F97839062",
+          "L0_F25343639",
+          "L4_F29464321",
+          "L23_F1206657",
+          "L0_F2239785",
+          "L16_F9311753",
+          "L2_F2110482",
+          "L1_F58660694",
+          "L5_F5576124",
+          "L8_F20940147",
+          "L21_F17793573",
+          "L15_F10172289",
+          "L6_F10902108",
+          "L2_F81977607",
+          "L0_F9350649",
+          "L0_F1925702",
+          "L2_F25751073",
+          "L19_F3686950",
+          "L9_F5335001",
+          "L1_F127145429",
+          "L17_F607735",
+          "L0_F4059824",
+          "L15_F97238469",
+          "L7_F244642",
+          "L1_F502501",
+          "L16_F12693224",
+          "L2_F38171950"
+        ],
+        "history": [
+          "L14_F450760",
+          "L16_F21447958",
+          "L1_F66314884",
+          "L2_F53773632",
+          "L5_F6168822",
+          "L0_F5781699",
+          "L7_F24363682",
+          "L2_F75393057",
+          "L7_F12946408",
+          "L17_F133505952",
+          "L1_F98834768",
+          "L7_F157072",
+          "L9_F4701701",
+          "L6_F12784089",
+          "L9_F46991655",
+          "L6_F10231019",
+          "L4_F45701575",
+          "L2_F976500",
+          "L0_F32501952",
+          "L1_F56908444",
+          "L18_F79310696",
+          "L18_F21981746",
+          "L17_F12219078",
+          "L18_F24161657",
+          "L17_F116991438",
+          "L0_F1708475",
+          "L3_F132494777",
+          "L8_F32930661",
+          "L0_F3278079",
+          "L2_F2443152",
+          "L4_F15395",
+          "L4_F47653198",
+          "L11_F2069583",
+          "L4_F106543498",
+          "L1_F72848483",
+          "L10_F59891029",
+          "L2_F29487357",
+          "L13_F22068032",
+          "L14_F12562563",
+          "L23_F13585054",
+          "L22_F118805",
+          "L7_F5393962",
+          "L6_F74487108",
+          "L4_F36881161",
+          "L1_F100160779",
+          "L5_F248154",
+          "L4_F60033398",
+          "L6_F64860348",
+          "L20_F6182865",
+          "L1_F109616219",
+          "L2_F53019250",
+          "L0_F110774169",
+          "L5_F15219",
+          "L21_F95102714",
+          "L0_F75909680",
+          "L7_F71216137",
+          "L2_F8086228",
+          "L11_F30525379",
+          "L4_F2823871",
+          "L5_F38206905",
+          "L3_F128264132",
+          "L0_F57894179",
+          "L0_F3017195",
+          "L2_F64632762",
+          "L17_F16247832",
+          "L3_F9970341",
+          "L7_F21908882",
+          "L8_F7313391",
+          "L1_F77482574",
+          "L7_F22879222",
+          "L0_F3024569",
+          "L6_F24398598",
+          "L6_F105683984",
+          "L6_F74853723",
+          "L3_F87139797",
+          "L6_F1779434",
+          "L5_F66591564",
+          "L14_F153720",
+          "L22_F27398480",
+          "L4_F38759605",
+          "L1_F106908751",
+          "L12_F47127473",
+          "L6_F116044988",
+          "L2_F24328797",
+          "L0_F90956327",
+          "L0_F14658404",
+          "L4_F48496471",
+          "L7_F1622693",
+          "L8_F75565062",
+          "L5_F74291949",
+          "L1_F92282903",
+          "L16_F86875954",
+          "L1_F687376",
+          "L4_F38460830",
+          "L5_F37519447",
+          "L6_F29641143",
+          "L16_F53611",
+          "L1_F406349",
+          "L14_F42684165",
+          "L3_F16236447",
+          "L1_F107641126",
+          "L2_F44053188",
+          "L0_F90511784",
+          "L8_F19471911",
+          "L0_F99200654",
+          "L23_F18286104",
+          "L16_F7130959",
+          "L7_F36846812",
+          "L1_F28001384",
+          "L7_F41600873",
+          "L0_F71299710",
+          "L13_F6521452",
+          "L14_F45101238",
+          "L0_F87549527",
+          "L22_F116487193",
+          "L4_F36564071",
+          "L7_F101438638",
+          "L14_F16282056",
+          "L5_F49496269",
+          "L17_F89625948",
+          "L4_F112522496",
+          "L4_F55940",
+          "L2_F37788468",
+          "L4_F40118398",
+          "L15_F25923584",
+          "L17_F22107907",
+          "L16_F10412749",
+          "L0_F26926790",
+          "L7_F19584403",
+          "L5_F28091254",
+          "L0_F53235720",
+          "L8_F35183457",
+          "L15_F41966525",
+          "L2_F66996097",
+          "L7_F16528367",
+          "L0_F57657690",
+          "L0_F93045260",
+          "L20_F62033070"
+        ]
+      },
+      "category_specific_counts": {
+        "chemistry": 107,
+        "geography": 28,
+        "history": 138
+      },
+      "category_overlap": {
+        "chemistry vs geography": {
+          "shared_features": [
+            "L3_F5150441",
+            "L0_F64712375",
+            "L0_F1813559",
+            "L24_F88478228",
+            "L0_F74438300",
+            "L6_F2586668",
+            "L4_F110446948"
+          ],
+          "count": 7,
+          "jaccard": 0.0440251572327044
+        },
+        "chemistry vs history": {
+          "shared_features": [
+            "L6_F2586668",
+            "L6_F7533014",
+            "L3_F5150441",
+            "L11_F6324334",
+            "L0_F1813559",
+            "L24_F88478228",
+            "L7_F4828270",
+            "L0_F74438300",
+            "L5_F2584395",
+            "L4_F8443990",
+            "L6_F48733121",
+            "L8_F4831377",
+            "L4_F110446948",
+            "L0_F40747877"
+          ],
+          "count": 14,
+          "jaccard": 0.05204460966542751
+        },
+        "geography vs history": {
+          "shared_features": [
+            "L3_F5150441",
+            "L9_F125286525",
+            "L7_F110677",
+            "L5_F7993995",
+            "L6_F106470521",
+            "L12_F78206258",
+            "L0_F1813559",
+            "L1_F99962728",
+            "L0_F80638649",
+            "L0_F11637899",
+            "L24_F88478228",
+            "L0_F74438300",
+            "L10_F100614194",
+            "L6_F2586668",
+            "L4_F110446948"
+          ],
+          "count": 15,
+          "jaccard": 0.07894736842105263
+        }
+      },
+      "avg_bottleneck_layer": {
+        "chemistry": 5.528225806451613,
+        "geography": 5.752427184466019,
+        "history": 6.646341463414634
+      },
+      "layer_distributions": {
+        "chemistry": {
+          "0": 66,
+          "1": 26,
+          "2": 20,
+          "3": 13,
+          "4": 21,
+          "5": 2,
+          "6": 19,
+          "7": 15,
+          "8": 8,
+          "9": 5,
+          "10": 4,
+          "11": 1,
+          "12": 8,
+          "13": 9,
+          "14": 8,
+          "15": 2,
+          "16": 2,
+          "17": 1,
+          "18": 1,
+          "19": 1,
+          "20": 6,
+          "21": 1,
+          "22": 1,
+          "23": 3,
+          "24": 5
+        },
+        "geography": {
+          "0": 52,
+          "1": 13,
+          "2": 26,
+          "3": 14,
+          "4": 24,
+          "5": 9,
+          "6": 11,
+          "7": 7,
+          "8": 4,
+          "9": 4,
+          "10": 1,
+          "12": 2,
+          "15": 8,
+          "16": 9,
+          "17": 6,
+          "19": 1,
+          "21": 7,
+          "23": 4,
+          "24": 4
+        },
+        "history": {
+          "0": 32,
+          "1": 17,
+          "2": 13,
+          "3": 11,
+          "4": 32,
+          "5": 18,
+          "6": 24,
+          "7": 27,
+          "8": 10,
+          "9": 8,
+          "10": 5,
+          "11": 5,
+          "12": 4,
+          "13": 3,
+          "14": 8,
+          "15": 2,
+          "16": 5,
+          "17": 7,
+          "18": 3,
+          "20": 2,
+          "21": 1,
+          "22": 3,
+          "23": 2,
+          "24": 4
+        }
+      },
+      "avg_jaccard_within": {
+        "chemistry": 0.2885371241319611,
+        "geography": 0.39489384067931554,
+        "history": 0.10761067777617206
+      }
+    },
+    {
+      "model": "qwen3-4b",
+      "universal_bottlenecks": [
+        "L19_F6611637508",
+        "L29_F89625936",
+        "L33_F10240593794",
+        "L27_F12610705050",
+        "L34_F415944868",
+        "L17_F6197796762",
+        "L25_F942235729",
+        "L18_F11703352509",
+        "L28_F393078712",
+        "L32_F3158177517",
+        "L16_F1043399704",
+        "L15_F8173514424",
+        "L26_F10368215974",
+        "L24_F457788386",
+        "L26_F10912888953"
+      ],
+      "universal_count": 15,
+      "category_specific": {
+        "chemistry": [
+          "L27_F109764308",
+          "L29_F11043729241",
+          "L13_F1279598152",
+          "L19_F11406012146",
+          "L22_F4467724105",
+          "L24_F19322411",
+          "L26_F1133238",
+          "L30_F6419068134",
+          "L5_F1072423822",
+          "L31_F12889676488",
+          "L25_F772382530",
+          "L7_F5148029707",
+          "L24_F487796970",
+          "L32_F66153720",
+          "L29_F228178173",
+          "L12_F502302347",
+          "L8_F10625102416",
+          "L23_F1705951642",
+          "L28_F1199005936",
+          "L8_F230126322",
+          "L10_F5299402714",
+          "L29_F9851377131",
+          "L25_F3210127975",
+          "L31_F4729996921",
+          "L26_F5142348964",
+          "L31_F1400554243",
+          "L8_F3086190321",
+          "L29_F2364140673",
+          "L28_F1888512124",
+          "L22_F210237742",
+          "L29_F627057961",
+          "L28_F2987219836",
+          "L25_F11628506227",
+          "L24_F7546491206",
+          "L13_F6349912457",
+          "L28_F169804777",
+          "L22_F3103971422",
+          "L29_F2693890071",
+          "L23_F962178754",
+          "L22_F12596733427",
+          "L22_F2647554505",
+          "L25_F6113691727",
+          "L24_F8238208955",
+          "L23_F973485726",
+          "L24_F180452478",
+          "L13_F4226764",
+          "L25_F1732514654",
+          "L26_F258838101",
+          "L9_F2699691930",
+          "L25_F9306231352",
+          "L23_F9518895229",
+          "L24_F12464547080",
+          "L25_F2544590765",
+          "L29_F1822057131",
+          "L29_F2697194151",
+          "L27_F2921727875",
+          "L31_F10331671846",
+          "L10_F1650279964",
+          "L9_F12358199495",
+          "L25_F11234630227",
+          "L27_F7867534052",
+          "L23_F13306269387",
+          "L24_F8316179036",
+          "L32_F616268245",
+          "L8_F387157042",
+          "L23_F7262836479",
+          "L23_F7344174586",
+          "L27_F2886974063",
+          "L29_F6891203871",
+          "L29_F10859621595",
+          "L23_F75442",
+          "L9_F959329493",
+          "L24_F112672541",
+          "L10_F5030195440",
+          "L22_F9777263180",
+          "L27_F1591692803",
+          "L26_F1958034304",
+          "L21_F12763945403"
+        ],
+        "geography": [
+          "L26_F321095784",
+          "L20_F9608098732",
+          "L10_F7122867679",
+          "L25_F11281747340",
+          "L10_F2503311892",
+          "L29_F5309805796",
+          "L23_F7067951041",
+          "L25_F826434814",
+          "L27_F120815712",
+          "L11_F9096644391",
+          "L25_F4264030352",
+          "L31_F4360799323",
+          "L23_F3136517979",
+          "L22_F11060975722",
+          "L32_F459666327",
+          "L23_F305106729",
+          "L29_F276348265",
+          "L28_F10343750167",
+          "L8_F352437966",
+          "L9_F1862666120",
+          "L22_F27822047",
+          "L9_F13022962568",
+          "L28_F8108056124",
+          "L25_F2636795864",
+          "L28_F231608974",
+          "L28_F106470499",
+          "L8_F5690364531",
+          "L28_F28641067",
+          "L30_F2700941222",
+          "L21_F8771567453",
+          "L27_F5054598212",
+          "L31_F10831491304",
+          "L22_F1485642772",
+          "L26_F6218074",
+          "L23_F350661379",
+          "L26_F1389461943",
+          "L30_F7641879347",
+          "L29_F32865748",
+          "L28_F9078174856",
+          "L30_F735111965",
+          "L29_F306046140",
+          "L26_F3553202823",
+          "L26_F11289259164",
+          "L26_F3687558354",
+          "L23_F312112596",
+          "L29_F7810937548",
+          "L25_F12748611655",
+          "L28_F4903717999",
+          "L24_F11181928260",
+          "L29_F5470213876",
+          "L31_F2193040846",
+          "L30_F103709",
+          "L10_F11733664634",
+          "L9_F6421561118",
+          "L27_F106558073",
+          "L27_F2750112338",
+          "L9_F5821151040",
+          "L22_F7923075998",
+          "L10_F4354451170",
+          "L29_F6219414655",
+          "L24_F630071726",
+          "L20_F1799130084",
+          "L29_F12336827551",
+          "L30_F9779220995",
+          "L22_F12138923368",
+          "L28_F11819300597",
+          "L29_F1946224825",
+          "L29_F1462025745",
+          "L23_F7309795392",
+          "L21_F948235904",
+          "L28_F888922501",
+          "L28_F344964482",
+          "L29_F123567030",
+          "L31_F1572118669",
+          "L28_F8613215596",
+          "L31_F374489996",
+          "L31_F5732367169",
+          "L23_F2796435481",
+          "L23_F13239468702",
+          "L25_F4703190565",
+          "L32_F5220120720",
+          "L31_F4728149114",
+          "L27_F904081475",
+          "L12_F7892893248",
+          "L22_F5109139132",
+          "L22_F8843502505",
+          "L28_F4214675737",
+          "L11_F6507180228",
+          "L26_F630284733",
+          "L11_F6892612743",
+          "L23_F1601468691",
+          "L23_F3257173092",
+          "L23_F11995378581",
+          "L30_F259589474",
+          "L26_F2284643379",
+          "L24_F16898366",
+          "L31_F6758019379",
+          "L25_F4632175600",
+          "L10_F8862663805",
+          "L30_F2029705010",
+          "L22_F2208964255",
+          "L31_F4211830058",
+          "L29_F210135220",
+          "L31_F4847924246",
+          "L11_F3984521803",
+          "L9_F13052997941",
+          "L22_F8010805153",
+          "L29_F390866790",
+          "L11_F98245141",
+          "L33_F1931404442"
+        ],
+        "history": [
+          "L30_F649026375",
+          "L29_F3372709485",
+          "L26_F1149960876",
+          "L27_F1411424987",
+          "L29_F574994886",
+          "L21_F762978494",
+          "L10_F7892265055",
+          "L13_F1584085027",
+          "L31_F6253365829",
+          "L33_F6352796",
+          "L26_F9024491004",
+          "L29_F1621793598",
+          "L29_F1705367571",
+          "L24_F214565945",
+          "L28_F1141058077",
+          "L25_F982064695",
+          "L27_F2444927600",
+          "L10_F8252977039",
+          "L28_F93783331",
+          "L27_F12553280447",
+          "L26_F4695725568",
+          "L23_F2555803236",
+          "L21_F1005155844",
+          "L32_F713834187",
+          "L26_F245876373",
+          "L26_F1589944218",
+          "L24_F613077611",
+          "L12_F8893578383",
+          "L11_F1209459141",
+          "L11_F10545222913",
+          "L29_F141094771",
+          "L12_F992774507",
+          "L29_F10834435176",
+          "L23_F10372536472",
+          "L27_F518339475",
+          "L27_F919025600",
+          "L26_F4486649601",
+          "L9_F23300541",
+          "L9_F200170026",
+          "L13_F4433664847",
+          "L23_F8848290882",
+          "L24_F12076056320",
+          "L11_F11058149958",
+          "L31_F528206221",
+          "L26_F13395653013",
+          "L29_F12312335473",
+          "L26_F1976852854",
+          "L28_F7890631847",
+          "L12_F3151902093",
+          "L24_F5173530035",
+          "L22_F7603479563",
+          "L28_F3566703541",
+          "L10_F3365814070",
+          "L22_F5739007657",
+          "L23_F4533757452",
+          "L25_F379156927",
+          "L11_F9539050614",
+          "L29_F3899548798",
+          "L9_F3970697045",
+          "L13_F3421257826",
+          "L24_F482470491",
+          "L26_F161253834",
+          "L29_F8991874326",
+          "L28_F8530726861",
+          "L27_F6103743800",
+          "L28_F1599997567",
+          "L25_F502175560",
+          "L28_F8474132176",
+          "L9_F1264567185",
+          "L13_F6061500446",
+          "L28_F11130842177",
+          "L24_F1771225896",
+          "L26_F5279449119",
+          "L29_F7556937361",
+          "L8_F1359524431",
+          "L22_F11757114473",
+          "L25_F214159",
+          "L14_F3043287121",
+          "L11_F3608378664",
+          "L27_F2082738042",
+          "L27_F656759375",
+          "L10_F151406090",
+          "L11_F8170957518",
+          "L29_F4512737473",
+          "L27_F13087435763",
+          "L12_F800099990",
+          "L27_F777382137",
+          "L30_F5825143985",
+          "L10_F1818738505",
+          "L23_F4128632991",
+          "L13_F3535942451",
+          "L24_F2105323580",
+          "L11_F2827783194",
+          "L14_F487578363",
+          "L13_F2217080741",
+          "L22_F10912888957",
+          "L18_F11045958642",
+          "L27_F9124721567",
+          "L11_F210853368",
+          "L24_F1828098786",
+          "L29_F4428016641",
+          "L27_F6675150168",
+          "L30_F2611724",
+          "L11_F702431409",
+          "L30_F10474761399",
+          "L24_F6922584920",
+          "L21_F7914266744",
+          "L22_F12884860162",
+          "L22_F5357729347",
+          "L9_F234805275",
+          "L11_F9398547741",
+          "L28_F7063132",
+          "L29_F5293536141",
+          "L10_F6887095555",
+          "L28_F8523413737",
+          "L25_F2868387385",
+          "L23_F818647392",
+          "L21_F4834148606",
+          "L7_F170431945",
+          "L25_F142931752",
+          "L29_F7979318598",
+          "L22_F10499091755",
+          "L24_F4888973261",
+          "L14_F8322628621",
+          "L25_F7152618184",
+          "L26_F4331338174",
+          "L12_F2923256940",
+          "L27_F11720493932",
+          "L12_F2242323015",
+          "L11_F11989183813",
+          "L24_F1129146456",
+          "L23_F4735153246",
+          "L28_F132234424",
+          "L8_F742362",
+          "L30_F8308313934",
+          "L27_F2400517377",
+          "L28_F3125913817",
+          "L21_F3121724598",
+          "L29_F5066972748",
+          "L23_F821644429",
+          "L28_F9761048752",
+          "L26_F5291066988",
+          "L25_F12026996845",
+          "L26_F30775908",
+          "L24_F2851068803",
+          "L28_F37450156",
+          "L26_F1252726458",
+          "L11_F2041317448",
+          "L25_F1678492804",
+          "L27_F11648340000",
+          "L25_F488328100",
+          "L27_F1040375",
+          "L24_F629149103",
+          "L12_F4102594640",
+          "L21_F12048719739",
+          "L22_F5640228922",
+          "L11_F5968272873",
+          "L28_F2172690211",
+          "L16_F593694094",
+          "L31_F8717478829",
+          "L28_F13355744737",
+          "L22_F6674456930",
+          "L22_F46469597",
+          "L10_F2021812244",
+          "L22_F119782",
+          "L30_F14501774",
+          "L22_F3465739117"
+        ]
+      },
+      "category_specific_counts": {
+        "chemistry": 78,
+        "geography": 110,
+        "history": 167
+      },
+      "category_overlap": {
+        "chemistry vs geography": {
+          "shared_features": [
+            "L19_F6611637508",
+            "L22_F2223944755",
+            "L29_F89625936",
+            "L16_F1043399704",
+            "L33_F10240593794",
+            "L27_F2280859542",
+            "L27_F12610705050",
+            "L34_F415944868",
+            "L17_F6197796762",
+            "L25_F942235729",
+            "L18_F11703352509",
+            "L28_F393078712",
+            "L32_F3158177517",
+            "L24_F457788386",
+            "L23_F4208618361",
+            "L15_F8173514424",
+            "L26_F10368215974",
+            "L26_F10912888953"
+          ],
+          "count": 18,
+          "jaccard": 0.08144796380090498
+        },
+        "chemistry vs history": {
+          "shared_features": [
+            "L33_F10240593794",
+            "L17_F6197796762",
+            "L25_F942235729",
+            "L30_F1922775047",
+            "L28_F393078712",
+            "L24_F457788386",
+            "L26_F10368215974",
+            "L19_F6611637508",
+            "L31_F2597510894",
+            "L15_F8173514424",
+            "L16_F1043399704",
+            "L20_F1727632350",
+            "L26_F10912888953",
+            "L29_F89625936",
+            "L27_F12610705050",
+            "L14_F1655454555",
+            "L34_F415944868",
+            "L18_F11703352509",
+            "L32_F3158177517",
+            "L32_F7014668202"
+          ],
+          "count": 20,
+          "jaccard": 0.07194244604316546
+        },
+        "geography vs history": {
+          "shared_features": [
+            "L33_F10240593794",
+            "L30_F9930165",
+            "L17_F6197796762",
+            "L25_F942235729",
+            "L14_F4638048813",
+            "L15_F308649419",
+            "L28_F6533445176",
+            "L12_F2735743452",
+            "L28_F4283723051",
+            "L28_F393078712",
+            "L24_F457788386",
+            "L26_F10368215974",
+            "L19_F6611637508",
+            "L15_F8173514424",
+            "L8_F303010644",
+            "L16_F1043399704",
+            "L27_F10384782758",
+            "L26_F10912888953",
+            "L29_F89625936",
+            "L27_F12610705050",
+            "L34_F415944868",
+            "L18_F11703352509",
+            "L32_F3158177517",
+            "L23_F2077126807",
+            "L13_F2980576222"
+          ],
+          "count": 25,
+          "jaccard": 0.08064516129032258
+        }
+      },
+      "avg_bottleneck_layer": {
+        "chemistry": 24.093525179856115,
+        "geography": 24.640287769784173,
+        "history": 21.985964912280703
+      },
+      "layer_distributions": {
+        "chemistry": {
+          "5": 1,
+          "7": 1,
+          "8": 4,
+          "9": 5,
+          "10": 5,
+          "12": 1,
+          "13": 6,
+          "14": 3,
+          "15": 9,
+          "16": 9,
+          "17": 8,
+          "18": 9,
+          "19": 10,
+          "20": 2,
+          "21": 1,
+          "22": 12,
+          "23": 11,
+          "24": 22,
+          "25": 13,
+          "26": 18,
+          "27": 32,
+          "28": 25,
+          "29": 23,
+          "30": 9,
+          "31": 12,
+          "32": 12,
+          "33": 6,
+          "34": 9
+        },
+        "geography": {
+          "8": 3,
+          "9": 5,
+          "10": 5,
+          "11": 5,
+          "12": 2,
+          "13": 1,
+          "14": 1,
+          "15": 4,
+          "16": 6,
+          "17": 7,
+          "18": 9,
+          "19": 7,
+          "20": 2,
+          "21": 2,
+          "22": 24,
+          "23": 15,
+          "24": 10,
+          "25": 19,
+          "26": 21,
+          "27": 25,
+          "28": 30,
+          "29": 24,
+          "30": 12,
+          "31": 10,
+          "32": 9,
+          "33": 10,
+          "34": 10
+        },
+        "history": {
+          "7": 1,
+          "8": 3,
+          "9": 6,
+          "10": 8,
+          "11": 16,
+          "12": 13,
+          "13": 12,
+          "14": 9,
+          "15": 9,
+          "16": 9,
+          "17": 4,
+          "18": 4,
+          "19": 6,
+          "20": 1,
+          "21": 6,
+          "22": 16,
+          "23": 13,
+          "24": 17,
+          "25": 14,
+          "26": 18,
+          "27": 22,
+          "28": 26,
+          "29": 18,
+          "30": 9,
+          "31": 6,
+          "32": 6,
+          "33": 3,
+          "34": 10
+        }
+      },
+      "avg_jaccard_within": {
+        "chemistry": 0.3526867207171995,
+        "geography": 0.3344799767214907,
+        "history": 0.1527135857246278
+      }
+    }
+  ],
+  "model_comparison": {
+    "shared_universal": [],
+    "shared_universal_count": 0,
+    "gemma_only_universal": [
+      "L3_F5150441",
+      "L0_F1813559",
+      "L24_F88478228",
+      "L4_F110446948",
+      "L6_F2586668",
+      "L0_F74438300"
+    ],
+    "gemma_only_universal_count": 6,
+    "qwen_only_universal": [
+      "L19_F6611637508",
+      "L29_F89625936",
+      "L33_F10240593794",
+      "L27_F12610705050",
+      "L34_F415944868",
+      "L17_F6197796762",
+      "L25_F942235729",
+      "L18_F11703352509",
+      "L28_F393078712",
+      "L32_F3158177517",
+      "L16_F1043399704",
+      "L15_F8173514424",
+      "L26_F10368215974",
+      "L24_F457788386",
+      "L26_F10912888953"
+    ],
+    "qwen_only_universal_count": 15,
+    "jaccard_comparison": {
+      "chemistry": {
+        "gemma-2-2b": 0.2885371241319611,
+        "qwen3-4b": 0.3526867207171995
+      },
+      "geography": {
+        "gemma-2-2b": 0.39489384067931554,
+        "qwen3-4b": 0.3344799767214907
+      },
+      "history": {
+        "gemma-2-2b": 0.10761067777617206,
+        "qwen3-4b": 0.1527135857246278
+      }
+    },
+    "layer_comparison": {
+      "chemistry": {
+        "gemma-2-2b": 5.528225806451613,
+        "qwen3-4b": 24.093525179856115
+      },
+      "geography": {
+        "gemma-2-2b": 5.752427184466019,
+        "qwen3-4b": 24.640287769784173
+      },
+      "history": {
+        "gemma-2-2b": 6.646341463414634,
+        "qwen3-4b": 21.985964912280703
+      }
+    }
+  }
+}

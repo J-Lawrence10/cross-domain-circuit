@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+.Python
+.installed.cfg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Secrets and config with credentials
+.env
+.env.local
+*.secret
+credentials.json
+config/api_key*
+config/neuronpedia_config.yaml
+
+# Raw attribution graph data (700+ MB, regenerable via the Neuronpedia API)
+data/raw_graphs/
+data/stage_2_traceback/
+data/stage_1_5_*/
+
+# Generated outputs that we treat as derived artifacts, not source
+# (committed SVGs in docs/figures/ are still tracked; uncomment to gitignore)
+# docs/figures/*.png
+
+# Backup files
+*.bak
+*.backup
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Project-specific
+peer_review/
