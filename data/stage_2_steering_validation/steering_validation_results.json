@@ -1,0 +1,587 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-28T11:34:36.321881",
+    "n_experiments": 20,
+    "n_enriched": 20,
+    "n_with_graph_metrics": 0,
+    "n_circuits": 6
+  },
+  "summary": {
+    "mean_logprob_shift": 0.04479698181152344,
+    "mean_kl_divergence": 0.027453212189428405,
+    "text_change_rate": 0.5,
+    "best_predictor": {
+      "predictor": "avg_convergence",
+      "effect": "kl_divergence",
+      "r": 0.38709596322226025
+    }
+  },
+  "correlations": {
+    "betweenness": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "in_degree": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "out_degree": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "activation": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "influence": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "pagerank": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "weighted_degree": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    },
+    "circuits_appeared_in": {
+      "mean_logprob_shift": {
+        "r": 0.12261124250620847,
+        "p": 0.6001740214963234
+      },
+      "max_logprob_shift": {
+        "r": 0.2347902945756095,
+        "p": 0.30546821498996213
+      },
+      "kl_divergence": {
+        "r": 0.32848444633360985,
+        "p": 0.1400730806049033
+      }
+    },
+    "avg_convergence": {
+      "mean_logprob_shift": {
+        "r": 0.3346435392956991,
+        "p": 0.1319035185981985
+      },
+      "max_logprob_shift": {
+        "r": 0.24263868850879372,
+        "p": 0.28862670022558623
+      },
+      "kl_divergence": {
+        "r": 0.38709596322226025,
+        "p": 0.07488466399778826
+      }
+    },
+    "abs_strength": {
+      "mean_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "max_logprob_shift": {
+        "r": 0,
+        "p": 1.0
+      },
+      "kl_divergence": {
+        "r": 0,
+        "p": 1.0
+      }
+    }
+  },
+  "per_layer": {
+    "3": {
+      "mean_shift": 0.03608589172363281,
+      "n": 4
+    },
+    "4": {
+      "mean_shift": 0.053843688964843754,
+      "n": 4
+    },
+    "6": {
+      "mean_shift": 0.057827758789062496,
+      "n": 4
+    },
+    "0": {
+      "mean_shift": 0.05649261474609375,
+      "n": 4
+    },
+    "24": {
+      "mean_shift": 0.019734954833984374,
+      "n": 4
+    }
+  },
+  "per_feature": {
+    "L3_F5150441": {
+      "mean_shift": 0.03608589172363281,
+      "n": 4
+    },
+    "L4_F110446948": {
+      "mean_shift": 0.053843688964843754,
+      "n": 4
+    },
+    "L6_F2586668": {
+      "mean_shift": 0.057827758789062496,
+      "n": 4
+    },
+    "L0_F1813559": {
+      "mean_shift": 0.05649261474609375,
+      "n": 4
+    },
+    "L24_F88478228": {
+      "mean_shift": 0.019734954833984374,
+      "n": 4
+    }
+  },
+  "enriched_results": [
+    {
+      "feature_label": "L3_F5150441",
+      "circuit_id": "gemma-2-2b_the-longest-river-in-africa-is",
+      "strength": -20,
+      "layer": 3,
+      "circuits_appeared_in": 23,
+      "avg_convergence": 0.8521739130434783,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.06796875,
+        "max_logprob_shift": 0.125,
+        "kl_divergence": 0.08377441182443977,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1043
+    },
+    {
+      "feature_label": "L3_F5150441",
+      "circuit_id": "gemma-2-2b_the-longest-river-in-africa-is",
+      "strength": 20,
+      "layer": 3,
+      "circuits_appeared_in": 23,
+      "avg_convergence": 0.8521739130434783,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.022265625,
+        "max_logprob_shift": 0.0390625,
+        "kl_divergence": 0.034490377561014626,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1043
+    },
+    {
+      "feature_label": "L4_F110446948",
+      "circuit_id": "gemma-2-2b_the-longest-river-in-africa-is",
+      "strength": -20,
+      "layer": 4,
+      "circuits_appeared_in": 22,
+      "avg_convergence": 0.8545454545454546,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.05234375,
+        "max_logprob_shift": 0.14453125,
+        "kl_divergence": 0.007791359497486319,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1043
+    },
+    {
+      "feature_label": "L4_F110446948",
+      "circuit_id": "gemma-2-2b_the-longest-river-in-africa-is",
+      "strength": 20,
+      "layer": 4,
+      "circuits_appeared_in": 22,
+      "avg_convergence": 0.8545454545454546,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.06875,
+        "max_logprob_shift": 0.23046875,
+        "kl_divergence": 0.1940167739223572,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1043
+    },
+    {
+      "feature_label": "L6_F2586668",
+      "circuit_id": "gemma-2-2b_the-longest-river-in-africa-is",
+      "strength": -20,
+      "layer": 6,
+      "circuits_appeared_in": 16,
+      "avg_convergence": 0.8375,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.0935546875,
+        "max_logprob_shift": 0.2109375,
+        "kl_divergence": 0.017768972190372295,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1043
+    },
+    {
+      "feature_label": "L6_F2586668",
+      "circuit_id": "gemma-2-2b_the-longest-river-in-africa-is",
+      "strength": 20,
+      "layer": 6,
+      "circuits_appeared_in": 16,
+      "avg_convergence": 0.8375,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.09453125,
+        "max_logprob_shift": 0.1640625,
+        "kl_divergence": 0.11860863502020301,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1043
+    },
+    {
+      "feature_label": "L3_F5150441",
+      "circuit_id": "gemma-2-2b_the-great-fire-of-london-occurred-in",
+      "strength": -20,
+      "layer": 3,
+      "circuits_appeared_in": 23,
+      "avg_convergence": 0.8521739130434783,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.02623138427734375,
+        "max_logprob_shift": 0.125,
+        "kl_divergence": -0.06234216154052273,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1275
+    },
+    {
+      "feature_label": "L3_F5150441",
+      "circuit_id": "gemma-2-2b_the-great-fire-of-london-occurred-in",
+      "strength": 20,
+      "layer": 3,
+      "circuits_appeared_in": 23,
+      "avg_convergence": 0.8521739130434783,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.0278778076171875,
+        "max_logprob_shift": 0.12890625,
+        "kl_divergence": 0.06940187994821186,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1275
+    },
+    {
+      "feature_label": "L4_F110446948",
+      "circuit_id": "gemma-2-2b_the-great-fire-of-london-occurred-in",
+      "strength": -20,
+      "layer": 4,
+      "circuits_appeared_in": 22,
+      "avg_convergence": 0.8545454545454546,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.06895599365234376,
+        "max_logprob_shift": 0.33984375,
+        "kl_divergence": 0.15925585827742125,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1275
+    },
+    {
+      "feature_label": "L4_F110446948",
+      "circuit_id": "gemma-2-2b_the-great-fire-of-london-occurred-in",
+      "strength": 20,
+      "layer": 4,
+      "circuits_appeared_in": 22,
+      "avg_convergence": 0.8545454545454546,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.02532501220703125,
+        "max_logprob_shift": 0.1171875,
+        "kl_divergence": -0.050056165055245405,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1275
+    },
+    {
+      "feature_label": "L0_F1813559",
+      "circuit_id": "gemma-2-2b_the-titanic-sank-in",
+      "strength": -20,
+      "layer": 0,
+      "circuits_appeared_in": 17,
+      "avg_convergence": 0.8352941176470587,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.00501708984375,
+        "max_logprob_shift": 0.01416015625,
+        "kl_divergence": 0.016946899458441602,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1222
+    },
+    {
+      "feature_label": "L0_F1813559",
+      "circuit_id": "gemma-2-2b_the-titanic-sank-in",
+      "strength": 20,
+      "layer": 0,
+      "circuits_appeared_in": 17,
+      "avg_convergence": 0.8352941176470587,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.003375244140625,
+        "max_logprob_shift": 0.0078125,
+        "kl_divergence": 0.012564208854299111,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1222
+    },
+    {
+      "feature_label": "L6_F2586668",
+      "circuit_id": "gemma-2-2b_the-titanic-sank-in",
+      "strength": -20,
+      "layer": 6,
+      "circuits_appeared_in": 16,
+      "avg_convergence": 0.8375,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.0132568359375,
+        "max_logprob_shift": 0.03515625,
+        "kl_divergence": 0.005767933645192726,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1222
+    },
+    {
+      "feature_label": "L6_F2586668",
+      "circuit_id": "gemma-2-2b_the-titanic-sank-in",
+      "strength": 20,
+      "layer": 6,
+      "circuits_appeared_in": 16,
+      "avg_convergence": 0.8375,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.02996826171875,
+        "max_logprob_shift": 0.13671875,
+        "kl_divergence": 0.07619778419451247,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1222
+    },
+    {
+      "feature_label": "L0_F1813559",
+      "circuit_id": "gemma-2-2b_the-chemical-symbol-for-sodium-is",
+      "strength": -20,
+      "layer": 0,
+      "circuits_appeared_in": 17,
+      "avg_convergence": 0.8352941176470587,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.104296875,
+        "max_logprob_shift": 0.205078125,
+        "kl_divergence": -0.09318088587221256,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1234
+    },
+    {
+      "feature_label": "L0_F1813559",
+      "circuit_id": "gemma-2-2b_the-chemical-symbol-for-sodium-is",
+      "strength": 20,
+      "layer": 0,
+      "circuits_appeared_in": 17,
+      "avg_convergence": 0.8352941176470587,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.11328125,
+        "max_logprob_shift": 0.1953125,
+        "kl_divergence": 0.06482085497212049,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1234
+    },
+    {
+      "feature_label": "L24_F88478228",
+      "circuit_id": "gemma-2-2b_world-war-ii-ended-in",
+      "strength": -20,
+      "layer": 24,
+      "circuits_appeared_in": 13,
+      "avg_convergence": 0.7230769230769231,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.00294036865234375,
+        "max_logprob_shift": 0.01171875,
+        "kl_divergence": 0.0032435069933383033,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1302
+    },
+    {
+      "feature_label": "L24_F88478228",
+      "circuit_id": "gemma-2-2b_world-war-ii-ended-in",
+      "strength": 20,
+      "layer": 24,
+      "circuits_appeared_in": 13,
+      "avg_convergence": 0.7230769230769231,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.04105224609375,
+        "max_logprob_shift": 0.19921875,
+        "kl_divergence": -0.08812051297702064,
+        "token_change_count": 0,
+        "text_changed": true,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1302
+    },
+    {
+      "feature_label": "L24_F88478228",
+      "circuit_id": "gemma-2-2b_world-war-i-started-in",
+      "strength": -20,
+      "layer": 24,
+      "circuits_appeared_in": 13,
+      "avg_convergence": 0.7230769230769231,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.01297454833984375,
+        "max_logprob_shift": 0.0625,
+        "kl_divergence": 0.032937934915060016,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1251
+    },
+    {
+      "feature_label": "L24_F88478228",
+      "circuit_id": "gemma-2-2b_world-war-i-started-in",
+      "strength": 20,
+      "layer": 24,
+      "circuits_appeared_in": 13,
+      "avg_convergence": 0.7230769230769231,
+      "is_universal": true,
+      "effect": {
+        "mean_logprob_shift": 0.02197265625,
+        "max_logprob_shift": 0.10546875,
+        "kl_divergence": -0.0548234220409016,
+        "token_change_count": 0,
+        "text_changed": false,
+        "n_tokens_compared": 5
+      },
+      "graph_metrics": null,
+      "n_nodes_in_graph": 1251
+    }
+  ]
+}

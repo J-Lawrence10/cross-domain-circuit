@@ -1,0 +1,1695 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-28T16:22:32.384168",
+    "n_annotated": 130,
+    "n_unannotated": 114,
+    "n_classified": 130
+  },
+  "overall": {
+    "polysemantic_count": 16,
+    "monosemantic_count": 114,
+    "polysemantic_rate": 0.12307692307692308,
+    "category_counts": {
+      "CODE": 26,
+      "DOMAIN_SPECIFIC": 17,
+      "CONCEPTS": 9,
+      "LANGUAGE": 26,
+      "OTHER": 34,
+      "MATH": 10,
+      "SCIENCE": 14,
+      "ENTITIES": 10,
+      "MULTILINGUAL": 3
+    }
+  },
+  "layer_analysis": {
+    "3": {
+      "categories": {
+        "CODE": 1,
+        "SCIENCE": 1,
+        "OTHER": 2
+      },
+      "poly_rate": 0.0
+    },
+    "4": {
+      "categories": {
+        "DOMAIN_SPECIFIC": 1,
+        "LANGUAGE": 3,
+        "MULTILINGUAL": 2,
+        "OTHER": 5,
+        "CODE": 2,
+        "CONCEPTS": 1,
+        "ENTITIES": 1,
+        "SCIENCE": 2,
+        "MATH": 1
+      },
+      "poly_rate": 0.2
+    },
+    "0": {
+      "categories": {
+        "CODE": 6,
+        "LANGUAGE": 9,
+        "OTHER": 5,
+        "MATH": 2,
+        "ENTITIES": 1,
+        "DOMAIN_SPECIFIC": 3
+      },
+      "poly_rate": 0.13636363636363635
+    },
+    "6": {
+      "categories": {
+        "CODE": 2,
+        "CONCEPTS": 3,
+        "LANGUAGE": 2,
+        "OTHER": 2,
+        "MATH": 1,
+        "DOMAIN_SPECIFIC": 1
+      },
+      "poly_rate": 0.1
+    },
+    "24": {
+      "categories": {
+        "LANGUAGE": 1,
+        "DOMAIN_SPECIFIC": 2
+      },
+      "poly_rate": 0.5
+    },
+    "2": {
+      "categories": {
+        "OTHER": 4,
+        "LANGUAGE": 1,
+        "CONCEPTS": 1,
+        "CODE": 1,
+        "MATH": 1
+      },
+      "poly_rate": 0.0
+    },
+    "5": {
+      "categories": {
+        "OTHER": 1,
+        "LANGUAGE": 2,
+        "CONCEPTS": 1,
+        "DOMAIN_SPECIFIC": 1,
+        "SCIENCE": 1,
+        "ENTITIES": 1
+      },
+      "poly_rate": 0.16666666666666666
+    },
+    "9": {
+      "categories": {
+        "MATH": 1,
+        "CODE": 2,
+        "ENTITIES": 1,
+        "DOMAIN_SPECIFIC": 1,
+        "OTHER": 3
+      },
+      "poly_rate": 0.0
+    },
+    "1": {
+      "categories": {
+        "SCIENCE": 3,
+        "CODE": 1,
+        "LANGUAGE": 2,
+        "DOMAIN_SPECIFIC": 1,
+        "OTHER": 2
+      },
+      "poly_rate": 0.0
+    },
+    "7": {
+      "categories": {
+        "ENTITIES": 2,
+        "OTHER": 3,
+        "LANGUAGE": 2,
+        "DOMAIN_SPECIFIC": 2,
+        "CONCEPTS": 1,
+        "CODE": 3
+      },
+      "poly_rate": 0.2
+    },
+    "10": {
+      "categories": {
+        "CODE": 2,
+        "ENTITIES": 1,
+        "SCIENCE": 1
+      },
+      "poly_rate": 0.0
+    },
+    "12": {
+      "categories": {
+        "LANGUAGE": 1,
+        "CODE": 1,
+        "MATH": 1,
+        "SCIENCE": 1,
+        "DOMAIN_SPECIFIC": 2,
+        "ENTITIES": 1,
+        "MULTILINGUAL": 1
+      },
+      "poly_rate": 0.75
+    },
+    "21": {
+      "categories": {
+        "SCIENCE": 1,
+        "LANGUAGE": 1
+      },
+      "poly_rate": 1.0
+    },
+    "15": {
+      "categories": {
+        "DOMAIN_SPECIFIC": 1,
+        "CODE": 1,
+        "MATH": 1
+      },
+      "poly_rate": 0.0
+    },
+    "8": {
+      "categories": {
+        "CODE": 3,
+        "OTHER": 1,
+        "SCIENCE": 1
+      },
+      "poly_rate": 0.0
+    },
+    "16": {
+      "categories": {
+        "OTHER": 1,
+        "ENTITIES": 1
+      },
+      "poly_rate": 0.0
+    },
+    "17": {
+      "categories": {
+        "SCIENCE": 1,
+        "OTHER": 1
+      },
+      "poly_rate": 0.0
+    },
+    "20": {
+      "categories": {
+        "OTHER": 1,
+        "SCIENCE": 1
+      },
+      "poly_rate": 0.0
+    },
+    "23": {
+      "categories": {
+        "CODE": 1,
+        "OTHER": 1,
+        "ENTITIES": 1
+      },
+      "poly_rate": 0.0
+    },
+    "11": {
+      "categories": {
+        "DOMAIN_SPECIFIC": 1,
+        "SCIENCE": 1,
+        "LANGUAGE": 1
+      },
+      "poly_rate": 0.5
+    },
+    "13": {
+      "categories": {
+        "DOMAIN_SPECIFIC": 1,
+        "OTHER": 1,
+        "LANGUAGE": 1,
+        "MATH": 1
+      },
+      "poly_rate": 0.0
+    },
+    "14": {
+      "categories": {
+        "CONCEPTS": 2,
+        "OTHER": 1,
+        "MATH": 1
+      },
+      "poly_rate": 0.0
+    }
+  },
+  "cross_domain": {
+    "count": 70,
+    "in_all_3": 23,
+    "semantic_types": {
+      "?": 46,
+      "CODE": 8,
+      "DOMAIN_SPECIFIC": 4,
+      "CONCEPTS": 3,
+      "LANGUAGE": 6,
+      "OTHER": 2,
+      "MATH": 2,
+      "SCIENCE": 1,
+      "ENTITIES": 2
+    },
+    "features": [
+      {
+        "label": "L34_F415944868",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L16_F1043399704",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L19_F6611637508",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L27_F12610705050",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L18_F11703352509",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L3_F5150441",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "CODE"
+        ],
+        "explanation": " HTML formatting tags such as italics, paragraph delimiters, and list delimiters"
+      },
+      {
+        "label": "L4_F110446948",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "DOMAIN_SPECIFIC"
+        ],
+        "explanation": " place names and surrounding words"
+      },
+      {
+        "label": "L17_F6197796762",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L33_F10240593794",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L15_F8173514424",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L24_F457788386",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L0_F1813559",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "CODE"
+        ],
+        "explanation": "code and file related keywords and annotations (e.g. handler, Logger, php, funct"
+      },
+      {
+        "label": "L32_F3158177517",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L6_F2586668",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "CODE",
+          "CONCEPTS"
+        ],
+        "explanation": " code snippets related to Drupal views, specifically around \"strict warning\", \"m"
+      },
+      {
+        "label": "L26_F10368215974",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L29_F89625936",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L24_F88478228",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "LANGUAGE",
+          "DOMAIN_SPECIFIC"
+        ],
+        "explanation": "parts of long place names from the Lithuanian language"
+      },
+      {
+        "label": "L30_F1922775047",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L31_F2597510894",
+        "prompt_categories": [
+          "chemistry",
+          "history",
+          "geography"
+        ],
+        "n_categories": 3,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      },
+      {
+        "label": "L32_F7014668202",
+        "prompt_categories": [
+          "chemistry",
+          "history"
+        ],
+        "n_categories": 2,
+        "semantic_class": [
+          "?"
+        ],
+        "explanation": ""
+      }
+    ]
+  },
+  "feature_classifications": {
+    "L3_F5150441": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " HTML formatting tags such as italics, paragraph delimiters, and list delimiters",
+      "layer": 3,
+      "n_categories": 1
+    },
+    "L4_F110446948": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " place names and surrounding words",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L0_F1813559": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "code and file related keywords and annotations (e.g. handler, Logger, php, function, return)",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L6_F2586668": {
+      "categories": [
+        "CODE",
+        "CONCEPTS"
+      ],
+      "is_polysemantic": true,
+      "explanation": " code snippets related to Drupal views, specifically around \"strict warning\", \"method\", and file pat",
+      "layer": 6,
+      "n_categories": 2
+    },
+    "L24_F88478228": {
+      "categories": [
+        "LANGUAGE",
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": true,
+      "explanation": "parts of long place names from the Lithuanian language",
+      "layer": 24,
+      "n_categories": 2
+    },
+    "L2_F25751073": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words that look like usernames and filenames",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L5_F7993995": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases related to myths and metaphors of sky and heaven",
+      "layer": 5,
+      "n_categories": 1
+    },
+    "L9_F125286525": {
+      "categories": [
+        "MATH"
+      ],
+      "is_polysemantic": false,
+      "explanation": " mathematical formulas and expressions",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L1_F99962728": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to the inhibition of biological processes",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L7_F4828270": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": "words that describe new tech being used to help disabled people, or to solve hard problems easier",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L0_F11637899": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to finding elements in a collection and determining its size in code",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F64712375": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the word \"graduated\" and the word \"more.\"",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F124985954": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the word \"to\"",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L4_F7332530": {
+      "categories": [
+        "LANGUAGE",
+        "MULTILINGUAL"
+      ],
+      "is_polysemantic": true,
+      "explanation": "sections of text in a non-English language, possibly machine-translated",
+      "layer": 4,
+      "n_categories": 2
+    },
+    "L5_F5576124": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the phrase \"with respect to\"",
+      "layer": 5,
+      "n_categories": 1
+    },
+    "L6_F10902108": {
+      "categories": [
+        "CONCEPTS"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases emphasizing importance or significance",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L1_F502501": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "code snippets including time, import statements, and running processes",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L7_F110677": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": "words referring to human genders and sexual situations",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L0_F120024270": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words in Dutch",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L2_F2110482": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to computer networks and device communication",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L0_F25343639": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the words \"every\" and \"each\" but also activates on \"determined\" or \"charges\"",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F1925702": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the word \"returned\" and other verbs that mean to move back somewhere",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L4_F29464321": {
+      "categories": [
+        "MULTILINGUAL"
+      ],
+      "is_polysemantic": false,
+      "explanation": " proper nouns, with a strong emphasis on Vietnamese names and locations",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L10_F100614194": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code with indentation consisting of tabs or layout information for Android apps",
+      "layer": 10,
+      "n_categories": 1
+    },
+    "L12_F78206258": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the word \"both,\" and to a lesser extent, words associated with combinations of items",
+      "layer": 12,
+      "n_categories": 1
+    },
+    "L7_F16528367": {
+      "categories": [
+        "LANGUAGE",
+        "DOMAIN_SPECIFIC",
+        "CONCEPTS"
+      ],
+      "is_polysemantic": true,
+      "explanation": " language related to laws and legal obligations.",
+      "layer": 7,
+      "n_categories": 3
+    },
+    "L4_F47653198": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to planning or future activities",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L0_F80638649": {
+      "categories": [
+        "LANGUAGE",
+        "MATH",
+        "ENTITIES"
+      ],
+      "is_polysemantic": true,
+      "explanation": " capitalized words and phrases, particularly acronyms or abbreviations, sometimes with numbers or sp",
+      "layer": 0,
+      "n_categories": 3
+    },
+    "L0_F74438300": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " fragmented bits of language like headings, titles, and verbs.",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L6_F15806246": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "code snippets generally, especially those mentioning names of functions or other names that are part",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L0_F12105659": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " mentions of laws, codes, statutes, sections, adoptions, and accounting",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L21_F17793573": {
+      "categories": [
+        "SCIENCE",
+        "LANGUAGE"
+      ],
+      "is_polysemantic": true,
+      "explanation": " the abbreviation \"Ad\" as part of medical terms",
+      "layer": 21,
+      "n_categories": 2
+    },
+    "L7_F244642": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases associated with business expenditures, financial costs, and process improvements",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L15_F10172289": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the words 'one hand' or words related to the human body, political entities, or conservatism.",
+      "layer": 15,
+      "n_categories": 1
+    },
+    "L8_F4831377": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code, including HTML tags, URLs, and commands",
+      "layer": 8,
+      "n_categories": 1
+    },
+    "L16_F12693224": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " a variety of technical terms",
+      "layer": 16,
+      "n_categories": 1
+    },
+    "L3_F97839062": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to anesthetics and medical procedures",
+      "layer": 3,
+      "n_categories": 1
+    },
+    "L17_F607735": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "cell cultures",
+      "layer": 17,
+      "n_categories": 1
+    },
+    "L9_F4701701": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code and data tables",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L0_F32501952": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to deletion",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F40747877": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "code snippets containing CSS or XML layout information, especially attributes relating to background",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L7_F12688195": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " source code snippets, file paths, and related symbols like '=' and '#'.",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L8_F87258646": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to microbiology, agriculture, and food science",
+      "layer": 8,
+      "n_categories": 1
+    },
+    "L12_F56652677": {
+      "categories": [
+        "CODE",
+        "MATH"
+      ],
+      "is_polysemantic": true,
+      "explanation": " decimal numbers in different formats and mathematical symbols",
+      "layer": 12,
+      "n_categories": 2
+    },
+    "L1_F67750618": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the word \"manner\"",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L0_F63918470": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "Android-related code libraries",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F100047584": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words containing the suffix \"logi\" or related to XML",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F128440377": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the word \"nor.\"",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L2_F81977607": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the token \"free\" followed closely by another token",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L0_F9350649": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words relating to legal parentage",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L6_F106470521": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "conjunctions and relative pronouns",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L6_F10231019": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " personal pronouns combined with past tense verbs",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L6_F105683984": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " dates",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L4_F8443990": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code snippets and programming-related terms",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L1_F48024898": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to legal proceedings and evidence in court.",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L20_F4853149": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases about railroads, crossings, trains, and related equipment",
+      "layer": 20,
+      "n_categories": 1
+    },
+    "L4_F96778823": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the last syllables of last names",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L2_F113048163": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " references to buyers and sellers in a transaction",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L4_F8767573": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " dialogue and conversational elements, particularly quotations and speech attributions",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L8_F20940147": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " scientific publications and citations with emphasis on names and years",
+      "layer": 8,
+      "n_categories": 1
+    },
+    "L23_F1206657": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code documentation",
+      "layer": 23,
+      "n_categories": 1
+    },
+    "L2_F38171950": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " job titles containing \"president\"",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L7_F22879222": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code snippets related to machine learning models",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L9_F3843368": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": " instances of the first-person perspective combined with indicators of time or scheduling.",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L9_F91037261": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the keyword \"while\" used in code",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L8_F7313391": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code snippets and programming-related keywords such as \"type\", \"entities\", \"adjacent\", \"file\" and \"",
+      "layer": 8,
+      "n_categories": 1
+    },
+    "L0_F53235720": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " XML code tags related to Style",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L8_F19471911": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " Java import statements, especially those related to Android libraries and Tencent's mm SDK",
+      "layer": 8,
+      "n_categories": 1
+    },
+    "L10_F59891029": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words frequently used in java code, such as \"public\", \"private\", and \"class\"",
+      "layer": 10,
+      "n_categories": 1
+    },
+    "L5_F2584395": {
+      "categories": [
+        "CONCEPTS"
+      ],
+      "is_polysemantic": false,
+      "explanation": " expressions of a desire to detach from obligations.",
+      "layer": 5,
+      "n_categories": 1
+    },
+    "L11_F6324334": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " nouns relating to particular topics like energy, diseases, weather, crafts, economics, and history.",
+      "layer": 11,
+      "n_categories": 1
+    },
+    "L6_F48733121": {
+      "categories": [
+        "CONCEPTS"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words that are used when making a judgement or decision",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L7_F107685142": {
+      "categories": [
+        "CODE",
+        "LANGUAGE"
+      ],
+      "is_polysemantic": true,
+      "explanation": "This neuron seems to be highly sensitive to code snippets or file paths, particularly those using th",
+      "layer": 7,
+      "n_categories": 2
+    },
+    "L1_F38311879": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words relating to medical workers and their work",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L6_F42342996": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": "instances of getting close to something, penetration, or bits and tools",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L24_F92024936": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " technical terms and also looks for place names",
+      "layer": 24,
+      "n_categories": 1
+    },
+    "L12_F54637818": {
+      "categories": [
+        "SCIENCE",
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": true,
+      "explanation": " technical, scientific, and legal terms",
+      "layer": 12,
+      "n_categories": 2
+    },
+    "L13_F53742514": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases related to legal proceedings and potentially negative consequences ",
+      "layer": 13,
+      "n_categories": 1
+    },
+    "L14_F6917325": {
+      "categories": [
+        "CONCEPTS"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to emotions and hardship",
+      "layer": 14,
+      "n_categories": 1
+    },
+    "L3_F13372202": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " uses of something as something",
+      "layer": 3,
+      "n_categories": 1
+    },
+    "L9_F5335001": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words or phrases relating to crime, death, or legal proceedings.",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L16_F9311753": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": " names of people",
+      "layer": 16,
+      "n_categories": 1
+    },
+    "L2_F37788468": {
+      "categories": [
+        "CONCEPTS"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases related to fairness and equal rights, especially in a social context",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L4_F36564071": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to systems, devices, or processes that have been or can be difficult, easy, effective",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L3_F128264132": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": "words and phrases related to adherence or patches",
+      "layer": 3,
+      "n_categories": 1
+    },
+    "L4_F48496471": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words or fragments of words likely to begin a noun phrase",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L14_F153720": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases related to the eye disease conjunctivitis and its causes",
+      "layer": 14,
+      "n_categories": 1
+    },
+    "L5_F6168822": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " mentions of geographic locations and institutions",
+      "layer": 5,
+      "n_categories": 1
+    },
+    "L23_F13585054": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to healthcare and employment",
+      "layer": 23,
+      "n_categories": 1
+    },
+    "L0_F3017195": {
+      "categories": [
+        "LANGUAGE",
+        "MATH"
+      ],
+      "is_polysemantic": true,
+      "explanation": " the letter 'c' in mathematical notation",
+      "layer": 0,
+      "n_categories": 2
+    },
+    "L4_F106543498": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " possessive pronouns followed by nouns that relate to qualities about a topic",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L4_F40118398": {
+      "categories": [
+        "CONCEPTS",
+        "ENTITIES"
+      ],
+      "is_polysemantic": true,
+      "explanation": " phrases in which people are being warned about something",
+      "layer": 4,
+      "n_categories": 2
+    },
+    "L4_F45701575": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " mentions of \"minutes\" and other time units, and possibly volume units",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L17_F89625948": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": "not",
+      "layer": 17,
+      "n_categories": 1
+    },
+    "L14_F45101238": {
+      "categories": [
+        "CONCEPTS"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to visibility, proportions, and inclusion",
+      "layer": 14,
+      "n_categories": 1
+    },
+    "L7_F38531023": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " tokens in website-related text, including references to trails, maps, Ontario-related educational c",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L15_F376262": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code-related keywords, especially related to data structures and network protocols",
+      "layer": 15,
+      "n_categories": 1
+    },
+    "L9_F38548580": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words describing jobs, schools, and government",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L5_F49496269": {
+      "categories": [
+        "SCIENCE",
+        "LANGUAGE"
+      ],
+      "is_polysemantic": true,
+      "explanation": " words and abbreviations related to scientific experimentation and analysis, especially in biology a",
+      "layer": 5,
+      "n_categories": 2
+    },
+    "L4_F2823871": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words associated with scientific studies, processes, and results.",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L4_F112522496": {
+      "categories": [
+        "CODE",
+        "MATH"
+      ],
+      "is_polysemantic": true,
+      "explanation": " regular expression syntax including escape characters and character sets",
+      "layer": 4,
+      "n_categories": 2
+    },
+    "L6_F116044988": {
+      "categories": [
+        "MATH"
+      ],
+      "is_polysemantic": false,
+      "explanation": "symbols and words related to mathematics",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L7_F101438638": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": " book titles and author names",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L7_F1622693": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " terms related to video games and media",
+      "layer": 7,
+      "n_categories": 1
+    },
+    "L4_F36881161": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words and phrases used to introduce explanations in research papers",
+      "layer": 4,
+      "n_categories": 1
+    },
+    "L5_F74291949": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": " terms which are likely proper nouns, especially names of people, places, organizations, treaties, a",
+      "layer": 5,
+      "n_categories": 1
+    },
+    "L6_F7533014": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " military units and terminology.",
+      "layer": 6,
+      "n_categories": 1
+    },
+    "L13_F50526364": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to soccer match reporting",
+      "layer": 13,
+      "n_categories": 1
+    },
+    "L9_F53525021": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " uses of the words \"conversely\", \"opponents\", \"complaints\", \"removal\", \"how\", \"can\" or phrases \"othe",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L13_F53614": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the preposition \"out\" and words associated with it, like direction or something being used up.",
+      "layer": 13,
+      "n_categories": 1
+    },
+    "L9_F2910068": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " lists and rankings, especially those related to technology and business",
+      "layer": 9,
+      "n_categories": 1
+    },
+    "L14_F42177505": {
+      "categories": [
+        "MATH"
+      ],
+      "is_polysemantic": false,
+      "explanation": " mathematical equations and expressions",
+      "layer": 14,
+      "n_categories": 1
+    },
+    "L10_F3146275": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": " proper nouns that indicate organization or location",
+      "layer": 10,
+      "n_categories": 1
+    },
+    "L10_F7405465": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to formal ceremonies and scientific procedures",
+      "layer": 10,
+      "n_categories": 1
+    },
+    "L1_F38032279": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to scientific studies in biology/chemistry including biological processes, forces/int",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L2_F17656650": {
+      "categories": [
+        "CODE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " code snippets in languages like Javascript, HTML, or Java that contain operators, strings, and vari",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L1_F4948": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": "sentences where the speaker says what they \"will\" do",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L23_F40423512": {
+      "categories": [
+        "ENTITIES"
+      ],
+      "is_polysemantic": false,
+      "explanation": " proper nouns, often acronyms or names with titles",
+      "layer": 23,
+      "n_categories": 1
+    },
+    "L0_F24587577": {
+      "categories": [
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the words \"trail\" and \"conservative,\" often in the context of political and geographical topics",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L0_F70051365": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the word \"direct\"",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L20_F71957985": {
+      "categories": [
+        "SCIENCE"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to information, studies, and creation",
+      "layer": 20,
+      "n_categories": 1
+    },
+    "L2_F116502477": {
+      "categories": [
+        "MATH"
+      ],
+      "is_polysemantic": false,
+      "explanation": " documents about mathematical theory",
+      "layer": 2,
+      "n_categories": 1
+    },
+    "L0_F41719544": {
+      "categories": [
+        "LANGUAGE",
+        "DOMAIN_SPECIFIC"
+      ],
+      "is_polysemantic": true,
+      "explanation": " the word \"candidate\", and words near it, in the context of legal documents",
+      "layer": 0,
+      "n_categories": 2
+    },
+    "L1_F127145429": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " the month of August",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L0_F2239785": {
+      "categories": [
+        "OTHER"
+      ],
+      "is_polysemantic": false,
+      "explanation": " words related to submitting or receiving information",
+      "layer": 0,
+      "n_categories": 1
+    },
+    "L1_F58660694": {
+      "categories": [
+        "LANGUAGE"
+      ],
+      "is_polysemantic": false,
+      "explanation": "the word \"instrument\" along with words related to measurement, and/or the word \"lateral\"",
+      "layer": 1,
+      "n_categories": 1
+    },
+    "L15_F97238469": {
+      "categories": [
+        "MATH"
+      ],
+      "is_polysemantic": false,
+      "explanation": " numbers that are powers of ten as well as time durations",
+      "layer": 15,
+      "n_categories": 1
+    },
+    "L12_F47127473": {
+      "categories": [
+        "DOMAIN_SPECIFIC",
+        "ENTITIES",
+        "MULTILINGUAL"
+      ],
+      "is_polysemantic": true,
+      "explanation": " Icelandic, German, and American place, people, and company names",
+      "layer": 12,
+      "n_categories": 3
+    },
+    "L13_F22068032": {
+      "categories": [
+        "MATH"
+      ],
+      "is_polysemantic": false,
+      "explanation": " strings of digits and hyphens near form feeds",
+      "layer": 13,
+      "n_categories": 1
+    },
+    "L11_F2069583": {
+      "categories": [
+        "SCIENCE",
+        "LANGUAGE"
+      ],
+      "is_polysemantic": true,
+      "explanation": "scientific language from biology journal articles",
+      "layer": 11,
+      "n_categories": 2
+    }
+  }
+}
