@@ -245,8 +245,8 @@ def draw_left_panel(ax,
     )
 
     ax.set_xlabel('Normalized depth (0 = input, 1 = output)')
-    ax.set_ylabel('Cumulative energy fraction')
-    ax.set_title('Cumulative energy by depth',
+    ax.set_ylabel('Cumulative activation share')
+    ax.set_title('Cumulative activation by depth',
                  color=COLOR_TEXT, pad=8)
     ax.set_xlim(0.0, 1.0)
     ax.set_ylim(0.0, 1.05)
@@ -311,7 +311,7 @@ def draw_right_panel(ax, sim: np.ndarray, n_gemma: int,
         spine.set_linewidth(0.8)
 
     ax.tick_params(length=0)
-    ax.set_title('Energy profile similarity matrix',
+    ax.set_title('Layer activation profile similarity',
                  color=COLOR_TEXT, pad=8)
 
     # Colorbar (compact, alongside the matrix).
@@ -350,7 +350,7 @@ def main() -> None:
     fig.suptitle('Architecture dominance', fontsize=17, fontweight='bold',
                  color=COLOR_TEXT, y=1.08, x=0.5, ha='center')
     fig.text(0.5, 1.012,
-             'Energy profiles cluster 14× more tightly by architecture than by domain',
+             'Layer activation profiles cluster 14× more tightly by architecture than by domain',
              fontsize=11.5, style='italic', color=COLOR_MUTED,
              ha='center', va='bottom')
 

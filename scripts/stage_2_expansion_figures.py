@@ -35,7 +35,7 @@ import numpy as np
 
 SCRIPT_DIR = Path(__file__).parent
 DATA_DIR = SCRIPT_DIR.parent / 'data'
-FIG_DIR = BASE / 'docs' / 'figures'
+FIG_DIR = SCRIPT_DIR.parent / 'docs' / 'figures'
 
 # Input data paths
 D1_RESULTS = DATA_DIR / 'stage_2_unused_columns' / 'unused_columns_results.json'

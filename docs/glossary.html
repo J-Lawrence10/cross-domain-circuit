@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary: Cross-Domain Circuit Analysis</title>
-<meta name="description" content="Plain-language definitions of Jaccard similarity, activation energy, bottleneck tax, cosine similarity on energy profiles, steering experiments, and direct logit attribution.">
+<meta name="description" content="Plain-language definitions of Jaccard similarity, activation magnitude, the bottleneck penalty, cosine similarity on layer activation profiles, steering experiments, and direct logit attribution.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,7 +98,7 @@ function toggleTheme() {
 <section class="hero">
   <div class="hero-body" style="padding: 3rem 1.5rem 0.5rem 1.5rem;">
     <div class="container is-max-desktop">
-      <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i>Back to paper</a>
+      <a href="cross-domain-circuits.html" class="back-link"><i class="fa-solid fa-arrow-left"></i>Back to paper</a>
       <h1 class="title is-2">Glossary</h1>
       <p class="subtitle is-5" style="color: var(--text-muted);">Plain-language definitions of key concepts used in the Cross-Domain Circuit Analysis paper.</p>
     </div>
@@ -118,14 +118,14 @@ function toggleTheme() {
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#jaccard-similarity">Jaccard Similarity</a></li>
-<li><a href="#activation-energy">Activation Energy</a></li>
-<li><a href="#bottleneck-tax">Bottleneck Tax</a></li>
+<li><a href="#activation-magnitude">Activation Magnitude</a></li>
+<li><a href="#bottleneck-penalty">Bottleneck Penalty</a></li>
 <li><a href="#architecture-dominance">Architecture Dominance</a></li>
 <li><a href="#universal-bottleneck-features">Universal Bottleneck Features</a></li>
 <li><a href="#traceback-graphing">Traceback Graphing</a></li>
 <li><a href="#three-tier-dissociation">Three-Tier Dissociation</a></li>
-<li><a href="#cosine-similarity-on-energy-profiles">Cosine Similarity on Energy Profiles</a></li>
-<li><a href="#is-energy-finite-addressing-the-metaphor">Is Energy Finite? (Addressing the Metaphor)</a></li>
+<li><a href="#cosine-similarity-on-layer-activation-profiles">Cosine Similarity on Layer Activation Profiles</a></li>
+<li><a href="#a-note-on-terminology">A Note on Terminology: Why "Activation Magnitude," Not "Energy"</a></li>
 <li><a href="#steering-experiments-how-features-were-selected">Steering Experiments: How Features Were Selected</a></li>
 <li><a href="#direct-logit-attribution-how-the-output-token-is-chosen">Direct Logit Attribution: How the Output Token is Chosen</a></li>
 </ul>
@@ -153,36 +153,35 @@ Set B = {apple, orange, pear, kiwi}</p>
 | Gold vs Sodium (same template, different facts) | 0.60 | Circuits share 60% of features |
 | Gold template-A vs Gold template-B (same fact, different templates) | 0.30 | Only 30% shared |
 | Chemistry vs Geography (different domain) | 0.11 | Very different circuits |
-| GEMMA Geography prompts (within-domain) | 0.40 | Highest within-domain convergence |
-| GEMMA History prompts (within-domain) | 0.11 | Lowest within-domain convergence |</p>
+| Gemma Geography prompts (within-domain) | 0.40 | Highest within-domain convergence |
+| Gemma History prompts (within-domain) | 0.11 | Lowest within-domain convergence |</p>
 <p><strong>Why we chose it:</strong>
 - Simple and interpretable
 - Doesn't care about set size (two small sets with perfect overlap still score 1.0)
 - Ignores element ordering and magnitude</p>
 <p><strong>Limitation:</strong> Treats all features as equally important. A strongly-activated feature counts the same as one that barely fires.</p>
 <hr />
-<h2 id="activation-energy">Activation Energy</h2>
-<p><strong>Quick definition:</strong> A measure of how much "work" a neural network layer is doing, quantified by the magnitudes of feature activations.</p>
+<h2 id="activation-magnitude">Activation Magnitude</h2>
+<p><strong>Quick definition:</strong> The summed absolute activations of a circuit's SAE features, computed per layer or for the whole circuit. It quantifies how strongly the circuit's features fire at each depth.</p>
 <p><strong>How we compute it:</strong>
-- <strong>Node energy</strong> = sum of activation magnitudes across all SAE features in that layer
-- <strong>Total activation energy</strong> = sum of node energies across the entire circuit
-- <strong>Layer energy fraction</strong> = (energy at layer L) / (total circuit energy), i.e. what % of the circuit's work happens at layer L</p>
-<p><strong>Why call it "energy"?</strong> Physics analogy. High energy = many features strongly firing. Low energy = sparse activation. The name captures the intuition that a layer with high activation magnitudes is "doing more work."</p>
+- <strong>Per-layer activation magnitude</strong> = sum of absolute activations across all of the circuit's SAE features at that layer
+- <strong>Total activation magnitude</strong> = sum of per-layer magnitudes across the entire circuit
+- <strong>Per-layer activation share</strong> = (magnitude at layer L) / (circuit total), i.e. what fraction of the circuit's activation sits at layer L</p>
 <p><strong>How it looks in the paper:</strong></p>
-<p><strong>Energy profiles</strong> plot layer-energy-fraction against layer depth for each circuit. We found two distinct patterns:
-- <strong>GEMMA front-loads energy:</strong> 54% of total energy is in layers 0-12 (first half). Cumulative 50% reached by L11.
-- <strong>QWEN back-loads energy:</strong> Only 31% of energy in the first half. Cumulative 50% not reached until L28.</p>
-<p>These are fundamentally different computational strategies, but both produce comparable factual recall.</p>
-<p><strong>Key property:</strong> Energy profiles are <strong>architecture-determined, not domain-determined.</strong>
+<p><strong>Layer activation profiles</strong> plot per-layer activation share against layer depth for each circuit. We found two distinct patterns:
+- <strong>Gemma is front-loaded:</strong> 54% of total activation magnitude is in layers 0-12 (first half). The cumulative share reaches 50% by L11.
+- <strong>Qwen is back-loaded:</strong> only 31% of the total is in the first half. The cumulative share does not reach 50% until L28.</p>
+<p>These are different depth strategies, but both produce comparable factual recall.</p>
+<p><strong>Key property:</strong> Layer activation profiles are <strong>architecture-determined, not domain-determined.</strong>
 - Within-model cosine similarity (across chemistry/geography/history): <strong>0.978</strong>
 - Between-model cosine similarity: <strong>0.696</strong>
-- Architecture explains roughly 14× more variance than knowledge domain</p>
-<p><strong>Why this matters:</strong> Energy profiles are robust to prompt-template confounds (see Section 5.9). Feature IDs change when you rephrase prompts, but <em>where</em> computation happens across layers stays architecturally locked. That's why the architecture-dominance claim survives the format-variation critique.</p>
+- The architecture gap is roughly 14× the domain gap</p>
+<p><strong>Why this matters:</strong> Layer activation profiles are robust to prompt-template confounds (see Section 5.9). Feature IDs change when you rephrase prompts, but <em>where</em> computation happens across layers stays architecturally locked. That's why the architecture-dominance claim survives the format-variation critique.</p>
 <hr />
-<h2 id="bottleneck-tax">Bottleneck Tax</h2>
+<h2 id="bottleneck-penalty">Bottleneck Penalty</h2>
 <p><strong>Quick definition:</strong> The empirical finding that <strong>higher activation magnitude at a bottleneck layer correlates with <em>worse</em> model confidence.</strong> The name is a memorable label; the theoretical grounding is information bottleneck theory (Tishby &amp; Zaslavsky, 2015), which predicts that over-compression at an intermediate layer limits the information downstream layers can use for prediction.</p>
-<p><strong>Important note on framing:</strong> This is a <strong>correlation with a theoretical interpretation, not a proven causal mechanism</strong>. "Energy" here means summed feature activation magnitudes, NOT a conserved physical quantity (see the "Is Energy Finite?" entry). Early drafts used "energy budget" language; the final paper grounds the finding in information bottleneck theory instead.</p>
-<p><strong>The core correlations (GEMMA-2-2B):</strong></p>
+<p><strong>Important note on framing:</strong> This is a <strong>correlation with a theoretical interpretation, not a proven causal mechanism</strong>. Activation magnitude is not a conserved quantity (see "A Note on Terminology"). The finding is grounded in information bottleneck theory, not in any resource metaphor.</p>
+<p><strong>The core correlations (Gemma-2-2B):</strong></p>
 <table>
 <thead>
 <tr>
@@ -197,7 +196,7 @@ Set B = {apple, orange, pear, kiwi}</p>
 <td><strong>L6</strong></td>
 <td>Primary bottleneck</td>
 <td>r = −0.684, p &lt; 0.0001</td>
-<td>Negative (tax)</td>
+<td>Negative (penalty)</td>
 </tr>
 <tr>
 <td><strong>L10</strong></td>
@@ -225,7 +224,7 @@ Set B = {apple, orange, pear, kiwi}</p>
 </tr>
 </tbody>
 </table>
-<p><strong>More energy at L6 → worse predictions. More energy at L13/L16 → better predictions.</strong></p>
+<p><strong>More activation at L6 → worse predictions. More activation at L13/L16 → better predictions.</strong></p>
 <p><strong>The intuition (doorway analogy, use cautiously):</strong>
 Think of a narrow doorway in a hallway.
 - Information has to squeeze through the doorway (bottleneck at L6)
@@ -235,27 +234,27 @@ Think of a narrow doorway in a hallway.
 <p>Note: The bottleneck both filters information (potentially helpful, by discarding noise) AND limits downstream information (potentially harmful, if it discards signal). The paper's finding is that on average the harm dominates: circuits with heavier bottleneck activation tend to produce less confident predictions.</p>
 <p><strong>What we ruled out:</strong>
 - <strong>Bottleneck convergence</strong> (how sharply paths funnel): r = 0.27, NOT significant
-- <strong>Bottleneck energy fraction</strong> (what % of energy is at bottleneck): r = 0.26, NOT significant
-- <strong>Total activation energy</strong>: r = 0.53, Bonferroni-significant</p>
-<p>So it's not about having a "sharper" or "cleaner" bottleneck; it's about not <em>over-spending</em> energy there.</p>
+- <strong>Bottleneck activation share</strong> (what fraction of the circuit total sits at the bottleneck): r = 0.26, NOT significant
+- <strong>Total activation magnitude</strong>: r = 0.53, Bonferroni-significant</p>
+<p>So it is not about having a "sharper" or "cleaner" bottleneck; what matters is how much activation is concentrated there.</p>
 <p><strong>Why this matters:</strong>
-This is one of the paper's most novel contributions because it <strong>connects circuit structure directly to behavior</strong>. Earlier work (Meng et al. 2022) showed specific layers matter for factual recall via causal intervention. Our bottleneck tax is the correlational version: just by measuring <em>where</em> energy lives in a circuit, you can predict <em>how confident</em> the model will be.</p>
-<p><strong>QWEN3-4B contrast:</strong>
-QWEN shows zero Bonferroni-significant layer-energy-confidence correlations. Its late-bottleneck architecture (L22-25) diffuses the confidence signal across many layers instead of localizing it. The bottleneck tax appears specific to early-bottleneck architectures like GEMMA.</p>
-<p><strong>One-line summary:</strong> Bottleneck tax = an empirical correlation (higher L6 activation → lower confidence) grounded in information bottleneck theory (Tishby 2015), not a literal energy-budget mechanism.</p>
+This is one of the paper's most novel contributions because it <strong>connects circuit structure directly to behavior</strong>. Earlier work (Meng et al. 2022) showed specific layers matter for factual recall via causal intervention. Our bottleneck penalty is the correlational version: just by measuring <em>where</em> activation concentrates in a circuit, you can predict <em>how confident</em> the model will be.</p>
+<p><strong>Qwen3-4B contrast:</strong>
+Qwen shows zero Bonferroni-significant layer-activation-confidence correlations. Its late-bottleneck architecture (L22-25) diffuses the confidence signal across many layers instead of localizing it. The bottleneck penalty appears specific to early-bottleneck architectures like Gemma.</p>
+<p><strong>One-line summary:</strong> Bottleneck penalty = an empirical correlation (higher L6 activation share → lower confidence) grounded in information bottleneck theory (Tishby 2015), not a resource mechanism.</p>
 <p><strong>How to explain it to someone:</strong></p>
 <blockquote>
-<p>"We found that the more a circuit's activation is concentrated at its bottleneck layer (L6 in GEMMA), the less confident its prediction tends to be: r = -0.684, Bonferroni-significant. This is consistent with information bottleneck theory, which predicts that heavy compression at intermediate layers limits the information downstream layers can use. We call the pattern the 'bottleneck tax' for memorability, but it's a correlational finding with a theoretical interpretation, not a proven causal mechanism."</p>
+<p>"We found that the more a circuit's activation is concentrated at its bottleneck layer (L6 in Gemma), the less confident its prediction tends to be: r = -0.684, Bonferroni-significant. This is consistent with information bottleneck theory, which predicts that heavy compression at intermediate layers limits the information downstream layers can use. We call the pattern the 'bottleneck penalty' for memorability, but it's a correlational finding with a theoretical interpretation, not a proven causal mechanism."</p>
 </blockquote>
 <hr />
 <h2 id="architecture-dominance">Architecture Dominance</h2>
-<p><strong>Quick definition:</strong> The empirical observation that within-model circuits cluster about 14× more tightly in energy-profile similarity than between-model circuits, with knowledge domain modulating the profile by less than 2%. In short: which model you are using matters far more for circuit structure than what you are asking the model about.</p>
+<p><strong>Quick definition:</strong> The empirical observation that within-model circuits cluster about 14× more tightly in layer-activation-profile similarity than between-model circuits, with knowledge domain modulating the profile by less than 2%. In short: which model you are using matters far more for circuit structure than what you are asking the model about.</p>
 <p><strong>The core numbers (Section 5.5.1 and 6.1):</strong></p>
 <table>
 <thead>
 <tr>
 <th>Comparison</th>
-<th>Cosine similarity on energy profiles</th>
+<th>Cosine similarity on layer activation profiles</th>
 <th>Interpretation</th>
 </tr>
 </thead>
@@ -283,12 +282,12 @@ QWEN shows zero Bonferroni-significant layer-energy-confidence correlations. Its
 </tbody>
 </table>
 <p>The within-model figure clusters across all three knowledge domains. The between-model figure persists even after normalizing layer indices to a common 0-1 depth scale, so it is not an artifact of Gemma having 26 layers and Qwen having 36. A Mann-Whitney U test on the two distributions of pairwise similarities returns p &lt; 0.000001, with non-overlapping 95% bootstrap confidence intervals.</p>
-<p><strong>Beyond energy profiles:</strong> 13 of 16 structural metrics (node counts, edge density, layer breadth, path depth, bottleneck depth, and others) differ significantly between Gemma and Qwen circuits under a Bonferroni-corrected Mann-Whitney test. Peak activation layer shows perfect rank separation: every Gemma circuit peaks earlier than every Qwen circuit, with no overlap across the 60-circuit dataset.</p>
+<p><strong>Beyond layer activation profiles:</strong> 13 of 16 structural metrics (node counts, edge density, layer breadth, path depth, bottleneck depth, and others) differ significantly between Gemma and Qwen circuits under a Bonferroni-corrected Mann-Whitney test. Peak activation layer shows perfect rank separation: every Gemma circuit peaks earlier than every Qwen circuit, with no overlap across the 60-circuit dataset.</p>
 <p><strong>Why this is a load-bearing claim:</strong> The natural prior is that factual recall circuits differ by what they recall (chemistry features for chemistry prompts, geography features for geography prompts). Architecture dominance flips that prior. The same model produces structurally near-identical circuits across all three domains, while a different model on the same prompts produces a different structural signature. Domain is a small perturbation on top of an architecture-determined backbone.</p>
-<p><strong>Robustness to format confounds:</strong> Because feature IDs change when prompt templates are rephrased (Section 5.9), feature-overlap metrics can be inflated by template repetition. Energy profiles avoid this confound: they describe where computation happens across layers, not which specific features fire. Architecture dominance survives the format-variation critique that weaker overlap-based claims do not.</p>
+<p><strong>Robustness to format confounds:</strong> Because feature IDs change when prompt templates are rephrased (Section 5.9), feature-overlap metrics can be inflated by template repetition. Layer activation profiles avoid this confound: they describe where computation happens across layers, not which specific features fire. Architecture dominance survives the format-variation critique that weaker overlap-based claims do not.</p>
 <p><strong>How to explain it to someone:</strong></p>
 <blockquote>
-<p>"We compared the layer-by-layer energy distribution of 60 circuits, 30 from each model, spanning three knowledge domains. Within a single model, circuits cluster at 0.978 cosine similarity regardless of domain. Between models, that drops to 0.696, even after we normalize layer depth. The gap is about 14 times larger than the spread we see within either model when we change the topic. So architecture, not knowledge, dictates the structural shape of factual recall circuits in these models."</p>
+<p>"We compared the layer-by-layer activation distribution of 60 circuits, 30 from each model, spanning three knowledge domains. Within a single model, circuits cluster at 0.978 cosine similarity regardless of domain. Between models, that drops to 0.696, even after we normalize layer depth. The gap is about 14 times larger than the spread we see within either model when we change the topic. So architecture, not knowledge, dictates the structural shape of factual recall circuits in these models."</p>
 </blockquote>
 <hr />
 <h2 id="universal-bottleneck-features">Universal Bottleneck Features</h2>
@@ -382,16 +381,16 @@ QWEN shows zero Bonferroni-significant layer-energy-confidence correlations. Its
 <p>"We ran 80 steering experiments with three different selection criteria. Essential-pathway features produced the strongest distributional perturbations on average, with mean KL of 1.448. But they did not flip output text any more reliably than features selected by cross-circuit frequency, both landing around a quarter of experiments. And the rate of text changes turned out to depend almost entirely on the prompt domain: chemistry 0%, geography 20%, history 60%, regardless of which features we steered. Three tiers of causal effect, three different predictors, no single metric that wins on all three."</p>
 </blockquote>
 <hr />
-<h2 id="cosine-similarity-on-energy-profiles">Cosine Similarity on Energy Profiles</h2>
-<p><strong>Quick definition:</strong> A number between 0 and 1 measuring whether two circuits have the same <em>shape</em> of layer-by-layer energy distribution, regardless of total magnitude.</p>
+<h2 id="cosine-similarity-on-layer-activation-profiles">Cosine Similarity on Layer Activation Profiles</h2>
+<p><strong>Quick definition:</strong> A number between 0 and 1 measuring whether two circuits have the same <em>shape</em> of layer-by-layer activation distribution, regardless of total magnitude.</p>
 <p><strong>What the inputs are:</strong>
-Each circuit produces a vector of N numbers (26 for GEMMA, 36 for QWEN), the proportion of total circuit energy at each layer. Example:</p>
-<pre><code>GEMMA circuit → [0.08, 0.12, 0.15, 0.09, 0.06, 0.04, 0.03, 0.02, ...]
+Each circuit produces a vector of N numbers (26 for Gemma, 36 for Qwen), the proportion of the circuit's total activation magnitude at each layer. Example:</p>
+<pre><code>Gemma circuit → [0.08, 0.12, 0.15, 0.09, 0.06, 0.04, 0.03, 0.02, ...]
 </code></pre>
 <p>These sum to 1.0 (they're fractions).</p>
 <p><strong>Why cosine specifically:</strong></p>
 <ol>
-<li><strong>Shape over magnitude.</strong> Measures the <em>angle</em> between vectors, not their length. Two circuits concentrating energy at L6 will score as similar even if one has much more absolute energy. We care about <em>where</em> computation happens, not how much.</li>
+<li><strong>Shape over magnitude.</strong> Measures the <em>angle</em> between vectors, not their length. Two circuits concentrating activation at L6 will score as similar even if one has much larger absolute magnitudes. We care about <em>where</em> computation happens, not how much.</li>
 <li><strong>Standard in ML.</strong> Used ubiquitously for comparing embeddings, feature vectors, and activation patterns.</li>
 <li><strong>Interpretable.</strong> 1 = identical shape, 0 = completely different shape.</li>
 </ol>
@@ -403,7 +402,7 @@ Each circuit produces a vector of N numbers (26 for GEMMA, 36 for QWEN), the pro
 - <strong>Representational Similarity Analysis (RSA):</strong> Kriegeskorte, Mur, &amp; Bandettini (2008), <em>Frontiers in Systems Neuroscience</em>. Standard for comparing activation patterns across brains/models/conditions.
 - <strong>Centered Kernel Alignment (CKA):</strong> Kornblith, Norouzi, Lee, &amp; Hinton (2019), <em>ICML</em>, "Similarity of Neural Network Representations Revisited." Modern method for comparing activations across networks.
 - <strong>Cosine on SAE features:</strong> Bricken et al. (2023), Templeton et al. (2024) use cosine similarity on feature activations.</p>
-<p><strong>What's novel in our application:</strong> Applying cosine similarity specifically to <strong>per-layer energy fractions aggregated across a circuit</strong>, rather than comparing individual activation vectors. It's a reasonable extension of standard practice.</p>
+<p><strong>What's novel in our application:</strong> Applying cosine similarity specifically to <strong>per-layer activation shares aggregated across a circuit</strong>, rather than comparing individual activation vectors. It's a reasonable extension of standard practice.</p>
 <p><strong>The key results (Section 5.5.1):</strong>
 - Within-model cosine similarity: <strong>0.978</strong>
 - Between-model cosine similarity: <strong>0.696</strong> (after depth normalization)
@@ -411,50 +410,21 @@ Each circuit produces a vector of N numbers (26 for GEMMA, 36 for QWEN), the pro
 - Bootstrap 95% CI on within-model mean: <strong>[0.975, 0.981]</strong></p>
 <p><strong>Where we're vulnerable to reviewer critique:</strong>
 - We didn't formally benchmark cosine against KL divergence or Earth Mover's Distance. A reviewer could reasonably ask "would the pattern hold with a different metric?"
-- The "~14× more variance" claim divides the between-model gap (0.282) by the within-model domain gap (~0.02). This is a rough comparison, not a formal variance decomposition.</p>
+- The "~14×" claim divides the between-model gap (0.282) by the within-model domain gap (~0.02). This is a ratio of mean cosine gaps, not a formal variance decomposition, and the paper words it accordingly.</p>
 <p><strong>How to explain it:</strong></p>
 <blockquote>
 <p>"Cosine similarity measures whether two circuits concentrate their computation at the same layers: we care about the shape of where work happens, not the absolute amount. This extends representational similarity analysis (Kriegeskorte 2008) and modern activation-comparison methods like CKA (Kornblith 2019). Our finding that within-model scores cluster at 0.978 while between-model scores drop to 0.696 is statistically robust (Mann-Whitney p &lt; 0.000001)."</p>
 </blockquote>
 <hr />
-<h2 id="is-energy-finite-addressing-the-metaphor">Is Energy Finite? (Addressing the Metaphor)</h2>
-<p><strong>Quick definition:</strong> Our paper frames the bottleneck tax as if the model has a "finite energy budget" that must be spent somewhere. <strong>This is a metaphor, not a mechanism.</strong> Neural networks have no conservation law for activation energy.</p>
-<p><strong>The physical reality:</strong>
-- Each layer's activations are the output of learned linear + nonlinear transformations applied independently
-- Layer 6 can activate 0 features or 16,000 features without "using up" anything Layer 13 needs
-- Activation magnitudes are bounded by input magnitudes and learned weights, not by a global pool</p>
-<p><strong>What IS finite in a neural network:</strong>
-- <strong>Parameters</strong> (fixed capacity)
-- <strong>Compute per forward pass</strong> (fixed FLOPs)
-- <strong>Input information content</strong> (bounded by prompt)</p>
-<p>But these are different from a "shared energy budget."</p>
-<p><strong>So what does the bottleneck tax actually capture?</strong></p>
-<p>The correlation (r = −0.684 between L6 energy fraction and confidence) is <strong>real data</strong>. The <em>interpretation</em> as a resource tradeoff is where we're on thinner ground. Three more rigorous ways to frame the same finding:</p>
-<h3 id="option-1-correlational-safest-for-publication">Option 1: Correlational (safest for publication)</h3>
-<p>"Layer 6 energy fraction negatively correlates with output confidence across 30 GEMMA circuits. We do not claim a direct causal mechanism; this pattern could reflect upstream prompt difficulty, domain differences, or genuine compression-accumulation tradeoffs."</p>
-<h3 id="option-2-information-theoretic-stronger-with-citation">Option 2: Information-theoretic (stronger, with citation)</h3>
-<p>Following <strong>Tishby &amp; Zaslavsky (2015)</strong>, "Deep Learning and the Information Bottleneck Principle" (ITW) and <strong>Shwartz-Ziv &amp; Tishby (2017)</strong>, "Opening the Black Box of Deep Neural Networks via Information":</p>
-<blockquote>
-<p>"Information bottleneck theory predicts that heavy compression at an intermediate layer limits the information available to downstream layers for reconstruction and prediction. The negative correlation between L6 energy fraction and confidence (r = −0.684) is consistent with this prediction: circuits that concentrate more processing at the bottleneck may be compressing harder, leaving less information for evidence accumulation in later layers."</p>
-</blockquote>
-<p>This framing uses <strong>information</strong> (which does have a precise mathematical meaning in this context) rather than <strong>energy</strong> (which doesn't, in this context).</p>
-<h3 id="option-3-economic-metaphor-what-we-currently-wrote">Option 3: Economic metaphor (what we currently wrote)</h3>
-<p>"Heavy processing at the bottleneck consumes resources that could otherwise contribute to confidence." Evocative but not mechanistically grounded.</p>
-<p><strong>References that do NOT support "energy is finite":</strong>
-- <strong>Energy-based models</strong> (LeCun, Hinton): use "energy" as a scalar objective function over configurations, a completely different concept
-- <strong>Activation atlases</strong> (Olah et al., Distill): use activation magnitudes as features without framing them as finite
-- <strong>Hardware energy consumption</strong> (MLPerf, EfficientNet literature): about Joules used by chips, not about activations</p>
-<p><strong>Recommendation for publication:</strong></p>
-<p>We should soften Section 6.4 to either Option 1 (correlational) or Option 2 (information-theoretic, with citation). The current "energy tax" framing is evocative but a reviewer who pushes on the mechanism will find nothing solid behind it.</p>
-<p><strong>How to explain it honestly:</strong></p>
-<blockquote>
-<p>"The paper uses 'energy' as a convenient shorthand for activation magnitude, not as a claim that the model has a literal conserved quantity. The bottleneck tax is a correlation, not a mechanism. The best theoretical grounding comes from information bottleneck theory (Tishby &amp; Zaslavsky 2015), which predicts that compression at intermediate layers reduces information available downstream, consistent with our observation that high L6 energy predicts low confidence."</p>
-</blockquote>
-<p><strong>What this means for the paper:</strong>
-- The <strong>data</strong> (r = −0.684, Bonferroni-significant) stands.
-- The <strong>finding</strong> (certain layers' energy predicts confidence) stands.
-- The <strong>interpretation</strong> (why) should be softened to information-theoretic language or pure correlational language.
-- The name "bottleneck tax" is fine as a memorable label, but the framing around it should acknowledge it's a metaphor.</p>
+<h2 id="a-note-on-terminology">A Note on Terminology: Why "Activation Magnitude," Not "Energy"</h2>
+<p><strong>Quick definition:</strong> Earlier drafts of this work used "energy" as shorthand for summed feature activation magnitudes. The published version uses "activation magnitude" throughout. This entry records why.</p>
+<p><strong>The problem with "energy":</strong>
+- Neural networks have no conservation law for activations. Layer 6 can activate many features without "using up" anything layer 13 needs. A reader who takes "energy" literally infers a budget that does not exist.
+- "Activation energy" is an established chemistry term (the Arrhenius barrier a reaction must overcome). Chemistry is one of this paper's three knowledge domains, so the collision is direct.
+- Energy-based models (LeCun, Hinton) use "energy" as a scalar objective over configurations, a different concept again. Borrowing the word invites confusion with that literature.</p>
+<p><strong>What is actually computed:</strong> for a circuit and a layer, the summed absolute activation of the circuit's SAE features at that layer. Summing over layers gives the circuit total; dividing a layer's sum by the total gives that layer's activation share. Nothing in the analysis depends on any physical analogy.</p>
+<p><strong>What survives the renaming unchanged:</strong> every number. The within-model profile similarity (0.978), the between-model similarity (0.696), the L6 correlation with confidence (r = -0.684), and the front-loaded/back-loaded contrast (54% vs 31% in the first half of layers) are all statements about activation magnitudes and are unaffected.</p>
+<p><strong>The theoretical grounding</strong> for the bottleneck penalty comes from information bottleneck theory (Tishby &amp; Zaslavsky 2015; Shwartz-Ziv &amp; Tishby 2017), which is stated in terms of mutual information, a quantity with a precise meaning here, unlike "energy."</p>
 <hr />
 <h2 id="steering-experiments">Steering Experiments: How Features Were Selected</h2>
 <p><strong>Quick definition:</strong> Steering is a causal validation technique where we clamp a single SAE feature's activation to a fixed value (positive = amplify, negative = suppress) and measure whether the model's output changes. We ran 80 such experiments across three batches, each using a different criterion to choose which features to steer.</p>
@@ -495,7 +465,7 @@ strength = +20           (or -20; ±20 was used in every experiment)
 <tr>
 <td>D6</td>
 <td>Essential-pathway membership (topology)</td>
-<td>1,000 features extracted from minimal-pathway analysis on 30 GEMMA circuits</td>
+<td>1,000 features extracted from minimal-pathway analysis on 30 Gemma circuits</td>
 <td>L0_F64712375, L1_F1736314, L21_F5479683, L24_F18002975, L25_F50014975</td>
 <td>30</td>
 </tr>
@@ -628,8 +598,8 @@ strength = +20           (or -20; ±20 was used in every experiment)
 <p>This is the formal basis for "convergent outputs, divergent paths."</p>
 <p><strong>The selection step (at temperature=0):</strong></p>
 <p><code>argmax(logits)</code>. That's it. No beam search, no sampling. The token with the highest logit wins. This is why steering can flip predictions: shifting one feature's activation ripples through the decoder math, changes some logits, and can flip which token wins the argmax.</p>
-<p><strong>Why the bottleneck tax connects to this:</strong></p>
-<p>If energy gets concentrated at L6 (compression bottleneck), less informative residual-stream content reaches L25 where the unembedding actually consumes it. The output features at L25 still fire (but on degraded input), producing a flatter logit distribution (lower confidence). The information bottleneck framing captures this: I(X; T_L25) is bounded by I(X; T_L6), and a flatter logit distribution means less peaked argmax probability.</p>
+<p><strong>Why the bottleneck penalty connects to this:</strong></p>
+<p>If activation concentrates at L6 (compression bottleneck), less informative residual-stream content reaches L25 where the unembedding actually consumes it. The output features at L25 still fire (but on degraded input), producing a flatter logit distribution (lower confidence). The information bottleneck framing captures this: I(X; T_L25) is bounded by I(X; T_L6), and a flatter logit distribution means less peaked argmax probability.</p>
 <p><strong>Tools that compute DLA for you:</strong>
 - <strong>Neuronpedia feature dashboards</strong> show top positive and negative logits per feature in their <code>top_logits</code> and <code>bottom_logits</code> fields
 - <strong>TransformerLens</strong> has <code>apply_ln_to_stack()</code> and unembedding helpers for projecting activations through the final layers manually
@@ -655,7 +625,7 @@ strength = +20           (or -20; ±20 was used in every experiment)
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content has-text-centered">
-          <p><a href="index.html">Return to the Cross-Domain Circuit Analysis paper</a>.</p>
+          <p><a href="cross-domain-circuits.html">Return to the Cross-Domain Circuit Analysis paper</a>.</p>
         </div>
       </div>
     </div>

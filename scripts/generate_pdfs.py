@@ -26,7 +26,7 @@ if sys.platform == 'win32':
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 BASE = Path(__file__).parent.parent
-FIGURES_DIR = BASE / 'data' / 'stage_2_figures'
+FIGURES_DIR = BASE / 'docs' / 'figures'
 OUTPUT_DIR = BASE / 'docs' / 'papers' / 'pdf'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -400,9 +400,15 @@ def main():
             'figures': False,
         },
         {
-            'md': BASE.parent / 'supernode_detector' / 'docs' / 'SUPERNODE_PIPELINE_TOOL_PAPER.md',
-            'pdf': OUTPUT_DIR / 'SUPERNODE_PIPELINE_TOOL_PAPER.pdf',
-            'title': 'Supernode Detector: Automated Community Detection for Neuronpedia Attribution Graphs',
+            'md': BASE / 'docs' / 'papers' / 'GLOSSARY.md',
+            'pdf': OUTPUT_DIR / 'GLOSSARY.pdf',
+            'title': 'Glossary: Cross-Domain Circuit Analysis',
+            'figures': False,
+        },
+        {
+            'md': BASE / 'docs' / 'papers' / 'SUPPLEMENTARY_MATERIALS.md',
+            'pdf': OUTPUT_DIR / 'SUPPLEMENTARY_MATERIALS.pdf',
+            'title': 'Supplementary Materials: Cross-Domain Circuit Analysis',
             'figures': False,
         },
     ]

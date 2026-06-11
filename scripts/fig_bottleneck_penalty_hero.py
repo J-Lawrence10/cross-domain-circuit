@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Hero figure F1: The bottleneck tax.
+"""Hero figure F1: The bottleneck penalty.
 
 Two-panel annotated plot.
-  Left:  per-layer Spearman correlation between activation energy fraction
+  Left:  per-layer Spearman correlation between per-layer activation share
          and output confidence across 30 Gemma circuits. Sign-coloured bars
          (orange for r <= -0.3, purple for r >= +0.3, grey otherwise) with
          L6 highlighted via an annotated vertical guide. Horizontal guides
          at +/-0.6 mark a rough Bonferroni-significance band for visual
          reference.
-  Right: scatter of the 30 Gemma circuits, x = L6 energy fraction,
+  Right: scatter of the 30 Gemma circuits, x = L6 activation share,
          y = output probability. A regression line plus an r/p text box
          drives the punchline home.
 
@@ -19,8 +19,8 @@ Data sources:
       -> .['gemma-2-2b'] (30 circuits)
 
 Outputs:
-  data/stage_2_figures/fig_bottleneck_tax_hero.svg
-  data/stage_2_figures/fig_bottleneck_tax_hero.png
+  docs/figures/fig_bottleneck_penalty_hero.svg
+  docs/figures/fig_bottleneck_penalty_hero.png
 """
 
 from __future__ import annotations
@@ -98,7 +98,7 @@ def load_per_layer_correlations(results: dict) -> tuple[list[int], list[float]]:
 
 
 def load_l6_scatter(per_circuit: dict) -> tuple[np.ndarray, np.ndarray]:
-    """Return (l6_energy_fraction, output_probability) for the 30 Gemma circuits."""
+    """Return (L6 activation share, output_probability) for the 30 Gemma circuits."""
     gemma = per_circuit['gemma-2-2b']
     l6_frac = []
     output_prob = []
@@ -166,7 +166,7 @@ def draw_left_panel(ax, layers: list[int], r_values: list[float]) -> None:
 
     # Axes formatting.
     ax.set_xlabel('Layer')
-    ax.set_ylabel('Spearman r (energy fraction vs output prob)')
+    ax.set_ylabel('Spearman r (activation share vs output prob)')
     ax.set_title('Per-layer correlation across 30 Gemma circuits',
                  color=COLOR_TEXT, pad=8)
     ax.set_xlim(-0.7, max(layers) + 1.4)
@@ -215,9 +215,9 @@ def draw_right_panel(ax, l6_frac: np.ndarray, output_prob: np.ndarray) -> None:
                       edgecolor=COLOR_MUTED, linewidth=0.6, alpha=0.95),
             zorder=5)
 
-    ax.set_xlabel('L6 energy fraction (per circuit)')
+    ax.set_xlabel('L6 activation share (per circuit)')
     ax.set_ylabel('Output probability')
-    ax.set_title('L6 energy fraction vs output confidence',
+    ax.set_title('L6 activation share vs output confidence',
                  color=COLOR_TEXT, pad=8)
     ax.grid(True, alpha=0.18, zorder=0)
 
@@ -249,13 +249,13 @@ def main() -> None:
     # Title + subtitle anchored to the figure.
     # Reserve headroom so neither overlaps the panel titles.
     fig.subplots_adjust(top=0.82)
-    fig.suptitle('The bottleneck tax', fontsize=17, fontweight='bold',
+    fig.suptitle('The bottleneck penalty', fontsize=17, fontweight='bold',
                  color=COLOR_TEXT, y=1.08, x=0.5, ha='center')
-    fig.text(0.5, 1.012, 'More L6 activation → lower output confidence',
+    fig.text(0.5, 1.012, 'A larger L6 activation share predicts lower output confidence',
              fontsize=11.5, style='italic', color=COLOR_MUTED,
              ha='center', va='bottom')
 
-    save_hero_figure(fig, 'fig_bottleneck_tax_hero', OUTPUT_DIR,
+    save_hero_figure(fig, 'fig_bottleneck_penalty_hero', OUTPUT_DIR,
                      base_for_display=BASE)
     plt.close(fig)
 

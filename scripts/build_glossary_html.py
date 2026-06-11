@@ -7,14 +7,14 @@ can jump straight to the right entry.
 
 Anchor mapping (override the default markdown slugs):
   Jaccard Similarity                                  -> jaccard-similarity
-  Activation Energy                                   -> activation-energy
-  Bottleneck Tax                                      -> bottleneck-tax
+  Activation Magnitude                                -> activation-magnitude
+  Bottleneck Penalty                                  -> bottleneck-penalty
   Architecture Dominance                              -> architecture-dominance
   Universal Bottleneck Features                       -> universal-bottleneck-features
   Traceback Graphing                                  -> traceback-graphing
   Three-Tier Dissociation                             -> three-tier-dissociation
-  Cosine Similarity on Energy Profiles                -> cosine-similarity-on-energy-profiles
-  Is Energy Finite? (Addressing the Metaphor)         -> is-energy-finite-addressing-the-metaphor
+  Cosine Similarity on Layer Activation Profiles      -> cosine-similarity-on-layer-activation-profiles
+  A Note on Terminology                               -> a-note-on-terminology
   Steering Experiments: How Features Were Selected    -> steering-experiments
   Direct Logit Attribution: How the Output Token...   -> direct-logit-attribution
 """
@@ -33,19 +33,19 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
 
 ROOT = Path(__file__).resolve().parent.parent
 MD_PATH = ROOT / "docs" / "papers" / "GLOSSARY.md"
-HTML_OUT = ROOT.parent / "docs" / "glossary.html"
+HTML_OUT = ROOT / "docs" / "glossary.html"
 
 # Anchor overrides keyed by the EXACT H2 heading text in GLOSSARY.md.
 ANCHOR_OVERRIDES: dict[str, str] = {
     "Jaccard Similarity": "jaccard-similarity",
-    "Activation Energy": "activation-energy",
-    "Bottleneck Tax": "bottleneck-tax",
+    "Activation Magnitude": "activation-magnitude",
+    "Bottleneck Penalty": "bottleneck-penalty",
     "Architecture Dominance": "architecture-dominance",
     "Universal Bottleneck Features": "universal-bottleneck-features",
     "Traceback Graphing": "traceback-graphing",
     "Three-Tier Dissociation": "three-tier-dissociation",
-    "Cosine Similarity on Energy Profiles": "cosine-similarity-on-energy-profiles",
-    "Is Energy Finite? (Addressing the Metaphor)": "is-energy-finite-addressing-the-metaphor",
+    "Cosine Similarity on Layer Activation Profiles": "cosine-similarity-on-layer-activation-profiles",
+    'A Note on Terminology: Why "Activation Magnitude," Not "Energy"': "a-note-on-terminology",
     "Steering Experiments: How Features Were Selected": "steering-experiments",
     "Direct Logit Attribution: How the Output Token is Chosen": "direct-logit-attribution",
 }
@@ -78,7 +78,7 @@ HEAD_AND_HERO = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary: Cross-Domain Circuit Analysis</title>
-<meta name="description" content="Plain-language definitions of Jaccard similarity, activation energy, bottleneck tax, cosine similarity on energy profiles, steering experiments, and direct logit attribution.">
+<meta name="description" content="Plain-language definitions of Jaccard similarity, activation magnitude, the bottleneck penalty, cosine similarity on layer activation profiles, steering experiments, and direct logit attribution.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">

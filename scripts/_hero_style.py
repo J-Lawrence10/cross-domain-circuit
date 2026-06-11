@@ -1,7 +1,7 @@
 """Shared style and setup for hero figures.
 
 Centralizes the pieces previously duplicated across
-`fig_bottleneck_tax_hero.py` and `fig_architecture_dominance_hero.py`:
+`fig_bottleneck_penalty_hero.py` and `fig_architecture_dominance_hero.py`:
 
   * Windows stdout/stderr UTF-8 wrappers (so glyphs like the OK box don't
     blow up cp1252 consoles).

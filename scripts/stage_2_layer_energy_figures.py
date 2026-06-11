@@ -46,7 +46,7 @@ LAYER_ENERGY_DIR = DATA_DIR / 'stage_2_layer_energy'
 OUTPUT_DIR = BASE / 'docs' / 'figures'
 
 MODELS = ['gemma-2-2b', 'qwen3-4b']
-MODEL_LABELS = {'gemma-2-2b': 'GEMMA-2-2B', 'qwen3-4b': 'QWEN3-4B'}
+MODEL_LABELS = {'gemma-2-2b': 'Gemma-2-2B', 'qwen3-4b': 'Qwen3-4B'}
 CATEGORY_COLORS = {'chemistry': '#2196F3', 'geography': '#4CAF50', 'history': '#FF9800'}
 CATEGORY_LABELS = {'chemistry': 'Chemistry', 'geography': 'Geography', 'history': 'History'}
 MODEL_COLORS = {'gemma-2-2b': '#E91E63', 'qwen3-4b': '#9C27B0'}
@@ -114,14 +114,14 @@ def fig16_domain_energy_curves(results, per_circuit):
                            color=CATEGORY_COLORS[cat], alpha=0.15)
 
         ax.set_xlabel('Layer')
-        ax.set_ylabel('Energy Fraction')
+        ax.set_ylabel('Activation Share')
         ax.set_title(f'{MODEL_LABELS[model]}')
         ax.legend(loc='upper right')
         ax.set_xlim(0, total_layers - 1)
         ax.grid(True, alpha=0.3)
 
-    fig.suptitle('Domain-Averaged Layer Energy Profiles\n'
-                 'Architecture constrains energy distribution; domains overlap',
+    fig.suptitle('Domain-Averaged Layer Activation Profiles\n'
+                 'Architecture constrains the activation distribution; domains overlap',
                  fontsize=14, y=1.02)
     plt.tight_layout()
     plt.savefig(OUTPUT_DIR / 'fig16_domain_energy_curves.png', bbox_inches='tight')
@@ -168,14 +168,14 @@ def fig17_cross_model_profiles(results, per_circuit):
 
         ax.set_xlabel('Normalized Depth (0=input, 1=output)')
         if idx == 0:
-            ax.set_ylabel('Energy Fraction')
+            ax.set_ylabel('Activation Share')
         ax.set_title(f'{CATEGORY_LABELS[cat]}')
         ax.legend(loc='upper right')
         ax.set_xlim(0, 1)
         ax.grid(True, alpha=0.3)
 
-    fig.suptitle('Cross-Model Energy Profiles (Normalized Depth)\n'
-                 'GEMMA front-loads energy; QWEN back-loads it',
+    fig.suptitle('Cross-Model Layer Activation Profiles (Normalized Depth)\n'
+                 'Gemma is front-loaded; Qwen is back-loaded',
                  fontsize=14, y=1.02)
     plt.tight_layout()
     plt.savefig(OUTPUT_DIR / 'fig17_cross_model_profiles.png', bbox_inches='tight')
@@ -238,8 +238,8 @@ def fig18_layer_confidence_correlation(results):
         not_sig = mpatches.Patch(color='#BDBDBD', label='Not significant')
         ax.legend(handles=[sig_pos, sig_neg, not_sig], loc='lower right', fontsize=8)
 
-    fig.suptitle('Per-Layer Energy-Confidence Correlation\n'
-                 'Which layers\' energy predicts confident outputs? (Causal tracing analog)',
+    fig.suptitle('Per-Layer Activation-Confidence Correlation\n'
+                 'Which layers\' activation predicts confident outputs? (Causal tracing analog)',
                  fontsize=14, y=1.02)
     plt.tight_layout()
     plt.savefig(OUTPUT_DIR / 'fig18_layer_confidence_correlation.png', bbox_inches='tight')
@@ -290,14 +290,14 @@ def fig19_cumulative_energy(results):
         ax.text(0.5, 0.92, '90%', transform=ax.get_yaxis_transform(), fontsize=8, color='grey')
 
         ax.set_xlabel('Layer')
-        ax.set_ylabel('Cumulative Energy Fraction')
+        ax.set_ylabel('Cumulative Activation Share')
         ax.set_title(f'{MODEL_LABELS[model]}')
         ax.legend(loc='lower right')
         ax.set_xlim(0, total_layers - 1)
         ax.set_ylim(0, 1.05)
         ax.grid(True, alpha=0.3)
 
-    fig.suptitle('Cumulative Energy Accumulation Through Layers\n'
+    fig.suptitle('Cumulative Activation Through Layers\n'
                  'GEMMA reaches 50% by L11; QWEN by L28 — different accumulation regimes',
                  fontsize=14, y=1.02)
     plt.tight_layout()
@@ -377,7 +377,7 @@ def fig20_profile_similarity(results):
     ax.text(1, means[0] + 0.045, f'Gap = {gap:.3f}', ha='center', fontsize=10,
             fontweight='bold')
 
-    ax.set_title('Energy Profile Similarity: Architecture Dominates Domain\n'
+    ax.set_title('Layer Activation Profile Similarity: Architecture Dominates Domain\n'
                  'Within-model profiles are 97.8% similar; between-model only 69.6%',
                  fontsize=13)
 
@@ -528,7 +528,7 @@ def fig22_architecture_vs_domain_summary(results, per_circuit):
                     color=CATEGORY_COLORS[cat], linewidth=2.5, label=CATEGORY_LABELS[cat])
 
     ax.set_xlabel('Layer')
-    ax.set_ylabel('Energy Fraction')
+    ax.set_ylabel('Activation Share')
     ax.set_title(f'C: {MODEL_LABELS[model]} — All 30 Circuits')
     ax.legend(loc='upper right', fontsize=7, framealpha=0.9, edgecolor='gray')
     ax.set_xlim(0, total_layers - 1)
@@ -551,13 +551,13 @@ def fig22_architecture_vs_domain_summary(results, per_circuit):
                     color=CATEGORY_COLORS[cat], linewidth=2.5, label=CATEGORY_LABELS[cat])
 
     ax.set_xlabel('Layer')
-    ax.set_ylabel('Energy Fraction')
+    ax.set_ylabel('Activation Share')
     ax.set_title(f'D: {MODEL_LABELS[model]} — All 30 Circuits')
     ax.legend(loc='upper left', fontsize=7, framealpha=0.9, edgecolor='gray')
     ax.set_xlim(0, total_layers - 1)
     ax.grid(True, alpha=0.3)
 
-    fig.suptitle('Architecture Over Knowledge: Energy Profile Comparison\n'
+    fig.suptitle('Architecture Over Knowledge: Layer Activation Profile Comparison\n'
                  'Domain profiles overlap within models but diverge between models',
                  fontsize=14, y=1.03)
     fig.subplots_adjust(hspace=0.35, wspace=0.3, top=0.90)
@@ -603,7 +603,7 @@ def fig23_evidence_accumulation_summary(results, per_circuit):
 
     ax.axhline(y=0.5, color='grey', linestyle=':', alpha=0.5)
     ax.set_xlabel('Normalized Depth (0=input, 1=output)')
-    ax.set_ylabel('Cumulative Energy Fraction')
+    ax.set_ylabel('Cumulative Activation Share')
     ax.set_title('A: Evidence Accumulation Curves')
     ax.legend()
     ax.set_xlim(0, 1)
@@ -667,7 +667,7 @@ def fig23_evidence_accumulation_summary(results, per_circuit):
 
     ax.set_xticks([0.5, 3.5])
     ax.set_xticklabels([MODEL_LABELS[m] for m in MODELS])
-    ax.set_ylabel('Energy Fraction')
+    ax.set_ylabel('Activation Share')
     ax.set_title('C: Early vs Late Energy Distribution')
     ax.legend(loc='upper right')
     ax.set_ylim(0, 0.85)
@@ -706,7 +706,7 @@ def fig23_evidence_accumulation_summary(results, per_circuit):
                     bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8))
 
     fig.suptitle('Evidence Accumulation Analysis\n'
-                 'Confidence driven by distributed energy, not bottleneck concentration',
+                 'Confidence driven by distributed activation, not bottleneck concentration',
                  fontsize=14, y=1.01)
     plt.tight_layout()
     plt.savefig(OUTPUT_DIR / 'fig23_evidence_accumulation_summary.png', bbox_inches='tight')

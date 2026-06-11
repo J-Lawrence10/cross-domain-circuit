@@ -26,7 +26,7 @@ import matplotlib.patches as mpatches
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
 DATA_DIR = os.path.join(BASE_DIR, 'data')
-FIG_DIR = os.path.join(BASE, 'docs', 'figures')
+FIG_DIR = os.path.join(BASE_DIR, 'docs', 'figures')
 os.makedirs(FIG_DIR, exist_ok=True)
 
 # ── Load data ────────────────────────────────────────────────────────────────
@@ -244,7 +244,7 @@ def fig3_bottleneck_depth():
 # ═══════════════════════════════════════════════════════════════════════════════
 def fig4_confidence_energy():
     fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
-    fig.suptitle('Figure 4: Prediction Confidence vs Total Activation Energy', fontsize=14, fontweight='bold')
+    fig.suptitle('Figure 4: Prediction Confidence vs Total Activation Magnitude', fontsize=14, fontweight='bold')
 
     for mi, model in enumerate(MODELS):
         ax = axes[mi]
@@ -287,7 +287,7 @@ def fig4_confidence_energy():
                transform=ax.transAxes, va='top', fontsize=10,
                bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
-        ax.set_xlabel('Total Activation Energy')
+        ax.set_xlabel('Total Activation Magnitude')
         ax.set_ylabel('Output Probability')
         ax.set_title(MODEL_LABELS[model], color=MODEL_COLORS[model], fontweight='bold')
         ax.legend(loc='lower right')
@@ -351,7 +351,7 @@ def fig6_correlation_heatmap():
         'num_supernodes', 'size_entropy'
     ]
     metric_labels = [
-        'Total Energy', 'Weight Kurtosis', 'Total Nodes', 'Total Edges',
+        'Total Activation Magnitude', 'Weight Kurtosis', 'Total Nodes', 'Total Edges',
         '# Bottlenecks', 'Avg Layers Visited', 'Compression Ratio',
         'Score Decay Rate', 'Branching Factor', 'Top 10% Weight Share',
         'Weight Skewness', 'Peak Layer', 'Avg BN Layer', 'BN Layer Std',
@@ -760,8 +760,8 @@ def fig13_activation_profiles():
 
         ax2.set_xticks(x)
         ax2.set_xticklabels([CATEGORY_LABELS[c] for c in CATEGORIES])
-        ax2.set_ylabel('Total Activation Energy')
-        ax2.set_title(f'{MODEL_LABELS[model]} — Total Energy', color=MODEL_COLORS[model], fontweight='bold')
+        ax2.set_ylabel('Total Activation Magnitude')
+        ax2.set_title(f'{MODEL_LABELS[model]} — Total Activation Magnitude', color=MODEL_COLORS[model], fontweight='bold')
         ax2.grid(True, axis='y', alpha=0.3)
 
     fig.tight_layout()

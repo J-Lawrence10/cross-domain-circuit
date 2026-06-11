@@ -13,9 +13,9 @@ A circuit-level study of how two open language models, Gemma-2-2B and Qwen3-4B, 
 
 ## Key findings
 
-1. **Architecture dominates domain.** Within-model energy profile similarity is 0.978; between-model is 0.696. Architecture produces approximately 14x the mean cosine gap that knowledge domain does.
+1. **Architecture dominates domain.** Within-model layer activation profile similarity is 0.978; between-model is 0.696. Architecture produces approximately 14x the mean cosine gap that knowledge domain does.
 2. **Bottleneck depth is architecture-determined.** Gemma bottlenecks sit at L5-7 (about 22% depth); Qwen at L22-25 (about 65%). Both produce comparable factual recall.
-3. **The bottleneck tax.** In Gemma, activation energy at the bottleneck layer L6 negatively predicts output confidence (Spearman r = -0.684, Bonferroni-significant). Post-bottleneck layers L13 and L16 positively predict it.
+3. **The bottleneck penalty.** In Gemma, activation magnitude at the bottleneck layer L6 negatively predicts output confidence (Spearman r = -0.684, Bonferroni-significant). Post-bottleneck layers L13 and L16 positively predict it.
 4. **Universal bottleneck features are architecture-specific routing infrastructure.** Six in Gemma, 15 in Qwen, zero overlap. CODE (20%) and LANGUAGE (20%) categories dominate, suggesting routing rather than knowledge storage.
 5. **Three-tier causal dissociation.** 80 steering experiments show essential-pathway features produce the strongest distributional perturbations (mean KL = 1.448), but neither pathway topology nor cross-circuit frequency predicts text-level output changes. Circuit redundancy (94.1%) absorbs perturbations; output determinism governs text-level susceptibility.
 
@@ -36,7 +36,7 @@ scripts/                               Python code
   _hero_style.py                       shared matplotlib style for hero figures
   pipeline_constants.py                model layer counts and shared constants
   3b_traceback_paths.py                core traceback graphing algorithm
-  fig_*_hero.py                        the 3 hero figures (bottleneck tax,
+  fig_*_hero.py                        the 3 hero figures (bottleneck penalty,
                                        architecture dominance, bottleneck density)
   stage_2_*.py                         per-paper-section figure generators
   generate_pdfs.py                     rebuild the PDFs from the markdown sources
@@ -45,7 +45,7 @@ scripts/                               Python code
   apply_neuronpedia_links.py           hyperlink feature IDs in the HTML
 data/                                  analysis result JSONs (small, tracked)
   stage_2_analysis/                    cross-category bottleneck features
-  stage_2_layer_energy/                per-layer energy profiles
+  stage_2_layer_energy/                per-layer activation profiles
   stage_2_statistical_deepdive/        the 60-row circuit metric table
 plans/                                 development history for the website build
 ```
@@ -57,7 +57,7 @@ The 3 hero figures and 4 stage-2 figures are reproducible from the analysis JSON
 ```bash
 pip install -r requirements.txt
 cd scripts
-python fig_bottleneck_tax_hero.py
+python fig_bottleneck_penalty_hero.py
 python fig_architecture_dominance_hero.py
 python fig_bottleneck_density_hero.py
 python stage_2_paper_figures.py

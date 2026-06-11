@@ -28,7 +28,7 @@ if sys.platform == 'win32':
 SCRIPT_DIR = Path(__file__).parent
 BASE_DIR = SCRIPT_DIR.parent
 DATA_DIR = BASE_DIR / 'data'
-FIG_DIR = BASE / 'docs' / 'figures'
+FIG_DIR = BASE_DIR / 'docs' / 'figures'
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 

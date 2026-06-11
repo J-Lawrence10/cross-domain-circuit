@@ -58,7 +58,7 @@ data/stage_2_analysis/             Main cross-domain statistical results
 data/stage_2_minimal_pathways/     Essential pathway extraction (94.1% redundancy)
 data/stage_2_multi_algorithm/      Community detection with 4 algorithms
 data/stage_2_polysemanticity/      Semantic purity analysis
-data/stage_2_layer_energy/         Per-layer activation energy profiles
+data/stage_2_layer_energy/         Per-layer activation profiles
 data/stage_2_edge_flow/            Edge weight flow patterns
 data/stage_2_coactivation/         Feature co-activation networks
 data/stage_2_output_decomposition/ Output node contribution analysis
@@ -93,7 +93,7 @@ data/stage_2_essential_pathway_steering/     New 30 experiments (D6, added 2026-
 | Analysis | Output | Key result |
 |----------|--------|-----------|
 | Cross-category (ANOVA, regression) | `stage_2_analysis/` | 13/16 structural metrics differ cross-model |
-| Layer energy profiling | `stage_2_layer_energy/` | Within-model cos sim=0.978; between-model=0.696 |
+| Layer activation profiling | `stage_2_layer_energy/` | Within-model cos sim=0.978; between-model=0.696 |
 | Edge flow analysis | `stage_2_edge_flow/` | 80-85% of edges are skip connections |
 | Minimal pathway extraction | `stage_2_minimal_pathways/` | 94.1% node redundancy |
 | Multi-algorithm community validation | `stage_2_multi_algorithm/` | Modularity >0.4, Jaccard agreement=0.363 |
@@ -130,7 +130,7 @@ Files referenced by specific findings in the paper:
 | Bottleneck library | `stage_1_5_bottleneck_library.json` |
 | Minimal pathway metrics | `stage_2_minimal_pathways/minimal_pathway_results.json` |
 | Multi-algorithm validation | `stage_2_multi_algorithm/multi_algorithm_results.json` |
-| Layer energy profiles | `stage_2_layer_energy/layer_energy_analysis.json` |
+| Layer activation profiles | `stage_2_layer_energy/layer_energy_analysis.json` |
 | Steering D4 results | `stage_3_steering/steering_results.json` |
 | Steering D4+D5 results | `stage_3_steering/steering_results.json` |
 | Steering D6 results | `stage_2_essential_pathway_steering/essential_pathway_steering_results.json` |
